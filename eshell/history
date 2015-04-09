@@ -1,0 +1,13 @@
+gnatmake
+ls -l
+ls -l
+;s
+ls
+ls =l
+ls -al
+cd .fontconfig/
+ls
+cd ..
+;s
+ls
+cat pointEmacs 

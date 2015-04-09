@@ -1,0 +1,23 @@
+;; -*- emacs-lisp -*- <14/11/23 14:58:55 /Users/pthalamy/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["ssh"
+   #("thalamyp" 0 8
+     (fontified t))
+   #("pcserveur.ensimag.fr" 0 20
+     (fontified t))
+   nil nil]
+  ("uname" "Linux 2.6.32-431.29.2.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  (#("~" 0 1
+     (fontified t))
+   "/user/9/thalamyp")
+  ("file-exists" "test -e")))
