@@ -1,0 +1,235 @@
+;; Object csgCatoms3D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "csgCatoms3D/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("mkfile_path" variable (:default-value ("$(abspath $(lastword $(MAKEFILE_LIST)))")) nil [32 87])
+            ("current_dir" variable (:default-value ("$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))")) nil [87 151])
+            ("APPDIR" variable (:default-value ("../../applicationsBin/$(current_dir)")) nil [151 197])
+            ("SRCS" variable (:default-value ("csgCatoms3D.cpp" "csgCatoms3DBlockCode.cpp" "csgUtils.cpp" "stoyUtils.cpp" "meshUtils.cpp" "bitmapUtils.cpp" "mesh/geometrics.cpp" "mesh/obj_file.cpp" "mesh/polygon.cpp" "mesh/triangle.cpp" "mesh/world.cpp")) nil [718 911])
+            ("OUT" variable (:default-value ("$(APPDIR)/csgCatoms3D")) nil [981 1009])
+            ("MODULELIB" variable (:default-value ("-lsimCatoms3D")) nil [1086 1112])
+            ("TESTS" variable (:default-value ("../../utilities/blockCodeTest.sh" "csgCatoms3D" "$(OUT)")) nil [1191 1251])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [1374 1397])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [1397 1426])
+            ("OS" variable (:default-value ("$(shell uname -s)")) nil [1427 1450])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [1450 1513])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "-I/usr/local/include" "-I/opt/local/include" "-I/usr/X11/include")) nil [1542 1644])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [1649 1709])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-lGLEW" "-lglut" "-framework" "GLUT" "-framework" "OpenGL" "-L/usr/X11/lib" "/usr/local/lib/libglut.dylib" "$(MODULELIB)")) nil [1761 1921])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-L/opt/local/lib" "-lm" "-L/usr/X11/lib" "-lglut" "-lGL" "-lGLU" "-lGLEW" "-lpthread" "$(MODULELIB)")) nil [1927 2067])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [2086 2134])
+            ("CCFLAGS" variable (:default-value ("-g" "-Wall" "-std=c++11" "-DTINYXML_USE_STL" "-DTIXML_USE_STL")) nil [2183 2247])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [2401 2429])
+            ("CC" variable (:default-value ("g++")) nil [2436 2445])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [2446 2469])
+            (".cpp.o" function nil nil [2470 2520])
+            ("%.depends" function (:arguments ("%.cpp")) nil [2521 2579])
+            ("all" function (:arguments ("$(OUT)")) nil [2580 2596])
+            ("test" function nil nil [2597 2614])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [2615 2657])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [2658 2683])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [2684 2749])
+            ("clean" function nil nil [2804 2844]))          
+      :file "Makefile"
+      :pointmax 2844
+      :fsize 2843
+      :lastmodtime '(22453 9191 0 0)
+      :unmatched-syntax '((shell-command 2812 . 2843) (bol 2811 . 2811) (semantic-list 2790 . 2796) (punctuation 2789 . 2790) (symbol 2780 . 2788) (bol 2780 . 2780) (shell-command 2389 . 2395) (bol 2388 . 2388) (shell-command 2270 . 2387) (bol 2269 . 2269) (shell-command 2248 . 2268) (bol 2247 . 2247) (ENDIF 2134 . 2139) (bol 2134 . 2134) (shell-command 2068 . 2080) (bol 2067 . 2067) (shell-command 1922 . 1926) (bol 1921 . 1921) (shell-command 1741 . 1760) (bol 1740 . 1740)))
+    (semanticdb-table "csgUtils.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("csgUtils.h" include nil nil [1 22])
+            ("createCSG" function
+               (:parent "CsgUtils"
+                :arguments 
+                  ( ("MAX_SIZE" variable (:type "int") (reparse-symbol arg-sub-list) [49 62]))                  
+                :type "void")
+                nil [24 1043])
+            ("readFile" function
+               (:parent "CsgUtils"
+                :arguments 
+                  ( ("path_to_file" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1069 1089]))                  
+                :type "void")
+                nil [1045 1441])
+            ("readCSGBuffer" function
+               (:parent "CsgUtils"
+                :arguments 
+                  ( ("_csgBuffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1472 1489])
+                    ("_csgBufferSize" variable (:type "int") (reparse-symbol arg-sub-list) [1490 1509]))                  
+                :type "void")
+                nil [1443 1662])
+            ("readCSGNode" function
+               (:parent "CsgUtils"
+                :type ("CsgNode" type (:type "class") nil nil))
+                nil [1664 5143])
+            ("isInside" function
+               (:parent "CsgUtils"
+                :arguments 
+                  ( ("catomPosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5177 5200]))                  
+                :type ("PositionInfo" type (:type "class") nil nil))
+                nil [5145 5298])
+            ("isInside" function
+               (:parent "CsgUtils"
+                :arguments 
+                  ( ("node" variable
+                       (:reference 1
+                        :type ("CsgNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5332 5346])
+                    ("basePosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5347 5369])
+                    ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5370 5382])
+                    ("catomPosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5383 5406]))                  
+                :type ("PositionInfo" type (:type "class") nil nil))
+                nil [5300 8049]))          
+      :file "csgUtils.cpp"
+      :pointmax 8050
+      :fsize 6040
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "csgUtils.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CSGUTILS_H_" variable (:constant-flag t) nil [29 40])
+            ("csg.h" include nil nil [42 58])
+            ("color.h" include nil nil [59 77])
+            ("PositionInfo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [227 234])
+                    ("inside" variable (:type "bool") (reparse-symbol classsubparts) [239 251])
+                    ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [256 268])
+                    ("PositionInfo" function
+                       (:constructor-flag t
+                        :type ("PositionInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [273 306])
+                    ("PositionInfo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("i" variable (:type "bool") (reparse-symbol arg-sub-list) [325 332]))                          
+                        :type ("PositionInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [312 347])
+                    ("PositionInfo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("i" variable (:type "bool") (reparse-symbol arg-sub-list) [366 373])
+                            ("c" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [374 382]))                          
+                        :type ("PositionInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [353 407])
+                    ("isInside" function (:type "bool") (reparse-symbol classsubparts) [413 447])
+                    ("getColor" function (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [453 487]))                  
+                :type "class")
+                nil [206 491])
+            ("CsgUtils" type
+               (:members 
+                  ( ("csgBufferPos" variable (:type "int") (reparse-symbol classsubparts) [514 531])
+                    ("csgBuffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [559 575])
+                    ("csgBufferSize" variable (:type "int") (reparse-symbol classsubparts) [580 598])
+                    ("csgTree" variable (:type ("CsgNode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [603 619])
+                    ("public" label nil (reparse-symbol classsubparts) [621 628])
+                    ("createCSG" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("MAX_SIZE" variable (:type "int") (reparse-symbol arg-sub-list) [648 661]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [633 662])
+                    ("readFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("path_to_file" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [681 701]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [667 702])
+                    ("readCSGBuffer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("csgBuffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [726 742])
+                            ("csgBufferSize" variable (:type "int") (reparse-symbol arg-sub-list) [743 761]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [707 762])
+                    ("getCSGTree" function (:type ("CsgNode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [767 807])
+                    ("getCSGBuffer" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [812 855])
+                    ("getCSGBufferSize" function (:type "int") (reparse-symbol classsubparts) [860 908])
+                    ("isInside" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("catomPosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [935 958]))                          
+                        :type ("PositionInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [913 959])
+                    ("private" label nil (reparse-symbol classsubparts) [961 969])
+                    ("readCSGNode" function
+                       (:prototype-flag t
+                        :type ("CsgNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [974 996])
+                    ("isInside" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("node" variable
+                               (:reference 1
+                                :type ("CsgNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1023 1037])
+                            ("basePosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1038 1060])
+                            ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1061 1073])
+                            ("catomPosition" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1074 1097]))                          
+                        :type ("PositionInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1001 1098]))                  
+                :type "class")
+                nil [493 1101]))          
+      :file "csgUtils.h"
+      :pointmax 1129
+      :fsize 646
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((punctuation 487 . 488) (punctuation 447 . 448) (punctuation 407 . 408) (punctuation 347 . 348) (punctuation 306 . 307) (punctuation 203 . 204) (semantic-list 112 . 203) (CHAR 107 . 111) (UNSIGNED 98 . 106) (punctuation 96 . 97) (symbol 90 . 95) (CLASS 84 . 89) (ENUM 79 . 83))
+      :lexical-table 
+        '(("CSGUTILS_H_")
+          )
+)
+    (semanticdb-table "csgCatoms3D.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [81 100])
+            ("catoms3DSimulator.h" include nil nil [101 131])
+            ("catoms3DBlockCode.h" include nil nil [132 162])
+            ("csgCatoms3DBlockCode.h" include nil nil [163 196])
+            ("ctime" include (:system-flag t) nil [197 213])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [215 235])
+            ("Catoms3D" using (:type ("Catoms3D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [236 261])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [272 281])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [282 294]))                  
+                :type "int")
+                nil [263 1784]))          
+      :file "csgCatoms3D.cpp"
+      :pointmax 1785
+      :fsize 1784
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "csgCatoms3DBlockCode.h"
+      :file "csgCatoms3DBlockCode.h"
+      :fsize 2575
+      :lastmodtime '(22449 35660 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!csgCatoms3D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,530 @@
+;; Object map02/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "map02/"
+  :tables
+  (list
+    (semanticdb-table "map02BlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ROBOT02BLOCKCODE_H_" variable (:constant-flag t) nil [123 142])
+            ("GO_MAP_MSG_ID" variable (:constant-flag t) nil [152 165])
+            ("END_MAP_MSG_ID" variable (:constant-flag t) nil [189 203])
+            ("GO_FRAME_MSG_ID" variable (:constant-flag t) nil [227 242])
+            ("END_FRAME_MSG_ID" variable (:constant-flag t) nil [266 282])
+            ("SIZE" variable (:constant-flag t) nil [302 306])
+            ("robotBlocksBlockCode.h" include nil nil [319 352])
+            ("robotBlocksSimulator.h" include nil nil [353 386])
+            ("robotBlocksBlock.h" include nil nil [388 417])
+            ("GoMapMessage" type
+               (:prototype t
+                :type "class")
+                nil [419 438])
+            ("GoFrameMessage" type
+               (:prototype t
+                :type "class")
+                nil [439 460])
+            ("EndMapMessage" type
+               (:prototype t
+                :type "class")
+                nil [461 481])
+            ("GoMapMessage_ptr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("GoMapMessage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [483 538])
+            ("GoFrameMessage_ptr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("GoFrameMessage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [539 598])
+            ("Robot02BlockCode" type
+               (:superclasses 
+                  ( ("RobotBlocks::RobotBlocksBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("pmid" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [719 745])
+                    ("myColor" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [747 761])
+                    ("nbOfEnd" variable (:type "int") (reparse-symbol classsubparts) [763 775])
+                    ("nbOfFrame" variable (:type "int") (reparse-symbol classsubparts) [777 791])
+                    ("recieved" variable (:type "bool") (reparse-symbol classsubparts) [814 828])
+                    ("lockEnd" variable (:type "bool") (reparse-symbol classsubparts) [833 846])
+                    ("tab" variable
+                       (:dereference 2
+                        :type "int")
+                        (reparse-symbol classsubparts) [851 868])
+                    ("public" label nil (reparse-symbol classsubparts) [870 877])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [880 901])
+                    ("robotBlock" variable
+                       (:pointer 1
+                        :type ("RobotBlocks::RobotBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [903 945])
+                    ("Robot02BlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("RobotBlocks::RobotBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [966 1002]))                          
+                        :type ("Robot02BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [948 1003])
+                    ("Robot02BlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1005 1026])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1029 1044])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1069 1082]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1046 1083])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("RobotBlocks::RobotBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1147 1183]))                          
+                        :type ("RobotBlocks::RobotBlocksBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1086 1184])
+                    ("SendGoMapMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("except" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1209 1237])
+                            ("mid_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1238 1248])
+                            ("x_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1249 1257])
+                            ("y_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1258 1266])
+                            ("z_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1267 1275]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1187 1276])
+                    ("SendGoFrameMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("except" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1302 1330])
+                            ("mid_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1331 1341])
+                            ("x_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1342 1350])
+                            ("y_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1351 1359])
+                            ("z_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1360 1368]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1278 1369])
+                    ("SendEndMapMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("send" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1394 1420]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1371 1421]))                  
+                :type "class")
+                nil [600 1424])
+            ("GoFrameMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1466 1474])
+                    ("mid" variable (:type "int") (reparse-symbol classsubparts) [1477 1485])
+                    ("x" variable (:type "int") (reparse-symbol classsubparts) [1487 1493])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [1495 1501])
+                    ("z" variable (:type "int") (reparse-symbol classsubparts) [1503 1509])
+                    ("GoFrameMessage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mid_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1527 1537])
+                            ("x_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1538 1546])
+                            ("y_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1547 1555])
+                            ("z_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1556 1564]))                          
+                        :type ("GoFrameMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1512 1565])
+                    ("GoFrameMessage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1567 1585]))                  
+                :type "class")
+                nil [1426 1588])
+            ("GoMapMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1628 1636])
+                    ("mid" variable (:type "int") (reparse-symbol classsubparts) [1639 1647])
+                    ("x" variable (:type "int") (reparse-symbol classsubparts) [1649 1655])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [1657 1663])
+                    ("z" variable (:type "int") (reparse-symbol classsubparts) [1665 1671])
+                    ("GoMapMessage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mid_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1687 1697])
+                            ("x_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1698 1706])
+                            ("y_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1707 1715])
+                            ("z_" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1716 1724]))                          
+                        :type ("GoMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1674 1725])
+                    ("GoMapMessage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1727 1743]))                  
+                :type "class")
+                nil [1590 1746])
+            ("EndMapMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1786 1794])
+                    ("EndMapMessage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("EndMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1797 1813])
+                    ("EndMapMessage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1815 1832]))                  
+                :type "class")
+                nil [1748 1835]))          
+      :file "map02BlockCode.h"
+      :pointmax 1869
+      :fsize 1868
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ROBOT02BLOCKCODE_H_")
+          ("SIZE" . ((number "20000" 312 . 317)))
+          ("END_MAP_MSG_ID" . ((number "10002" 213 . 218)))
+          ("GO_FRAME_MSG_ID" . ((number "10011" 252 . 257)))
+          ("END_FRAME_MSG_ID" . ((number "10012" 288 . 293)))
+          ("GO_MAP_MSG_ID" . ((number "10001" 175 . 180)))
+          )
+)
+    (semanticdb-table "map02.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [80 99])
+            ("robotBlocksSimulator.h" include nil nil [100 133])
+            ("robotBlocksBlockCode.h" include nil nil [134 167])
+            ("map02BlockCode.h" include nil nil [168 195])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [197 217])
+            ("RobotBlocks" using (:type ("RobotBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [218 246])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [257 266])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [267 279]))                  
+                :type "int")
+                nil [248 632]))          
+      :file "map02.cpp"
+      :pointmax 633
+      :fsize 632
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "map02BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [277 296])
+            ("sstream" include (:system-flag t) nil [297 315])
+            ("map02BlockCode.h" include nil nil [316 343])
+            ("scheduler.h" include nil nil [344 366])
+            ("robotBlocksEvents.h" include nil nil [367 397])
+            ("memory" include (:system-flag t) nil [398 415])
+            ("COM_DELAY" variable
+               (:constant-flag t
+                :default-value "1200000"
+                :type "int")
+                nil [417 445])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [447 467])
+            ("RobotBlocks" using (:type ("RobotBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [468 496])
+            ("Robot02BlockCode" function
+               (:constructor-flag t
+                :parent "Robot02BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("RobotBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [533 556]))                  
+                :type ("Robot02BlockCode" type (:type "class") nil nil))
+                nil [498 755])
+            ("Robot02BlockCode" function
+               (:destructor-flag t
+                :parent "Robot02BlockCode"
+                :type "void")
+                nil [757 846])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "Robot02BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("RobotBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [919 942]))                  
+                :type ("RobotBlocks::RobotBlocksBlockCode" type (:type "class") nil nil))
+                nil [848 983])
+            ("startup" function
+               (:parent "Robot02BlockCode"
+                :type "void")
+                nil [985 1648])
+            ("processLocalEvent" function
+               (:parent "Robot02BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1691 1704]))                  
+                :type "void")
+                nil [1650 5604])
+            ("SendGoFrameMessage" function
+               (:parent "Robot02BlockCode"
+                :arguments 
+                  ( ("p2pExcept" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5648 5679])
+                    ("mid_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5680 5690])
+                    ("x_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5691 5699])
+                    ("y_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5700 5708])
+                    ("z_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5709 5717]))                  
+                :type "void")
+                nil [5606 6252])
+            ("GoFrameMessage" function
+               (:constructor-flag t
+                :parent "GoFrameMessage"
+                :arguments 
+                  ( ("mid_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6285 6295])
+                    ("x_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6296 6304])
+                    ("y_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6305 6313])
+                    ("z_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6314 6322]))                  
+                :type ("GoFrameMessage" type (:type "class") nil nil))
+                nil [6254 6400])
+            ("SendEndMapMessage" function
+               (:parent "Robot02BlockCode"
+                :arguments 
+                  ( ("send" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6443 6469]))                  
+                :type "void")
+                nil [6402 6872])
+            ("SendGoMapMessage" function
+               (:parent "Robot02BlockCode"
+                :arguments 
+                  ( ("p2pExcept" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6914 6945])
+                    ("mid_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6946 6956])
+                    ("x_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6957 6965])
+                    ("y_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6966 6974])
+                    ("z_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6975 6983]))                  
+                :type "void")
+                nil [6874 9595])
+            ("GoMapMessage" function
+               (:constructor-flag t
+                :parent "GoMapMessage"
+                :arguments 
+                  ( ("mid_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9624 9634])
+                    ("x_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9635 9643])
+                    ("y_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9644 9652])
+                    ("z_" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [9653 9661]))                  
+                :type ("GoMapMessage" type (:type "class") nil nil))
+                nil [9597 9737])
+            ("EndMapMessage" function
+               (:constructor-flag t
+                :parent "EndMapMessage"
+                :type ("EndMapMessage" type (:type "class") nil nil))
+                nil [9739 9794])
+            ("EndMapMessage" function
+               (:destructor-flag t
+                :parent "EndMapMessage"
+                :type "void")
+                nil [9796 9830])
+            ("GoMapMessage" function
+               (:destructor-flag t
+                :parent "GoMapMessage"
+                :type "void")
+                nil [9831 9863])
+            ("GoFrameMessage" function
+               (:destructor-flag t
+                :parent "GoFrameMessage"
+                :type "void")
+                nil [9864 9900]))          
+      :file "map02BlockCode.cpp"
+      :pointmax 9901
+      :fsize 9900
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("map02.cpp" "map02BlockCode.cpp")) nil [1 37])
+            ("OUT" variable (:default-value ("$(APPDIR)/map02")) nil [38 60])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [61 84])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [84 113])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [114 175])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [562 610])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimRobotBlocks.a")) nil [611 670])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [671 699])
+            ("CC" variable (:default-value ("g++")) nil [699 708])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [709 732])
+            (".cpp.o" function nil nil [733 783])
+            ("%.depends" function (:arguments ("%.cpp")) nil [784 842])
+            ("all" function (:arguments ("$(OUT)")) nil [843 859])
+            ("test" function nil nil [860 923])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [924 967])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [968 993])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1118 1184])
+            ("clean" function nil nil [1240 1280]))          
+      :file "Makefile"
+      :pointmax 1280
+      :fsize 1279
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1248 . 1279) (bol 1247 . 1247) (semantic-list 1226 . 1232) (punctuation 1225 . 1226) (symbol 1216 . 1224) (bol 1216 . 1216))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!map02!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

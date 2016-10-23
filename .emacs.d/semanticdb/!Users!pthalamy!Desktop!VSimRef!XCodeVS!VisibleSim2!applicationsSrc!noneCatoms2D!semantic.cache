@@ -1,0 +1,199 @@
+;; Object noneCatoms2D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "noneCatoms2D/"
+  :tables
+  (list
+    (semanticdb-table "noneCatoms2DBlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [87 106])
+            ("sstream" include (:system-flag t) nil [107 125])
+            ("noneCatoms2DBlockCode.h" include nil nil [126 160])
+            ("scheduler.h" include nil nil [161 183])
+            ("events.h" include nil nil [184 203])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [205 225])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [226 251])
+            ("NoneCatoms2DBlockCode" function
+               (:constructor-flag t
+                :parent "NoneCatoms2DBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [298 318]))                  
+                :type ("NoneCatoms2DBlockCode" type (:type "class") nil nil))
+                nil [253 470])
+            ("NoneCatoms2DBlockCode" function
+               (:destructor-flag t
+                :parent "NoneCatoms2DBlockCode"
+                :type "void")
+                nil [472 579])
+            ("startup" function
+               (:parent "NoneCatoms2DBlockCode"
+                :type "void")
+                nil [581 716])
+            ("processLocalEvent" function
+               (:parent "NoneCatoms2DBlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [764 777]))                  
+                :type "void")
+                nil [718 1061])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "NoneCatoms2DBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BuildingBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1115 1135]))                  
+                :type ("BlockCode" type (:type "class") nil nil))
+                nil [1063 1197]))          
+      :file "noneCatoms2DBlockCode.cpp"
+      :pointmax 1198
+      :fsize 1197
+      :lastmodtime '(22453 9191 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "noneCatoms2D.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [82 101])
+            ("catoms2DSimulator.h" include nil nil [102 132])
+            ("catoms2DBlockCode.h" include nil nil [133 163])
+            ("noneCatoms2DBlockCode.h" include nil nil [164 198])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [200 220])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [221 246])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [257 266])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [267 279]))                  
+                :type "int")
+                nil [248 695]))          
+      :file "noneCatoms2D.cpp"
+      :pointmax 696
+      :fsize 695
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "noneCatoms2DBlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CATOM2D1BLOCKCODE_H_" variable (:constant-flag t) nil [122 142])
+            ("catoms2DBlockCode.h" include nil nil [144 174])
+            ("catoms2DSimulator.h" include nil nil [175 205])
+            ("catoms2DBlock.h" include nil nil [206 232])
+            ("NoneCatoms2DBlockCode" type
+               (:superclasses 
+                  ( ("Catoms2D::Catoms2DBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [305 312])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [315 336])
+                    ("catom2D" variable
+                       (:pointer 1
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [338 371])
+                    ("NoneCatoms2DBlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [397 427]))                          
+                        :type ("NoneCatoms2DBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [374 428])
+                    ("NoneCatoms2DBlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [430 456])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [459 474])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [499 512]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [476 513])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("BuildingBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [552 572]))                          
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [516 573]))                  
+                :type "class")
+                nil [234 576]))          
+      :file "noneCatoms2DBlockCode.h"
+      :pointmax 611
+      :fsize 610
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CATOM2D1BLOCKCODE_H_")
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("mkfile_path" variable (:default-value ("$(abspath $(lastword $(MAKEFILE_LIST)))")) nil [32 87])
+            ("current_dir" variable (:default-value ("$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))")) nil [87 151])
+            ("APPDIR" variable (:default-value ("../../applicationsBin/$(current_dir)")) nil [151 197])
+            ("SRCS" variable (:default-value ("noneCatoms2D.cpp" "noneCatoms2DBlockCode.cpp")) nil [718 768])
+            ("OUT" variable (:default-value ("$(APPDIR)/noneCatoms2D")) nil [838 867])
+            ("MODULELIB" variable (:default-value ("-lsimCatoms2D")) nil [944 970])
+            ("TESTS" variable (:default-value ("../../utilities/blockCodeTest.sh" "noneCatoms2D" "$(OUT)")) nil [1049 1110])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [1234 1257])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [1257 1286])
+            ("OS" variable (:default-value ("$(shell uname -s)")) nil [1287 1310])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [1310 1373])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "-I/usr/local/include" "-I/opt/local/include" "-I/usr/X11/include")) nil [1402 1504])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [1509 1569])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-lGLEW" "-lglut" "-framework" "GLUT" "-framework" "OpenGL" "-L/usr/X11/lib" "/usr/local/lib/libglut.dylib" "$(MODULELIB)")) nil [1621 1781])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-L/opt/local/lib" "-lm" "-L/usr/X11/lib" "-lglut" "-lGL" "-lGLU" "-lGLEW" "-lpthread" "$(MODULELIB)")) nil [1787 1927])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [1946 1994])
+            ("CCFLAGS" variable (:default-value ("-g" "-Wall" "-std=c++11" "-DTINYXML_USE_STL" "-DTIXML_USE_STL")) nil [2043 2107])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [2261 2289])
+            ("CC" variable (:default-value ("g++")) nil [2296 2305])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [2306 2329])
+            (".cpp.o" function nil nil [2330 2380])
+            ("%.depends" function (:arguments ("%.cpp")) nil [2381 2439])
+            ("all" function (:arguments ("$(OUT)")) nil [2440 2456])
+            ("test" function nil nil [2457 2474])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [2475 2517])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [2518 2543])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [2544 2609])
+            ("clean" function nil nil [2664 2704]))          
+      :file "Makefile"
+      :pointmax 2704
+      :fsize 2703
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 2672 . 2703) (bol 2671 . 2671) (semantic-list 2650 . 2656) (punctuation 2649 . 2650) (symbol 2640 . 2648) (bol 2640 . 2640) (shell-command 2249 . 2255) (bol 2248 . 2248) (shell-command 2130 . 2247) (bol 2129 . 2129) (shell-command 2108 . 2128) (bol 2107 . 2107) (ENDIF 1994 . 1999) (bol 1994 . 1994) (shell-command 1928 . 1940) (bol 1927 . 1927) (shell-command 1782 . 1786) (bol 1781 . 1781) (shell-command 1601 . 1620) (bol 1600 . 1600))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!noneCatoms2D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

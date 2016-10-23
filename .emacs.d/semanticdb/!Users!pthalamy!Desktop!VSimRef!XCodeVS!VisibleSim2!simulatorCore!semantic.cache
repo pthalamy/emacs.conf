@@ -1,0 +1,24 @@
+;; Object simulatorCore/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "simulatorCore/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("GLOBAL_LIBS" variable (:default-value ("\"-L./ -L/usr/local/lib  -L/usr/X11/lib -lsimCatoms3D -lsimCatoms2D -lsimRobotBlocks -lsimBlinkyBlocks -lsimSmartBlocks -lpthread -lGLEW -lGL -lGLU -lglut -lboost_thread -lboost_system\"")) nil [498 697])
+            ("GLOBAL_CCFLAGS" variable (:default-value ("\"-g -Wall -DTINYXML_USE_STL -DTIXML_USE_STL -DDEBUG_VM_MESSAGES\"")) nil [717 799])
+            ("SUBDIRS" variable (:default-value ("simulatorCore/src" "applicationsSrc")) nil [1339 1383])
+            ("GLOBAL_INCLUDES" variable (:default-value ("\"-I/usr/local/include -I/opt/local/include -I/usr/X11/include\"")) nil [1384 1465])
+            (".PHONY" function (:arguments ("subdirs" "$(SUBDIRS)")) nil [1467 1494])
+            ("subdirs" function (:arguments ("$(SUBDIRS)")) nil [1495 1515])
+            ("$(SUBDIRS)" function nil nil [1516 1668])
+            ("clean" function nil nil [1740 1824]))          
+      :file "Makefile"
+      :pointmax 1824
+      :fsize 1823
+      :lastmodtime '(22379 45160 0 0)
+      :unmatched-syntax '((shell-command 1762 . 1823) (bol 1761 . 1761) (semantic-list 1484 . 1493) (punctuation 1483 . 1484) (symbol 1475 . 1482) (punctuation 1473 . 1474) (symbol 1467 . 1473) (bol 1467 . 1467) (shell-command 1762 . 1823) (bol 1761 . 1761))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!simulatorCore!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

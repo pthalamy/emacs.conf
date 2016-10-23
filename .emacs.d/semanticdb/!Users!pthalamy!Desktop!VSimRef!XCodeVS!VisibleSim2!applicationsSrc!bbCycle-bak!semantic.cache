@@ -1,0 +1,34 @@
+;; Object bbCycle-bak/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bbCycle-bak/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("bbCycle.cpp" "bbCycleBlockCode.cpp")) nil [1 41])
+            ("OUT" variable (:default-value ("$(APPDIR)/bbCycle")) nil [42 66])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [67 90])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [90 119])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [120 181])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [568 616])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimBlinkyBlocks.a")) nil [617 677])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [678 706])
+            ("CC" variable (:default-value ("g++")) nil [706 715])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [716 739])
+            (".cpp.o" function nil nil [740 790])
+            ("%.depends" function (:arguments ("%.cpp")) nil [791 849])
+            ("all" function (:arguments ("$(OUT)")) nil [850 866])
+            ("test" function nil nil [867 877])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [878 919])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [920 945])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [947 1013])
+            ("clean" function nil nil [1068 1108]))          
+      :file "Makefile"
+      :pointmax 1108
+      :fsize 1107
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1076 . 1107) (bol 1075 . 1075) (semantic-list 1054 . 1060) (punctuation 1053 . 1054) (symbol 1044 . 1052) (bol 1044 . 1044))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!bbCycle-bak!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

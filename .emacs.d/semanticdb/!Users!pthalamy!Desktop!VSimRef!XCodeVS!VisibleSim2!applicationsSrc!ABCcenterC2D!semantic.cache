@@ -1,0 +1,192 @@
+;; Object ABCcenterC2D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ABCcenterC2D/"
+  :tables
+  (list
+    (semanticdb-table "ABCcenter.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("catoms2DSimulator.h" include nil nil [21 51])
+            ("catoms2DBlockCode.h" include nil nil [52 82])
+            ("ABCcenterCode.h" include nil nil [83 109])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [111 131])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [132 157])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [168 177])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [178 190]))                  
+                :type "int")
+                nil [159 362]))          
+      :file "ABCcenter.cpp"
+      :pointmax 363
+      :fsize 362
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ABCcenterCode.h"
+      :file "ABCcenterCode.h"
+      :fsize 2366
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "ABCcenterCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABCcenterCode.h" include nil nil [1 27])
+            ("myTabColors" variable
+               (:dereference 1
+                :default-value "{RED,ORANGE,YELLOW,GREEN,CYAN,BLUE,MAGENTA,GREY}"
+                :type ("Color" type (:type "class") nil nil))
+                nil [48 118])
+            ("delayMin" variable
+               (:constant-flag t
+                :default-value "100"
+                :type "int")
+                nil [119 142])
+            ("delayDelta" variable
+               (:constant-flag t
+                :default-value "20"
+                :type "int")
+                nil [143 167])
+            ("startup" function
+               (:parent "ABCcenterCode"
+                :type "void")
+                nil [169 1322])
+            ("mySpinningTreeFunc" function
+               (:parent "ABCcenterCode"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MessageOf" type
+                             (:template-specifier 
+                                ( ("SPdata" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1363 1391])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1392 1419]))                  
+                :type "void")
+                nil [1324 4862])
+            ("myAckSPFunc" function
+               (:parent "ABCcenterCode"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MessageOf" type
+                             (:template-specifier 
+                                ( ("ackData" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4897 4926])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4926 4954]))                  
+                :type "void")
+                nil [4865 7220])
+            ("myGo2BFunc" function
+               (:parent "ABCcenterCode"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MessageOf" type
+                             (:template-specifier 
+                                ( ("uint8_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7253 7282])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7282 7310]))                  
+                :type "void")
+                nil [7222 9461])
+            ("initModuleData" function
+               (:parent "ABCcenterCode"
+                :type "void")
+                nil [9464 9810])
+            ("_mySpinningTreeFunc" function
+               (:arguments 
+                  ( ("codebloc" variable
+                       (:pointer 1
+                        :type ("GenericCodeBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9837 9864])
+                    ("msg" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9864 9879])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9880 9907]))                  
+                :type "void")
+                nil [9812 10059])
+            ("_myAckSPFunc" function
+               (:arguments 
+                  ( ("codebloc" variable
+                       (:pointer 1
+                        :type ("GenericCodeBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10079 10106])
+                    ("msg" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10106 10121])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10122 10149]))                  
+                :type "void")
+                nil [10061 10296])
+            ("_myGo2BFunc" function
+               (:arguments 
+                  ( ("codebloc" variable
+                       (:pointer 1
+                        :type ("GenericCodeBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10315 10342])
+                    ("msg" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10342 10357])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10358 10385]))                  
+                :type "void")
+                nil [10298 10531]))          
+      :file "ABCcenterCode.cpp"
+      :pointmax 10532
+      :fsize 10531
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("ABCcenter.cpp" "ABCcenterCode.cpp")) nil [1 40])
+            ("OUT" variable (:default-value ("$(APPDIR)/ABCcenter")) nil [41 67])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [68 91])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [91 120])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [121 181])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib" "-lsimCatoms2D")) nil [568 630])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimCatoms2D.a")) nil [631 687])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [688 716])
+            ("CC" variable (:default-value ("g++")) nil [716 725])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [726 749])
+            (".cpp.o" function nil nil [750 800])
+            ("%.depends" function (:arguments ("%.cpp")) nil [801 859])
+            ("all" function (:arguments ("$(OUT)")) nil [860 876])
+            ("test" function nil nil [877 883])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [940 982])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [983 1008])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1133 1198])
+            ("clean" function nil nil [1254 1294]))          
+      :file "Makefile"
+      :pointmax 1294
+      :fsize 1293
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1262 . 1293) (bol 1261 . 1261) (semantic-list 1240 . 1246) (punctuation 1239 . 1240) (symbol 1230 . 1238) (bol 1230 . 1230))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!ABCcenterC2D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

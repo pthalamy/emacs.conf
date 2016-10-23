@@ -1,0 +1,33 @@
+;; Object sphereCatoms3D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sphereCatoms3D/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("sphereCatoms3D.cpp" "sphereCatoms3DBlockCode.cpp")) nil [1 55])
+            ("OUT" variable (:default-value ("sphereCatoms3D")) nil [56 77])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [78 101])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [101 130])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [131 191])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [578 626])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimCatoms3D.a")) nil [627 683])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [684 712])
+            ("CC" variable (:default-value ("g++")) nil [712 721])
+            (".PHONY" function (:arguments ("clean" "all")) nil [722 740])
+            (".cpp.o" function nil nil [741 791])
+            ("%.depends" function (:arguments ("%.cpp")) nil [792 850])
+            ("all" function (:arguments ("$(OUT)")) nil [851 863])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [864 906])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [907 932])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1057 1122])
+            ("clean" function nil nil [1142 1182]))          
+      :file "Makefile"
+      :pointmax 1182
+      :fsize 1181
+      :lastmodtime '(22349 18399 0 0)
+      :unmatched-syntax '((shell-command 1150 . 1181) (bol 1149 . 1149) (semantic-list 1134 . 1140) (punctuation 1133 . 1134) (symbol 1124 . 1132) (bol 1124 . 1124))))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSim!applicationsSrc!sphereCatoms3D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

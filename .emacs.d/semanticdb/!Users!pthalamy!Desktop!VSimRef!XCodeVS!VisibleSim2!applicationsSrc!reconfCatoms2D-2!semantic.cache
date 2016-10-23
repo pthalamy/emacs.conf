@@ -1,0 +1,66 @@
+;; Object reconfCatoms2D-2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "reconfCatoms2D-2/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("catom2D1.cpp" "catom2D1BlockCode.cpp")) nil [1 43])
+            ("OUT" variable (:default-value ("$(APPDIR)/catom2D1")) nil [44 69])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [70 93])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [93 122])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [123 184])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [571 619])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimCatoms2D.a")) nil [620 676])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [677 705])
+            ("CC" variable (:default-value ("g++")) nil [705 714])
+            (".PHONY" function (:arguments ("clean" "all")) nil [715 733])
+            (".cpp.o" function nil nil [734 784])
+            ("%.depends" function (:arguments ("%.cpp")) nil [785 843])
+            ("all" function (:arguments ("$(OUT)")) nil [844 860])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [861 904])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [905 930])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1055 1121])
+            ("clean" function nil nil [1177 1217]))          
+      :file "Makefile"
+      :pointmax 1217
+      :fsize 1216
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1185 . 1216) (bol 1184 . 1184) (semantic-list 1163 . 1169) (punctuation 1162 . 1163) (symbol 1153 . 1161) (bol 1153 . 1153)))
+    (semanticdb-table "catom2D1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [82 101])
+            ("catoms2DSimulator.h" include nil nil [102 132])
+            ("catoms2DBlockCode.h" include nil nil [133 163])
+            ("catom2D1BlockCode.h" include nil nil [164 194])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [196 216])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [217 242])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [253 262])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [263 275]))                  
+                :type "int")
+                nil [244 693]))          
+      :file "catom2D1.cpp"
+      :pointmax 694
+      :fsize 693
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "catom2D1BlockCode.h"
+      :file "catom2D1BlockCode.h"
+      :fsize 630
+      :lastmodtime '(22449 35660 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!reconfCatoms2D-2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

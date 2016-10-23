@@ -1,0 +1,41 @@
+;; Object noneCatoms2D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "noneCatoms2D/"
+  :tables
+  (list
+    (semanticdb-table "catom2D1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [82 101])
+            ("catoms2DSimulator.h" include nil nil [102 132])
+            ("catoms2DBlockCode.h" include nil nil [133 163])
+            ("catom2D1BlockCode.h" include nil nil [164 194])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [196 216])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [217 242])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [253 262])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [263 275]))                  
+                :type "int")
+                nil [244 775]))          
+      :file "catom2D1.cpp"
+      :pointmax 776
+      :fsize 775
+      :lastmodtime '(22349 18399 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "catom2D1BlockCode.h"
+      :file "catom2D1BlockCode.h"
+      :fsize 678
+      :lastmodtime '(22349 18399 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSim!applicationsSrc!noneCatoms2D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,222 @@
+;; Object musicPlayer/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "musicPlayer/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("musicPlayer.cpp" "musicPlayerBlockCode.cpp")) nil [1 49])
+            ("OUT" variable (:default-value ("$(APPDIR)/musicPlayer")) nil [50 78])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [79 102])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [102 131])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [132 193])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib" "-lsfml-audio" "-lsfml-system")) nil [580 655])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [656 719])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [720 748])
+            ("CC" variable (:default-value ("g++")) nil [748 757])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [758 781])
+            (".cpp.o" function nil nil [782 832])
+            ("%.depends" function (:arguments ("%.cpp")) nil [833 891])
+            ("all" function (:arguments ("$(OUT)")) nil [892 908])
+            ("test" function nil nil [909 978])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [979 1020])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [1021 1046])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1048 1114])
+            ("clean" function nil nil [1169 1209]))          
+      :file "Makefile"
+      :pointmax 1209
+      :fsize 1208
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1177 . 1208) (bol 1176 . 1176) (semantic-list 1155 . 1161) (punctuation 1154 . 1155) (symbol 1145 . 1153) (bol 1145 . 1145)))
+    (semanticdb-table "musicPlayerBlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [85 104])
+            ("sstream" include (:system-flag t) nil [105 123])
+            ("boost/asio.hpp" include (:system-flag t) nil [124 149])
+            ("memory" include (:system-flag t) nil [150 167])
+            ("stdio.h" include (:system-flag t) nil [168 186])
+            ("SFML/Audio.hpp" include (:system-flag t) nil [187 212])
+            ("scheduler.h" include nil nil [214 236])
+            ("network.h" include nil nil [237 257])
+            ("musicPlayerBlockCode.h" include nil nil [258 291])
+            ("musicPlayerEvents.h" include nil nil [292 322])
+            ("trace.h" include nil nil [323 341])
+            ("vector" include (:system-flag t) nil [342 359])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [361 381])
+            ("BlinkyBlocks" using (:type ("BlinkyBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [382 411])
+            ("SYNC_PERIOD" variable (:constant-flag t) nil [421 432])
+            ("SAMPLE_RATE" variable (:constant-flag t) nil [455 466])
+            ("TEMPO" variable (:constant-flag t) nil [481 486])
+            ("AMPLITUDE" variable (:constant-flag t) nil [499 508])
+            ("SAMPLES_Q" variable (:constant-flag t) nil [523 532])
+            ("SAMPLES_DQ" variable (:constant-flag t) nil [620 630])
+            ("SAMPLES_H" variable (:constant-flag t) nil [691 700])
+            ("SAMPLES_E" variable (:constant-flag t) nil [749 758])
+            ("SAMPLES_S" variable (:constant-flag t) nil [807 816])
+            ("A" variable (:constant-flag t) nil [866 867])
+            ("B" variable (:constant-flag t) nil [883 884])
+            ("C" variable (:constant-flag t) nil [900 901])
+            ("D" variable (:constant-flag t) nil [917 918])
+            ("E" variable (:constant-flag t) nil [934 935])
+            ("F" variable (:constant-flag t) nil [951 952])
+            ("G" variable (:constant-flag t) nil [968 969])
+            ("MusicPlayerBlockCode" function
+               (:constructor-flag t
+                :parent "MusicPlayerBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BlinkyBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1021 1045]))                  
+                :type ("MusicPlayerBlockCode" type (:type "class") nil nil))
+                nil [978 1133])
+            ("MusicPlayerBlockCode" function
+               (:destructor-flag t
+                :parent "MusicPlayerBlockCode"
+                :type "void")
+                nil [1135 1238])
+            ("init" function
+               (:parent "MusicPlayerBlockCode"
+                :type "void")
+                nil [1240 1809])
+            ("startup" function
+               (:parent "MusicPlayerBlockCode"
+                :type "void")
+                nil [1811 1965])
+            ("processLocalEvent" function
+               (:parent "MusicPlayerBlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2012 2025]))                  
+                :type "void")
+                nil [1967 5972])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "MusicPlayerBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BlinkyBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6051 6075]))                  
+                :type ("BlinkyBlocks::BlinkyBlocksBlockCode" type (:type "class") nil nil))
+                nil [5974 6120])
+            ("sendClockToNeighbors" function
+               (:parent "MusicPlayerBlockCode"
+                :arguments 
+                  ( ("p2pExcept" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6171 6202])
+                    ("hop" variable (:type "int") (reparse-symbol arg-sub-list) [6203 6211])
+                    ("clock" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6212 6227])
+                    ("id" variable (:type "int") (reparse-symbol arg-sub-list) [6228 6235]))                  
+                :type "void")
+                nil [6122 6643])
+            ("sendSongToNeighbors" function
+               (:parent "MusicPlayerBlockCode"
+                :arguments 
+                  ( ("p2pExcept" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6693 6724])
+                    ("score" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Note" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [6725 6749]))                  
+                :type "void")
+                nil [6645 7503])
+            ("Score" function
+               (:parent "MusicPlayerBlockCode"
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("Note" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [7505 9530])
+            ("SynchroMessage" function
+               (:constructor-flag t
+                :parent "SynchroMessage"
+                :arguments 
+                  ( ("t" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9563 9574])
+                    ("hop" variable (:type "int") (reparse-symbol arg-sub-list) [9575 9583])
+                    ("ids" variable (:type "int") (reparse-symbol arg-sub-list) [9584 9592]))                  
+                :type ("SynchroMessage" type (:type "class") nil nil))
+                nil [9532 9663])
+            ("SynchroMessage" function
+               (:destructor-flag t
+                :parent "SynchroMessage"
+                :type "void")
+                nil [9665 9700])
+            ("ScoreMessage" function
+               (:constructor-flag t
+                :parent "ScoreMessage"
+                :arguments 
+                  ( ("song" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Note" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [9729 9752]))                  
+                :type ("ScoreMessage" type (:type "class") nil nil))
+                nil [9702 9799])
+            ("ScoreMessage" function
+               (:destructor-flag t
+                :parent "ScoreMessage"
+                :type "void")
+                nil [9801 9832])
+            ("Note" function
+               (:constructor-flag t
+                :parent "Note"
+                :arguments 
+                  ( ("freq" variable (:type "float") (reparse-symbol arg-sub-list) [9845 9856])
+                    ("time" variable (:type "float") (reparse-symbol arg-sub-list) [9857 9868])
+                    ("div" variable (:type "int") (reparse-symbol arg-sub-list) [9869 9877]))                  
+                :type ("Note" type (:type "class") nil nil))
+                nil [9834 9928])
+            ("Note" function
+               (:destructor-flag t
+                :parent "Note"
+                :type "void")
+                nil [9930 9945]))          
+      :file "musicPlayerBlockCode.cpp"
+      :pointmax 9946
+      :fsize 9933
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("A" . ((number "440.00" 868 . 874)))
+          ("B" . ((number "493.88" 885 . 891)))
+          ("C" . ((number "261.63" 902 . 908)))
+          ("SAMPLES_Q" . ((semantic-list "(const unsigned)" 533 . 549) (semantic-list "((60./(float)TEMPO)*SAMPLE_RATE)" 549 . 581)))
+          ("D" . ((number "293.66" 919 . 925)))
+          ("SAMPLES_E" . ((semantic-list "(SAMPLES_Q/2)" 759 . 772)))
+          ("E" . ((number "329.63" 936 . 942)))
+          ("SYNC_PERIOD" . ((semantic-list "(1*1000*1000)" 433 . 446)))
+          ("SAMPLES_S" . ((semantic-list "(SAMPLES_Q/4)" 817 . 830)))
+          ("F" . ((number "349.23" 953 . 959)))
+          ("SAMPLE_RATE" . ((number "44100" 467 . 472)))
+          ("G" . ((number "392.00" 970 . 976)))
+          ("TEMPO" . ((number "65" 487 . 489)))
+          ("SAMPLES_H" . ((semantic-list "(SAMPLES_Q*2)" 701 . 714)))
+          ("AMPLITUDE" . ((number "30000" 509 . 514)))
+          ("SAMPLES_DQ" . ((semantic-list "(SAMPLES_Q*1.5)" 631 . 646)))
+          )
+)
+    (semanticdb-table "musicPlayerBlockCode.h"
+      :file "musicPlayerBlockCode.h"
+      :fsize 1709
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "musicPlayerEvents.h"
+      :file "musicPlayerEvents.h"
+      :fsize 1389
+      :lastmodtime '(22449 35660 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!musicPlayer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

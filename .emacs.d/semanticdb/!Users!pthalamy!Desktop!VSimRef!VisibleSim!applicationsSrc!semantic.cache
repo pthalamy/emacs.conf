@@ -1,0 +1,21 @@
+;; Object applicationsSrc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "applicationsSrc/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("noneCatoms2D" "bbCycle" "robot01" "smartBlocks1" "csgCatoms3D")) nil [1 65])
+            (".PHONY" function (:arguments ("subdirs" "$(SUBDIRS)")) nil [368 395])
+            ("subdirs" function (:arguments ("$(SUBDIRS)")) nil [396 416])
+            ("$(SUBDIRS)" function nil nil [417 622])
+            ("clean" function nil nil [780 864]))          
+      :file "Makefile"
+      :pointmax 864
+      :fsize 863
+      :lastmodtime '(22349 19127 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSim!applicationsSrc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1953 @@
+;; Object reconfCatoms2D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "reconfCatoms2D/"
+  :tables
+  (list
+    (semanticdb-table "reconfiguration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("set" include (:system-flag t) nil [84 98])
+            ("iostream" include (:system-flag t) nil [99 118])
+            ("cstring" include (:system-flag t) nil [119 137])
+            ("memory" include (:system-flag t) nil [138 155])
+            ("catoms2DWorld.h" include nil nil [157 183])
+            ("scheduler.h" include nil nil [184 206])
+            ("events.h" include nil nil [207 226])
+            ("reconfiguration.h" include nil nil [227 255])
+            ("reconfigurationMsg.h" include nil nil [256 287])
+            ("RECONFIGURATION_WITH_COLOR" variable (:constant-flag t) nil [404 430])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [432 452])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [453 478])
+            ("ROTATION_DIRECTION" variable (:constant-flag t) nil [488 506])
+            ("OPPOSITE_ROTATION_DIRECTION" variable (:constant-flag t) nil [537 564])
+            ("STRATEGY_TWO" variable (:constant-flag t) nil [625 637])
+            ("MY_CERR" variable (:constant-flag t) nil [647 654])
+            ("PerimeterCaseState" function
+               (:constructor-flag t
+                :parent "PerimeterCaseState"
+                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                nil [727 786])
+            ("PerimeterCaseState" function
+               (:constructor-flag t
+                :parent "PerimeterCaseState"
+                :arguments 
+                  ( ("c" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [827 840])
+                    ("s" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("reconfigurationState_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [841 872]))                  
+                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                nil [788 902])
+            ("PerimeterCaseState" function
+               (:constructor-flag t
+                :parent "PerimeterCaseState"
+                :arguments 
+                  ( ("pcs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [943 973]))                  
+                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                nil [904 1019])
+            ("PerimeterCaseState" function
+               (:destructor-flag t
+                :parent "PerimeterCaseState"
+                :type "void")
+                nil [1021 1065])
+            ("reset" function
+               (:parent "PerimeterCaseState"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1098 1112]))                  
+                :type "void")
+                nil [1067 1128])
+            ("toString" function
+               (:parent "PerimeterCaseState"
+                :type ("string" type (:type "class") nil nil))
+                nil [1130 1396])
+            ("Reconfiguration" function
+               (:constructor-flag t
+                :parent "Reconfiguration"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1468 1485])
+                    ("m" variable
+                       (:pointer 1
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1486 1493]))                  
+                :type ("Reconfiguration" type (:type "class") nil nil))
+                nil [1435 1940])
+            ("Reconfiguration" function
+               (:destructor-flag t
+                :parent "Reconfiguration"
+                :type "void")
+                nil [1942 1980])
+            ("updatePosition" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [1982 2117])
+            ("toString" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("s" variable (:type ("reconfigurationState_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2157 2182]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2119 2540])
+            ("handleStopMovingEvent" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [2542 3660])
+            ("handle" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("m" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3691 3704]))                  
+                :type "void")
+                nil [3662 9941])
+            ("start" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [9943 10370])
+            ("hasConverged" function
+               (:parent "Reconfiguration"
+                :type "bool")
+                nil [10372 10774])
+            ("updateState" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [10776 11003])
+            ("advertiseBeforeMoving" function
+               (:parent "Reconfiguration"
+                :type "int")
+                nil [11348 11733])
+            ("move" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [11735 12069])
+            ("queryStates" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [12071 12556])
+            ("shouldMove" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("pivot" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12591 12618])
+                    ("pcs" variable
+                       (:reference 1
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12619 12643]))                  
+                :type "bool")
+                nil [12558 13095])
+            ("canMove" function
+               (:pointer 1
+                :parent "Reconfiguration"
+                :arguments 
+                  ( ("pcs" variable
+                       (:reference 1
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13143 13167]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [13097 14105])
+            ("isInTarget" function
+               (:parent "Reconfiguration"
+                :type "bool")
+                nil [14107 14193])
+            ("isOnBorder" function
+               (:parent "Reconfiguration"
+                :type "bool")
+                nil [14195 14277])
+            ("isFree" function
+               (:parent "Reconfiguration"
+                :type "bool")
+                nil [14279 14400])
+            ("getPivot" function
+               (:pointer 1
+                :parent "Reconfiguration"
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [14402 14518])
+            ("getCellAfterRotationAround" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("pivot" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14575 14602]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [14520 14763])
+            ("nextMove" function
+               (:pointer 1
+                :parent "Reconfiguration"
+                :type ("Rotation2DMove" type (:type "class") nil nil))
+                nil [14765 14979])
+            ("forwardStateUpdate" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("p2p" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15022 15047])
+                    ("pcs" variable
+                       (:reference 1
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15048 15072]))                  
+                :type "void")
+                nil [14981 15174])
+            ("forwardStopMoving" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("p2p" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15216 15241])
+                    ("c" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15242 15256]))                  
+                :type "void")
+                nil [15176 15354])
+            ("isDone" function
+               (:parent "Reconfiguration"
+                :type "bool")
+                nil [15356 15822])
+            ("isMoving" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15855 15869]))                  
+                :type "bool")
+                nil [15824 16027])
+            ("isNeighborToMoving" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16070 16084]))                  
+                :type "bool")
+                nil [16029 16258])
+            ("removeMoving" function
+               (:parent "Reconfiguration"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16295 16309]))                  
+                :type "void")
+                nil [16260 16469])
+            ("printMoving" function
+               (:parent "Reconfiguration"
+                :type "void")
+                nil [16472 16662]))          
+      :file "reconfiguration.cpp"
+      :pointmax 16663
+      :fsize 16662
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("STRATEGY_TWO")
+          ("ROTATION_DIRECTION" . 
+              ((symbol "RelativeDirection" 507 . 524) (punctuation ":" 524 . 525) (punctuation ":" 525 . 526) (symbol "CW" 526 . 528)))
+          ("RECONFIGURATION_WITH_COLOR")
+          ("MY_CERR" . 
+              ((symbol "cerr" 655 . 659) (punctuation "<" 660 . 661) (punctuation "<" 661 . 662) (string "\"@\"" 663 . 666) (punctuation "<" 667 . 668) (punctuation "<" 668 . 669) (symbol "catom" 670 . 675) (punctuation "-" 675 . 676) (punctuation ">" 676 . 677) (symbol "blockId" 677 . 684)))
+          ("OPPOSITE_ROTATION_DIRECTION" . 
+              ((symbol "RelativeDirection" 565 . 582) (punctuation ":" 582 . 583) (punctuation ":" 583 . 584) (symbol "getOpposite" 584 . 595) (semantic-list "(ROTATION_DIRECTION)" 595 . 615)))
+          )
+)
+    (semanticdb-table "reconfiguration.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("RECONFIGURATION_H_" variable (:constant-flag t) nil [120 138])
+            ("list" include (:system-flag t) nil [140 155])
+            ("catoms2DBlock.h" include nil nil [156 182])
+            ("rotation2DEvents.h" include nil nil [183 212])
+            ("network.h" include nil nil [214 234])
+            ("map.h" include nil nil [235 251])
+            ("border.h" include nil nil [252 271])
+            ("reconfigurationState_t" type
+               (:members 
+                  ( ("NOT_SET" variable
+                       (:constant-flag t
+                        :default-value (312 314)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [302 314])
+                    ("UNKNOWN" variable
+                       (:constant-flag t
+                        :default-value (326 328)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [316 328])
+                    ("BLOCKED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [330 338])
+                    ("WAITING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [339 347])
+                    ("ASK_TO_MOVE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [348 360])
+                    ("MOVING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [361 368])
+                    ("GOAL" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [369 374]))                  
+                :type "enum")
+                nil [273 375])
+            ("PerimeterCaseState" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [405 412])
+                    ("cell" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [415 431])
+                    ("states" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("reconfigurationState_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [434 475])
+                    ("PerimeterCaseState" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [479 500])
+                    ("PerimeterCaseState" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("c" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [522 535])
+                            ("s" variable (:type ("list" type
+                                 (:template-specifier 
+                                    ( ("reconfigurationState_t" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [536 567]))                          
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [503 568])
+                    ("PerimeterCaseState" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("pcs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [590 620]))                          
+                        :type ("PerimeterCaseState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [571 621])
+                    ("PerimeterCaseState" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [624 646])
+                    ("reset" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [661 675]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [650 676])
+                    ("toString" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [679 702]))                  
+                :type "class")
+                nil [377 705])
+            ("Reconfiguration" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [733 741])
+                    ("state" variable (:type ("reconfigurationState_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [745 774])
+                    ("catom" variable
+                       (:pointer 1
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [778 809])
+                    ("map" variable
+                       (:pointer 1
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [813 822])
+                    ("started" variable (:type "bool") (reparse-symbol classsubparts) [826 839])
+                    ("moving" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("Coordinate" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [966 995])
+                    ("nbWaitingAuthorization" variable (:type "int") (reparse-symbol classsubparts) [999 1026])
+                    ("init" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1034 1046])
+                    ("updatePosition" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1050 1072])
+                    ("updateState" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1076 1095])
+                    ("advertiseBeforeMoving" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1103 1131])
+                    ("isMoving" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1149 1163]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1135 1164])
+                    ("isNeighborToMoving" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1192 1206]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1168 1207])
+                    ("removeMoving" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1229 1243]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1211 1244])
+                    ("forwardStopMoving" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p2p" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1271 1296])
+                            ("c" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1297 1311]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1248 1312])
+                    ("printMoving" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1316 1335])
+                    ("move" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1343 1355])
+                    ("queryStates" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1359 1378])
+                    ("getPivot" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1382 1414])
+                    ("getCellAfterRotationAround" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pivot" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1456 1483]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1418 1484])
+                    ("isFree" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1488 1502])
+                    ("isInTarget" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1507 1525])
+                    ("isOnBorder" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1529 1547])
+                    ("hasConverged" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1551 1571])
+                    ("canMove" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("pcs" variable
+                               (:reference 1
+                                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1608 1632]))                          
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1579 1633])
+                    ("shouldMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pivot" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1653 1680])
+                            ("pcs" variable
+                               (:reference 1
+                                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1681 1705]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1637 1706])
+                    ("forwardStateUpdate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p2p" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1734 1759])
+                            ("pcs" variable
+                               (:reference 1
+                                :type ("PerimeterCaseState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1760 1784]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1710 1785])
+                    ("nextMove" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("Rotation2DMove" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1789 1816])
+                    ("public" label nil (reparse-symbol classsubparts) [1817 1824])
+                    ("Reconfiguration" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1848 1875])
+                            ("m" variable
+                               (:pointer 1
+                                :type ("Map" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1876 1883]))                          
+                        :type ("Reconfiguration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1832 1884])
+                    ("Reconfiguration" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1888 1907])
+                    ("start" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1912 1925])
+                    ("handle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("m" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1941 1954]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1929 1955])
+                    ("handleStopMovingEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1959 1988])
+                    ("isDone" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1993 2014])
+                    ("toString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("s" variable (:type ("reconfigurationState_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2046 2071]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2018 2072]))                  
+                :type "class")
+                nil [707 2075]))          
+      :file "reconfiguration.h"
+      :pointmax 2084
+      :fsize 2083
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("RECONFIGURATION_H_")
+          )
+)
+    (semanticdb-table "reconfigurationMsg.h"
+      :file "reconfigurationMsg.h"
+      :fsize 3965
+      :lastmodtime '(22449 35661 0 0))
+    (semanticdb-table "centralizedReconfiguration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("climits" include (:system-flag t) nil [21 39])
+            ("centralizedReconfiguration.h" include nil nil [40 79])
+            ("bfs.h" include nil nil [80 96])
+            ("catoms2DWorld.h" include nil nil [97 123])
+            ("coordinate.h" include nil nil [124 147])
+            ("rotation2DEvents.h" include nil nil [149 178])
+            ("map.h" include nil nil [179 195])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [197 217])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [218 243])
+            ("COLOR_DEBUG" variable (:constant-flag t) nil [253 264])
+            ("ROTATION_DIRECTION" variable (:constant-flag t) nil [273 291])
+            ("UNDEFINED_GRADIENT" variable (:constant-flag t) nil [322 340])
+            ("CONSECUTIVE_NEIGHBORS" variable (:constant-flag t) nil [353 374])
+            ("NB_MAX_CONSECUTIVE_NEIGHBORS_TO_MOVE" variable (:constant-flag t) nil [383 419])
+            ("state_t" type
+               (:members 
+                  ( ("MOVING" variable
+                       (:constant-flag t
+                        :default-value (465 466)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [456 466])
+                    ("UNMOVING" variable
+                       (:constant-flag t
+                        :default-value (479 480)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [468 480])
+                    ("STABLE" variable
+                       (:constant-flag t
+                        :default-value (491 492)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [482 492])
+                    ("HAS_TO_MOVE" variable
+                       (:constant-flag t
+                        :default-value (508 509)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [494 509])
+                    ("UNKNOWN" variable
+                       (:constant-flag t
+                        :default-value (521 522)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [511 522]))                  
+                :type "enum")
+                nil [442 524])
+            ("moves" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [526 547])
+            ("getMapBottomRight" function
+               (:typemodifiers ("static")
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [549 1089])
+            ("getTargetBottomLeft" function
+               (:typemodifiers ("static")
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [1091 1586])
+            ("isNeighbor" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1611 1628])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1628 1641]))                  
+                :type "bool")
+                nil [1588 1856])
+            ("isOver" function
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [1858 2246])
+            ("nextInterface" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2290 2307])
+                    ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2308 2339])
+                    ("p2p" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2340 2365]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [2248 2821])
+            ("extremeNeighborInDirection" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3741 3758])
+                    ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3759 3790]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [3686 4539])
+            ("reverseDirection" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4595 4626]))                  
+                :type ("RelativeDirection::Direction" type (:type "class") nil nil))
+                nil [4541 4818])
+            ("lastNeighborInDirection" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4872 4889])
+                    ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4890 4921]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [4820 5044])
+            ("firstNeighborInDirection" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5099 5116])
+                    ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5117 5148]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [5046 5193])
+            ("previousInterfacePerimeter" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5250 5268]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [5195 5328])
+            ("nextInterfacePerimeter" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5381 5399]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [5330 5458])
+            ("nextCatomPerimeter" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5501 5519]))                  
+                :type ("Catoms2DBlock" type (:type "class") nil nil))
+                nil [5460 5700])
+            ("previousCatomPerimeter" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5747 5765]))                  
+                :type ("Catoms2DBlock" type (:type "class") nil nil))
+                nil [5702 5855])
+            ("nextMove" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5889 5907]))                  
+                :type ("Rotation2DMove" type (:type "class") nil nil))
+                nil [5857 6148])
+            ("getPosition" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6180 6197])
+                    ("m" variable
+                       (:reference 1
+                        :type ("Rotation2DMove" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6198 6216]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [6150 6485])
+            ("isInTarget" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6510 6524]))                  
+                :type "bool")
+                nil [6487 6604])
+            ("canMove" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7629 7646])
+                    ("m" variable
+                       (:reference 1
+                        :type ("Rotation2DMove" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7647 7665])
+                    ("states" variable
+                       (:dereference 1
+                        :type ("state_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7666 7683]))                  
+                :type "bool")
+                nil [7609 11783])
+            ("canMove" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11805 11822])
+                    ("gradient" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [11823 11838]))                  
+                :type "bool")
+                nil [11785 12662])
+            ("updateState" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("states" variable
+                       (:dereference 1
+                        :type ("state_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12688 12705])
+                    ("gradient" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [12706 12721]))                  
+                :type "void")
+                nil [12664 13794])
+            ("move" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13813 13830])
+                    ("m" variable
+                       (:reference 1
+                        :type ("Rotation2DMove" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13831 13849]))                  
+                :type "void")
+                nil [13796 14383])
+            ("updateGradient" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14412 14429])
+                    ("gradient" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [14430 14445]))                  
+                :type "void")
+                nil [14385 14933])
+            ("centralized_reconfiguration" function (:type "void") nil [14935 18135]))          
+      :file "centralizedReconfiguration.cpp"
+      :pointmax 18136
+      :fsize 18135
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("COLOR_DEBUG")
+          ("ROTATION_DIRECTION" . 
+              ((symbol "RelativeDirection" 292 . 309) (punctuation ":" 309 . 310) (punctuation ":" 310 . 311) (symbol "CW" 311 . 313)))
+          ("CONSECUTIVE_NEIGHBORS")
+          ("NB_MAX_CONSECUTIVE_NEIGHBORS_TO_MOVE" . ((number "3" 420 . 421)))
+          ("UNDEFINED_GRADIENT" . ((punctuation "-" 341 . 342) (number "1" 342 . 343)))
+          )
+)
+    (semanticdb-table "centralizedReconfiguration.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CENTRALIZED_RECONFIGURATION_H" variable (:constant-flag t) nil [47 76])
+            ("centralized_reconfiguration" function
+               (:prototype-flag t
+                :type "void")
+                nil [78 113]))          
+      :file "centralizedReconfiguration.h"
+      :pointmax 122
+      :fsize 121
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CENTRALIZED_RECONFIGURATION_H")
+          )
+)
+    (semanticdb-table "bfs.h"
+      :file "bfs.h"
+      :fsize 1606
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "coordinate.h"
+      :file "coordinate.h"
+      :fsize 919
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "map.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MAP_H_" variable (:constant-flag t) nil [94 100])
+            ("catoms2DBlockCode.h" include nil nil [102 132])
+            ("catoms2DSimulator.h" include nil nil [133 163])
+            ("catoms2DBlock.h" include nil nil [165 191])
+            ("network.h" include nil nil [192 212])
+            ("memory" include (:system-flag t) nil [213 230])
+            ("coordinate.h" include nil nil [231 254])
+            ("border.h" include nil nil [255 274])
+            ("Map" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [289 296])
+                    ("ccth" variable
+                       (:typemodifiers ("static")
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [323 346])
+                    ("isConnected" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [349 373])
+                    ("catom2D" variable
+                       (:pointer 1
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [379 412])
+                    ("connectedToHost" variable (:type "bool") (reparse-symbol classsubparts) [415 436])
+                    ("positionKnown" variable (:type "bool") (reparse-symbol classsubparts) [439 458])
+                    ("position" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [461 481])
+                    ("waiting" variable (:type "int") (reparse-symbol classsubparts) [484 496])
+                    ("toHost" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [499 527])
+                    ("border" variable (:type ("Border" type (:type "class") nil nil)) (reparse-symbol classsubparts) [530 544])
+                    ("Map" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [552 582]))                          
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [548 583])
+                    ("Map" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Map" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [590 603]))                          
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [586 604])
+                    ("Map" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [607 614])
+                    ("connectToHost" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [618 639])
+                    ("handleMessage" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("message" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [661 680]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [642 681])
+                    ("getPosition" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("it" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [707 731]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [684 732])
+                    ("setPosition" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [752 765]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [735 766])
+                    ("getPosition" function
+                       (:prototype-flag t
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [769 794])
+                    ("real2Virtual" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [821 834]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [797 835])
+                    ("virtual2Real" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [862 875]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [838 876])
+                    ("real2Virtual" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("o" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [910 923])
+                            ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [924 937]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [879 938])
+                    ("virtual2Real" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("o" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [972 985])
+                            ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [986 999]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [941 1000])
+                    ("getPosition" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("catom2D" variable
+                               (:pointer 1
+                                :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1033 1066])
+                            ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1067 1080])
+                            ("it" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1081 1105]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1003 1106])
+                    ("buildMap" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1110 1126])
+                    ("mapBuilt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("d" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1143 1166]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1129 1167])
+                    ("getInterface" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("pos" variable
+                               (:reference 1
+                                :type ("Coordinate" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1205 1221]))                          
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1171 1222])
+                    ("getClosestInterface" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("dest" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1266 1282])
+                            ("ignore" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1283 1311]))                          
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1225 1312])
+                    ("distance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p1" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1328 1342])
+                            ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1343 1357]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1315 1358])
+                    ("distance" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1374 1388]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1361 1389])
+                    ("areNeighbors" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("p1" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1418 1432])
+                            ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1433 1447]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1393 1448])
+                    ("isInTarget" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1474 1487]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1451 1488])
+                    ("getOnBorderNeighbor" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("d" variable (:type ("Catoms2D::RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1537 1578]))                          
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1492 1579])
+                    ("getOnBorderNeighborInterface" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("d" variable (:type ("Catoms2D::RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1632 1673]))                          
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1582 1674])
+                    ("getOnBorderNeighborCoordinate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("d" variable (:type ("Catoms2D::RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1718 1759]))                          
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1677 1760]))                  
+                :type "class")
+                nil [276 1764])
+            ("GO_MAP_MSG" variable (:constant-flag t) nil [1786 1796])
+            ("BACK_MAP_MSG" variable (:constant-flag t) nil [1811 1823])
+            ("GoMapMessage" type
+               (:prototype t
+                :type "class")
+                nil [1831 1850])
+            ("GoMapMessage_ptr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("GoMapMessage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [1851 1906])
+            ("GoMapMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("protected" label nil (reparse-symbol classsubparts) [1947 1957])
+                    ("position" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1960 1980])
+                    ("public" label nil (reparse-symbol classsubparts) [1982 1989])
+                    ("GoMapMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2008 2021]))                          
+                        :type ("GoMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1995 2081])
+                    ("GoMapMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("m" variable
+                               (:pointer 1
+                                :type ("GoMapMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2098 2114]))                          
+                        :type ("GoMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2085 2181])
+                    ("GoMapMessage" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2188 2206])
+                    ("getPosition" function (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2210 2253])
+                    ("size" function (:type "unsigned int") (reparse-symbol classsubparts) [2257 2290]))                  
+                :type "class")
+                nil [1908 2294])
+            ("BackMapMessage" type
+               (:prototype t
+                :type "class")
+                nil [2296 2317])
+            ("BackMapMessage_ptr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("BackMapMessage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [2318 2377])
+            ("BackMapMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2420 2427])
+                    ("BackMapMessage" function
+                       (:constructor-flag t
+                        :type ("BackMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2429 2489])
+                    ("BackMapMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("m" variable
+                               (:pointer 1
+                                :type ("BackMapMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2508 2526]))                          
+                        :type ("BackMapMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2493 2565])
+                    ("BackMapMessage" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2572 2592])
+                    ("size" function (:type "unsigned int") (reparse-symbol classsubparts) [2596 2629]))                  
+                :type "class")
+                nil [2379 2633]))          
+      :file "map.h"
+      :pointmax 2642
+      :fsize 2641
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax '((punctuation 2629 . 2630) (punctuation 2592 . 2593) (punctuation 2565 . 2566) (punctuation 2489 . 2490) (punctuation 2290 . 2291) (punctuation 2253 . 2254) (punctuation 2206 . 2207) (punctuation 2181 . 2182) (punctuation 2081 . 2082))
+      :lexical-table 
+        '(("MAP_H_")
+          ("BACK_MAP_MSG" . ((number "15001" 1824 . 1829)))
+          ("GO_MAP_MSG" . ((number "15000" 1797 . 1802)))
+          )
+)
+    (semanticdb-table "map.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("map.h" include nil nil [1 17])
+            ("localTupleSpace.hpp" include nil nil [18 48])
+            ("tuple.hpp" include nil nil [49 69])
+            ("contextTuple.hpp" include nil nil [70 97])
+            ("catoms2DWorld.h" include nil nil [99 125])
+            ("vector3D.h" include nil nil [126 147])
+            ("REAL_COORDINATES" variable (:constant-flag t) nil [187 203])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [225 250])
+            ("Map::ccth" variable (:type ("Coordinate" type (:type "class") nil nil)) nil [252 273])
+            ("Map::isConnected" variable
+               (:default-value "false"
+                :type "bool")
+                nil [274 304])
+            ("Map" function
+               (:constructor-flag t
+                :parent "Map"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [315 335]))                  
+                :type ("Map" type (:type "class") nil nil))
+                nil [306 455])
+            ("Map" function
+               (:constructor-flag t
+                :parent "Map"
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [466 479]))                  
+                :type ("Map" type (:type "class") nil nil))
+                nil [457 642])
+            ("Map" function
+               (:destructor-flag t
+                :parent "Map"
+                :type "void")
+                nil [644 658])
+            ("connectToHost" function
+               (:parent "Map"
+                :type "void")
+                nil [660 1279])
+            ("handleMessage" function
+               (:parent "Map"
+                :arguments 
+                  ( ("message" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1305 1324]))                  
+                :type "bool")
+                nil [1281 3166])
+            ("buildMap" function
+               (:parent "Map"
+                :type "void")
+                nil [3168 3499])
+            ("mapBuilt" function
+               (:parent "Map"
+                :arguments 
+                  ( ("d" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3520 3543]))                  
+                :type "void")
+                nil [3501 3610])
+            ("setPosition" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3634 3647]))                  
+                :type "void")
+                nil [3612 3691])
+            ("getPosition" function
+               (:parent "Map"
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [3693 3745])
+            ("real2Virtual" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3776 3789]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [3747 3871])
+            ("virtual2Real" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3902 3915]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [3873 3950])
+            ("real2Virtual" function
+               (:parent "Map"
+                :arguments 
+                  ( ("o" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3981 3994])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3995 4008]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [3952 4159])
+            ("virtual2Real" function
+               (:parent "Map"
+                :arguments 
+                  ( ("o" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4190 4203])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4204 4217]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [4161 4362])
+            ("getPosition" function
+               (:parent "Map"
+                :arguments 
+                  ( ("catom2D" variable
+                       (:pointer 1
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4442 4475])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4476 4489])
+                    ("it" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4490 4514]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [4414 5234])
+            ("getPosition" function
+               (:parent "Map"
+                :arguments 
+                  ( ("it" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5264 5288]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [5236 5337])
+            ("getClosestInterface" function
+               (:pointer 1
+                :parent "Map"
+                :arguments 
+                  ( ("dest" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5385 5401])
+                    ("ignore" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5402 5430]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [5339 5810])
+            ("getInterface" function
+               (:pointer 1
+                :parent "Map"
+                :arguments 
+                  ( ("pos" variable
+                       (:reference 1
+                        :type ("Coordinate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5851 5867]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [5812 6098])
+            ("distance" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p1" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6118 6132])
+                    ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6133 6147]))                  
+                :type "int")
+                nil [6100 6198])
+            ("distance" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6218 6232]))                  
+                :type "int")
+                nil [6200 6268])
+            ("areNeighbors" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p1" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6293 6307])
+                    ("p2" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6308 6322]))                  
+                :type "bool")
+                nil [6270 6504])
+            ("isInTarget" function
+               (:parent "Map"
+                :arguments 
+                  ( ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6527 6540]))                  
+                :type "bool")
+                nil [6506 6672])
+            ("getOnBorderNeighborInterface" function
+               (:pointer 1
+                :parent "Map"
+                :arguments 
+                  ( ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6729 6760]))                  
+                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                nil [6674 6797])
+            ("getOnBorderNeighbor" function
+               (:pointer 1
+                :parent "Map"
+                :arguments 
+                  ( ("d" variable (:type ("Catoms2D::RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6839 6880]))                  
+                :type ("Catoms2DBlock" type (:type "class") nil nil))
+                nil [6799 7135])
+            ("getOnBorderNeighborCoordinate" function
+               (:parent "Map"
+                :arguments 
+                  ( ("d" variable (:type ("RelativeDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7183 7214]))                  
+                :type ("Coordinate" type (:type "class") nil nil))
+                nil [7137 7264]))          
+      :file "map.cpp"
+      :pointmax 7265
+      :fsize 7264
+      :lastmodtime '(22453 24969 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("REAL_COORDINATES")
+          )
+)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("mkfile_path" variable (:default-value ("$(abspath $(lastword $(MAKEFILE_LIST)))")) nil [32 87])
+            ("current_dir" variable (:default-value ("$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))")) nil [87 151])
+            ("APPDIR" variable (:default-value ("../../applicationsBin/$(current_dir)")) nil [151 197])
+            ("SRCS" variable (:default-value ("bfs.cpp" "centralizedReconfiguration.cpp" "reconfiguration.cpp" "CTuples.cpp" "angle.cpp" "map.cpp" "segment.cpp" "gpsr.cpp" "catom2D1.cpp" "catom2D1BlockCode.cpp" "border.cpp" "landmarks.cpp")) nil [718 895])
+            ("OUT" variable (:default-value ("$(APPDIR)/catom2D1")) nil [965 990])
+            ("MODULELIB" variable (:default-value ("-lsimCatoms2D")) nil [1067 1093])
+            ("TESTS" variable (:default-value ("../../utilities/blockCodeTest.sh" "catom2D1" "$(OUT)")) nil [1172 1229])
+            ("APPLIBS" variable (:default-value ("-L./ts" "-lTS")) nil [1231 1254])
+            ("APPLIBFILES" variable (:default-value ("ts/libTS.a")) nil [1254 1279])
+            ("APPINCLUDES" variable (:default-value ("-I./ts")) nil [1279 1300])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [1423 1446])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [1446 1475])
+            ("OS" variable (:default-value ("$(shell uname -s)")) nil [1476 1499])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [1499 1562])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "-I/usr/local/include" "-I/opt/local/include" "-I/usr/X11/include")) nil [1591 1693])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [1698 1758])
+            ("INCLUDES" variable (:default-value ("$(APPINCLUDES)")) nil [1765 1792])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-lGLEW" "-lglut" "-framework" "GLUT" "-framework" "OpenGL" "-L/usr/X11/lib" "/usr/local/lib/libglut.dylib" "$(MODULELIB)")) nil [1838 1998])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-L/opt/local/lib" "-lm" "-L/usr/X11/lib" "-lglut" "-lGL" "-lGLU" "-lGLEW" "-lpthread" "$(MODULELIB)")) nil [2004 2144])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [2163 2211])
+            ("LIBS" variable (:default-value ("$(APPLIBS)")) nil [2234 2253])
+            ("CCFLAGS" variable (:default-value ("-g" "-Wall" "-std=c++11" "-DTINYXML_USE_STL" "-DTIXML_USE_STL")) nil [2280 2344])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [2498 2526])
+            ("CC" variable (:default-value ("g++")) nil [2533 2542])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [2543 2566])
+            (".cpp.o" function nil nil [2567 2617])
+            ("%.depends" function (:arguments ("%.cpp")) nil [2618 2676])
+            ("all" function (:arguments ("$(OUT)")) nil [2677 2693])
+            ("test" function nil nil [2693 2710])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [2711 2753])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [2754 2779])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(APPLIBFILES)" "$(OBJS)")) nil [2780 2860])
+            ("$(APPLIBFILES)" function nil nil [2861 2894])
+            ("clean" function nil nil [2949 2989]))          
+      :file "Makefile"
+      :pointmax 2989
+      :fsize 2988
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 2957 . 2988) (bol 2956 . 2956) (semantic-list 2935 . 2941) (punctuation 2934 . 2935) (symbol 2925 . 2933) (bol 2925 . 2925) (shell-command 2486 . 2492) (bol 2485 . 2485) (shell-command 2367 . 2484) (bol 2366 . 2366) (shell-command 2345 . 2365) (bol 2344 . 2344) (ENDIF 2211 . 2216) (bol 2211 . 2211) (shell-command 2145 . 2157) (bol 2144 . 2144) (shell-command 1999 . 2003) (bol 1998 . 1998) (shell-command 1818 . 1837) (bol 1817 . 1817)))
+    (semanticdb-table "catom2D1BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [86 105])
+            ("sstream" include (:system-flag t) nil [106 124])
+            ("catom2D1BlockCode.h" include nil nil [125 155])
+            ("scheduler.h" include nil nil [156 178])
+            ("events.h" include nil nil [179 198])
+            ("rotation2DEvents.h" include nil nil [199 228])
+            ("memory" include (:system-flag t) nil [242 259])
+            ("reconfigurationMsg.h" include nil nil [261 292])
+            ("reconfCatoms2DEvents.h" include nil nil [293 326])
+            ("centralizedReconfiguration.h" include nil nil [327 366])
+            ("float.h" include (:system-flag t) nil [367 385])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [387 407])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [408 433])
+            ("NEIGHBORING_TEST" variable (:constant-flag t) nil [443 459])
+            ("Catoms2D1BlockCode" function
+               (:constructor-flag t
+                :parent "Catoms2D1BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [786 806]))                  
+                :type ("Catoms2D1BlockCode" type (:type "class") nil nil))
+                nil [747 1062])
+            ("Catoms2D1BlockCode" function
+               (:destructor-flag t
+                :parent "Catoms2D1BlockCode"
+                :type "void")
+                nil [1064 1167])
+            ("startup" function
+               (:parent "Catoms2D1BlockCode"
+                :type "void")
+                nil [1744 2724])
+            ("processLocalEvent" function
+               (:parent "Catoms2D1BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2769 2782]))                  
+                :type "void")
+                nil [2726 6845])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "Catoms2D1BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BuildingBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6896 6916]))                  
+                :type ("BlockCode" type (:type "class") nil nil))
+                nil [6847 6976]))          
+      :file "catom2D1BlockCode.cpp"
+      :pointmax 6977
+      :fsize 6976
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NEIGHBORING_TEST")
+          )
+)
+    (semanticdb-table "catom2D1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [82 101])
+            ("catoms2DSimulator.h" include nil nil [102 132])
+            ("catoms2DBlockCode.h" include nil nil [133 163])
+            ("catom2D1BlockCode.h" include nil nil [164 194])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [196 216])
+            ("Catoms2D" using (:type ("Catoms2D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [217 242])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [253 262])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [263 275]))                  
+                :type "int")
+                nil [244 460]))          
+      :file "catom2D1.cpp"
+      :pointmax 461
+      :fsize 460
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "catom2D1BlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CATOM2D1BLOCKCODE_H_" variable (:constant-flag t) nil [122 142])
+            ("catoms2DBlockCode.h" include nil nil [144 174])
+            ("catoms2DSimulator.h" include nil nil [175 205])
+            ("catoms2DBlock.h" include nil nil [207 233])
+            ("localTupleSpace.hpp" include nil nil [234 264])
+            ("tuple.hpp" include nil nil [265 285])
+            ("contextTuple.hpp" include nil nil [286 313])
+            ("CTuple.hpp" include nil nil [314 335])
+            ("segment.h" include nil nil [374 394])
+            ("map.h" include nil nil [395 411])
+            ("CTuples.h" include nil nil [412 432])
+            ("landmarks.h" include nil nil [433 455])
+            ("reconfiguration.h" include nil nil [457 485])
+            ("CTuples" type
+               (:prototype t
+                :type "class")
+                nil [487 501])
+            ("Landmarks" type
+               (:prototype t
+                :type "class")
+                nil [502 518])
+            ("Catoms2D1BlockCode" type
+               (:superclasses 
+                  ( ("Catoms2D::Catoms2DBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [585 592])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [596 617])
+                    ("catom2D" variable
+                       (:pointer 1
+                        :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [620 653])
+                    ("Catoms2D1BlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("Catoms2D::Catoms2DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [677 707]))                          
+                        :type ("Catoms2D1BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [657 708])
+                    ("Catoms2D1BlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [711 734])
+                    ("map" variable
+                       (:pointer 1
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [772 781])
+                    ("landmarks" variable
+                       (:pointer 1
+                        :type ("Landmarks" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [843 864])
+                    ("ctuples" variable
+                       (:pointer 1
+                        :type ("CTuples" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [888 905])
+                    ("reconfiguration" variable
+                       (:pointer 1
+                        :type ("Reconfiguration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [932 965])
+                    ("geoTest" variable (:type "bool") (reparse-symbol classsubparts) [969 982])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [988 1003])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1029 1042]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1006 1043])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("BuildingBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1132 1152]))                          
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1096 1153]))                  
+                :type "class")
+                nil [520 1156]))          
+      :file "catom2D1BlockCode.h"
+      :pointmax 1191
+      :fsize 1190
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CATOM2D1BLOCKCODE_H_")
+          )
+)
+    (semanticdb-table "reconfCatoms2DEvents.h"
+      :file "reconfCatoms2DEvents.h"
+      :fsize 1588
+      :lastmodtime '(22449 35661 0 0))
+    (semanticdb-table "segment.h"
+      :file "segment.h"
+      :fsize 614
+      :lastmodtime '(22449 35661 0 0))
+    (semanticdb-table "CTuples.h"
+      :file "CTuples.h"
+      :fsize 1457
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "landmarks.h"
+      :file "landmarks.h"
+      :fsize 2831
+      :lastmodtime '(22449 35661 0 0))
+    (semanticdb-table "CTuples.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("CTuples.h" include nil nil [1 21])
+            ("CTuples" function
+               (:constructor-flag t
+                :parent "CTuples"
+                :arguments 
+                  ( ("bc" variable
+                       (:pointer 1
+                        :type ("Catoms2D1BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89 112]))                  
+                :type ("CTuples" type (:type "class") nil nil))
+                nil [72 151])
+            ("CTuples" function
+               (:constructor-flag t
+                :parent "CTuples"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CTuples" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [170 187]))                  
+                :type ("CTuples" type (:type "class") nil nil))
+                nil [153 226])
+            ("CTuples" function
+               (:destructor-flag t
+                :parent "CTuples"
+                :type "void")
+                nil [228 250])
+            ("handleCTuplesMessage" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("msg" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [287 302]))                  
+                :type "void")
+                nil [252 975])
+            ("localOut" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("CTuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1000 1009]))                  
+                :type "void")
+                nil [977 1101])
+            ("localInp" function
+               (:pointer 1
+                :parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("CTuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1129 1138]))                  
+                :type ("CTuple" type (:type "class") nil nil))
+                nil [1103 1172])
+            ("out" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("Tuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1192 1200]))                  
+                :type "void")
+                nil [1174 1222])
+            ("out" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("ContextTuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1242 1257]))                  
+                :type "void")
+                nil [1224 1279])
+            ("out" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("CTuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1299 1308]))                  
+                :type "void")
+                nil [1281 1657])
+            ("inp" function
+               (:parent "CTuples"
+                :arguments 
+                  ( ("t" variable (:type ("CTuple" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1677 1686]))                  
+                :type "void")
+                nil [1659 2370]))          
+      :file "CTuples.cpp"
+      :pointmax 2371
+      :fsize 2370
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "landmarks.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("landmarks.h" include nil nil [1 23])
+            ("LANDMARKS_DEBUG" variable (:constant-flag t) nil [33 48])
+            ("PROBABILITY_LANDMARK" variable (:constant-flag t) nil [85 105])
+            ("Landmark::probability" variable
+               (:default-value "PROBABILITY_LANDMARK"
+                :type "double")
+                nil [111 163])
+            ("Landmark" function
+               (:constructor-flag t
+                :parent "Landmark"
+                :type ("Landmark" type (:type "class") nil nil))
+                nil [165 280])
+            ("Landmark" function
+               (:constructor-flag t
+                :parent "Landmark"
+                :arguments 
+                  ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [301 310]))                  
+                :type ("Landmark" type (:type "class") nil nil))
+                nil [282 408])
+            ("Landmark" function
+               (:constructor-flag t
+                :parent "Landmark"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Landmark" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [429 447]))                  
+                :type ("Landmark" type (:type "class") nil nil))
+                nil [410 507])
+            ("Landmark" function
+               (:destructor-flag t
+                :parent "Landmark"
+                :type "void")
+                nil [509 533])
+            ("setProbability" function
+               (:parent "Landmark"
+                :arguments 
+                  ( ("p" variable (:type "double") (reparse-symbol arg-sub-list) [567 576]))                  
+                :type "void")
+                nil [537 599])
+            ("randomDraw" function
+               (:parent "Landmark"
+                :type "void")
+                nil [601 756])
+            ("LandmarkEntry" function
+               (:constructor-flag t
+                :parent "LandmarkEntry"
+                :type ("LandmarkEntry" type (:type "class") nil nil))
+                nil [791 852])
+            ("LandmarkEntry" function
+               (:constructor-flag t
+                :parent "LandmarkEntry"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [883 889])
+                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [890 896])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [897 910])
+                    ("t" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [911 918]))                  
+                :type ("LandmarkEntry" type (:type "class") nil nil))
+                nil [854 941])
+            ("LandmarkEntry" function
+               (:constructor-flag t
+                :parent "LandmarkEntry"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LandmarkEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [972 995]))                  
+                :type ("LandmarkEntry" type (:type "class") nil nil))
+                nil [943 1044])
+            ("LandmarkEntry" function
+               (:destructor-flag t
+                :parent "LandmarkEntry"
+                :type "void")
+                nil [1046 1080])
+            ("update" function
+               (:parent "LandmarkEntry"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1109 1115])
+                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [1116 1122])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1123 1136])
+                    ("t" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1144]))                  
+                :type "void")
+                nil [1082 1167])
+            ("set" function
+               (:parent "LandmarkEntry"
+                :arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1193 1199])
+                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [1200 1206])
+                    ("p" variable (:type ("Coordinate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1207 1220])
+                    ("t" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1221 1228]))                  
+                :type "void")
+                nil [1169 1286])
+            ("MAX_NUM_LANDMARKS" variable (:constant-flag t) nil [1324 1341])
+            ("Landmarks" function
+               (:constructor-flag t
+                :parent "Landmarks"
+                :arguments 
+                  ( ("bc" variable
+                       (:pointer 1
+                        :type ("Catoms2D1BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1367 1390]))                  
+                :type ("Landmarks" type (:type "class") nil nil))
+                nil [1346 1509])
+            ("Landmarks" function
+               (:constructor-flag t
+                :parent "Landmarks"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Landmarks" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1532 1551]))                  
+                :type ("Landmarks" type (:type "class") nil nil))
+                nil [1511 1632])
+            ("Landmarks" function
+               (:destructor-flag t
+                :parent "Landmarks"
+                :type "void")
+                nil [1634 1680])
+            ("start" function
+               (:parent "Landmarks"
+                :type "void")
+                nil [1682 2142])
+            ("scheduleAdvertise" function
+               (:parent "Landmarks"
+                :arguments 
+                  ( ("t" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2185]))                  
+                :type "void")
+                nil [2144 2333])
+            ("advertise" function
+               (:parent "Landmarks"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :type ("LandmarkEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2361 2378])
+                    ("ignore" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2379 2407]))                  
+                :type "void")
+                nil [2335 2838])
+            ("update" function
+               (:parent "Landmarks"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :type ("LandmarkEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2863 2880]))                  
+                :type "bool")
+                nil [2840 3548])
+            ("handle" function
+               (:parent "Landmarks"
+                :arguments 
+                  ( ("message" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3573 3592]))                  
+                :type "bool")
+                nil [3550 4350])
+            ("handle" function
+               (:parent "Landmarks"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4375 4388]))                  
+                :type "void")
+                nil [4352 5082])
+            ("stop" function
+               (:parent "Landmarks"
+                :type "void")
+                nil [5084 5129])
+            ("printTable" function
+               (:parent "Landmarks"
+                :type "void")
+                nil [5131 5460]))          
+      :file "landmarks.cpp"
+      :pointmax 5461
+      :fsize 5460
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_NUM_LANDMARKS" . ((number "10" 1342 . 1344)))
+          ("PROBABILITY_LANDMARK" . ((number "0.1" 106 . 109)))
+          ("LANDMARKS_DEBUG")
+          )
+)
+    (semanticdb-table "border.h"
+      :file "border.h"
+      :fsize 414
+      :lastmodtime '(22449 35660 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!reconfCatoms2D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

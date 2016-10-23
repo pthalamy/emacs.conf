@@ -1,0 +1,16 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "interfaces.meld"
+      :major-mode 'c-mode
+      :tags nil
+      :file "interfaces.meld"
+      :pointmax 115
+      :fsize 114
+      :lastmodtime '(22424 35206 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsBin!meld!programs!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

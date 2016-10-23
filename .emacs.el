@@ -1,7 +1,10 @@
+;; Default directory for lisp files
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
 ;; Melpa
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+                         '("melpa" . "http://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
@@ -17,6 +20,12 @@
 ;; fenêtre) :
 (line-number-mode t)
 (column-number-mode t)
+
+;; All temp files in same dir
+ (setq backup-directory-alist
+                  `((".*" . ,temporary-file-directory)))
+        (setq auto-save-file-name-transforms
+                  `((".*" ,temporary-file-directory t)))
 
 ;; Ne pas afficher le message d'accueil
 (setq inhibit-startup-message t)
@@ -45,14 +54,29 @@
 
 ;; Définir des touches pour se déplacer rapidement :
 ;; Aller à la parenthèse ouvrante correspondante :
-(global-set-key [M-right] 'forward-sexp)
+(global-set-key [M-shift-right] 'forward-sexp)
 ;; Aller à la parenthèse Fermante correspondante :
-(global-set-key [M-left] 'backward-sexp)
+(global-set-key [M-shift-left] 'backward-sexp)
 
 ;; Compiler avec M-f9, recompiler (avec la même commande de
 ;; compilation) avec f9.
 (global-set-key [M-f9]   'compile)
-(global-set-key [f9]     'recompile)
+(global-set-key [f9]     'compile-again)
+(setq compilation-last-buffer nil)
+
+(defun compile-again (pfx)
+  """Run the same compile as the last time.
+
+If there was no last time, or there is a prefix argument, this acts like
+M-x compile.
+"""
+ (interactive "p")
+ (if (and (eq pfx 1)
+          compilation-last-buffer)
+         (progn
+           (set-buffer compilation-last-buffer)
+           (revert-buffer t t))
+         (call-interactively 'compile)))
 
 ;; Ouvrir les .txt en org-mode
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
@@ -65,20 +89,40 @@
 
 ;; Bind replace-string to C-x <F1>
 (global-set-key (kbd "<f1>") 'replace-string)
-(global-set-key [f2] 'shell)
+
+;; yasnippet
+(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20151011.1823")
+(require 'yasnippet)
+(setq yas/trigger-key (kbd "C-c <kp-multiply>"))
+;; This is where your snippets will lie.
+(setq yas/root-directory '("~/.emacs.d/elpa/yasnippet-20151011.1823/snippets"))
+(mapc 'yas/load-directory yas/root-directory)
+(yas-global-mode 1)
 
 ;; auto-complete
-(add-to-list 'load-path "~/.emacs.d")
 (require 'auto-complete-config)
+
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
+(setq-default ac-sources '(ac-source-yasnippet ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+(add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+(add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+(add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+(add-hook 'css-mode-hook 'ac-css-mode-setup)
+(add-hook 'auto-complete-mode-hook 'ac-common-setup)
+(global-auto-complete-mode t)
+(add-to-list 'ac-modes 'objc-mode)
 (auto-complete-mode 1)
+
+;; Java JDK Completion
+;; (require 'ajc-java-complete-config)
+;; (add-hook 'java-mode-hook 'ajc-java-complete-mode)
+;; (add-hook 'find-file-hook 'ajc-4-jsp-find-file-hook)
 
 ;; Associate .bb files to c-mode
 (add-to-list 'auto-mode-alist '("\\.bb\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.bbh\\'" . c-mode))
 
-;; Always show matching parenthesis and brackets
+;; Always show matching parenthesis and brackets C-M-n C-M-p
 (show-paren-mode 1)
 
 ;; Change window using M-arrow
@@ -97,15 +141,21 @@
 (global-set-key [(super left)] 'tabbar-backward-tab)
 (global-set-key [(super shift right)] 'tabbar-forward-group)
 (global-set-key [(super shift left)] 'tabbar-backward-group)
-
-;; WebKit
-;(require 'webkit)
+;;   Sort tabs by name
+(defun tabbar-add-tab (tabset object &optional append_ignored)
+  (let ((tabs (tabbar-tabs tabset)))
+        (if (tabbar-get-tab object tabset)
+                tabs
+          (let ((tab (tabbar-make-tab object tabset)))
+                (tabbar-set-template tabset nil)
+                (set tabset (sort (cons tab tabs)
+                                                  (lambda (a b) (string< (buffer-name (car a)) (buffer-name (car b))))))))))
 
 ;; Get default PATH
 (if (not (getenv "TERM_PROGRAM"))
-    (let ((path (shell-command-to-string
-		 "$SHELL -cl \"printf %s \\\"\\\$PATH\\\"\"")))
-      (setenv "PATH" path)))
+        (let ((path (shell-command-to-string
+                 "$SHELL -cl \"printf %s \\\"\\\$PATH\\\"\"")))
+          (setenv "PATH" path)))
 
 ;; Colorful shell
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
@@ -130,7 +180,7 @@
  )
 
 ;; Line numbers to the left
-(linum-mode 1)
+;; (linum-mode 1)
 
 ;; "y or n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -142,7 +192,8 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
 
 ;; Trailing whitespace is unnecessary
-(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+;; (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+;; (add-hook 'before-save-hook (lambda () (whitespace-cleanup)))
 
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
@@ -156,3 +207,181 @@
 
 ;; Tramp ssh (faster)
 (setq tramp-default-method "ssh")
+
+;; coding style / tabs
+(setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+(setq c-default-style "k&r"
+          c-basic-offset 4)
+
+;; No namespace indent in c++
+(defun my-c-setup ()
+  (setq-default indent-tabs-mode nil)
+  (setq tab-width 4)
+  (setq c-default-style "k&r"
+          c-basic-offset 4)
+  (c-set-offset 'innamespace [0])
+  (c-set-offset 'case-label '+))
+(add-hook 'c++-mode-hook 'my-c-setup)
+
+
+;; Cleanup lists
+;; (add-to-list 'c-cleanup-list 'brace-else-brace)
+;; (add-to-list 'c-cleanup-list 'brace-elseif-brace)
+;; (add-to-list 'c-cleanup-list 'brace-catch-brace)
+;; (add-to-list 'c-cleanup-list 'empty-defun-btace)
+;; (add-to-list 'c-cleanup-list 'defun-close-semi)
+
+
+(add-hook 'java-mode-hook (lambda ()
+                                (setq c-basic-offset 4
+                                  tab-width 4
+                                  indent-tabs-mode t)))
+
+(add-hook 'java-mode-hook
+                  (lambda ()
+                        "Treat Java 1.5 @-style annotations as comments."
+                        (setq c-comment-start-regexp "(@|/(/|[*][*]?))")
+                        (modify-syntax-entry ?@ "< b" java-mode-syntax-table)))
+
+;; Extended Helm Config
+(require 'helm)
+(require 'helm-config)
+
+;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
+
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
+(when (executable-find "curl")
+  (setq helm-net-prefer-curl t))
+
+(setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+          helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+          helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+          helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+          helm-ff-file-name-history-use-recentf t)
+
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(helm-mode 1)
+
+;; Prints the decimal value of hex under cursor
+(defun what-hexadecimal-value ()
+  "Prints the decimal value of a hexadecimal string under cursor.
+Samples of valid input:
+
+  ffff
+  0xffff
+  #xffff
+  FFFF
+  0xFFFF
+  #xFFFF
+
+Test cases
+  64*0xc8+#x12c 190*0x1f4+#x258
+  100 200 300   400 500 600"
+  (interactive )
+
+  (let (inputStr tempStr p1 p2 )
+        (save-excursion
+          (search-backward-regexp "[^0-9A-Fa-fx#]" nil t)
+          (forward-char)
+          (setq p1 (point) )
+          (search-forward-regexp "[^0-9A-Fa-fx#]" nil t)
+          (backward-char)
+          (setq p2 (point) ) )
+
+        (setq inputStr (buffer-substring-no-properties p1 p2) )
+
+        (let ((case-fold-search nil) )
+          (setq tempStr (replace-regexp-in-string "^0x" "" inputStr )) ; C, Perl, …
+          (setq tempStr (replace-regexp-in-string "^#x" "" tempStr )) ; elisp …
+          (setq tempStr (replace-regexp-in-string "^#" "" tempStr ))  ; CSS …
+          )
+
+        (message "Hex %s is %d" tempStr (string-to-number tempStr 16 ) )
+        ))
+
+;; I want an easy command for opening new shells:
+(defun new-shell (name)
+  "Opens a new shell buffer with the given name in
+asterisks (*name*) in the current directory and changes the
+prompt to 'name>'."
+  (interactive "sName: ")
+  (pop-to-buffer (concat "*" name "*"))
+  (unless (eq major-mode 'shell-mode)
+        (shell (current-buffer))
+        (sleep-for 0 200)
+        (delete-region (point-min) (point-max))
+        (comint-simple-send (get-buffer-process (current-buffer))
+                            (concat "export PS1=\"" name ">\""))
+        ))
+(global-set-key (kbd "C-c s") 'new-shell)
+
+;; Show  / Hide function body
+(require 'hideshow)
+(setq hs-minor-mode t)
+(global-set-key (kbd "M-s M-s") 'hs-toggle-hiding)
+(global-set-key (kbd "M-s M-a") 'hs-hide-all)
+(global-set-key (kbd "M-s M-z") 'hs-show-all)
+
+;; Don't open new frame for every file openning
+(setq ns-pop-up-frames 'nil)
+
+;; sqlplus path
+(setq sql-oracle-program "/opt/oracle/instantclient_11_2/sqlplus")
+
+;; BATTERY MODE !
+(display-battery-mode 1)
+(display-time-mode 1)
+(global-auto-revert-mode 1)
+
+;; subword mode using meta
+(global-subword-mode 1)
+;; (global-set-key (kbd "M-left") 'subword-backward)
+;; (global-set-key (kbd "M-right") 'subword-forward)
+;; (global-set-key (kbd "M-DEL") 'subword-backward-kill)
+
+;; Prolog
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
+(autoload 'prolog-mode "prolog" "Major mode for editing Prolog programs." t)
+(setq prolog-system 'swi)
+(setq auto-mode-alist (cons '("\\.pl$" . prolog-mode) auto-mode-alist))
+
+;; Projet-GL
+(setq auto-mode-alist (cons '("\\.ass$" . asm-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.deca$" . java-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.decah$" . java-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.g4$" . antlr-mode) auto-mode-alist))
+
+;; Linum mode
+(global-linum-mode t)
+;; Offset the number by two spaces to work around some weird fringe glitch
+(setq linum-format "  %d ")
+
+;; Window enlarge-shrink
+(global-set-key (kbd "s-}") 'enlarge-window-horizontally)
+(global-set-key (kbd "s-{") 'shrink-window-horizontally)
+
+;; Doxy yasnippet
+(fa-config-default)
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(set-default 'semantic-case-fold t)
+(global-set-key (kbd "C-c d") 'moo-doxygen)
+
+;; Projectile
+(projectile-global-mode 1)
+(setq projectile-enable-caching t)
+
+;; Guess style
+(add-to-list 'load-path "~/.emacs.d/lisp/guess-style/")
+(autoload 'guess-style-set-variable "guess-style" nil t)
+(autoload 'guess-style-guess-variable "guess-style")
+(autoload 'guess-style-guess-all "guess-style" nil t)
+(add-hook 'c-mode-common-hook 'guess-style-guess-all)

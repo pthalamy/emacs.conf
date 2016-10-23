@@ -1,0 +1,217 @@
+;; Object simpleColorSB/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "simpleColorSB/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("mkfile_path" variable (:default-value ("$(abspath $(lastword $(MAKEFILE_LIST)))")) nil [32 87])
+            ("current_dir" variable (:default-value ("$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))")) nil [87 151])
+            ("APPDIR" variable (:default-value ("../../applicationsBin/$(current_dir)")) nil [151 197])
+            ("SRCS" variable (:default-value ("simpleColor.cpp" "simpleColorCode.cpp")) nil [718 763])
+            ("OUT" variable (:default-value ("$(APPDIR)/simpleColorSB")) nil [833 863])
+            ("MODULELIB" variable (:default-value ("-lsimSmartBlocks")) nil [940 969])
+            ("TESTS" variable (:default-value ("../../utilities/blockCodeTest.sh" "simpleColorSB" "$(OUT)")) nil [1048 1110])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [1233 1256])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [1256 1285])
+            ("OS" variable (:default-value ("$(shell uname -s)")) nil [1286 1309])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [1309 1372])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "-I/usr/local/include" "-I/opt/local/include" "-I/usr/X11/include")) nil [1401 1503])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [1508 1568])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-lGLEW" "-lglut" "-framework" "GLUT" "-framework" "OpenGL" "-L/usr/X11/lib" "/usr/local/lib/libglut.dylib" "$(MODULELIB)")) nil [1620 1780])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-L/opt/local/lib" "-lm" "-L/usr/X11/lib" "-lglut" "-lGL" "-lGLU" "-lGLEW" "-lpthread" "$(MODULELIB)")) nil [1786 1926])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [1945 1993])
+            ("CCFLAGS" variable (:default-value ("-g" "-Wall" "-std=c++11" "-DTINYXML_USE_STL" "-DTIXML_USE_STL")) nil [2042 2106])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [2260 2288])
+            ("CC" variable (:default-value ("g++")) nil [2295 2304])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [2305 2328])
+            (".cpp.o" function nil nil [2329 2379])
+            ("%.depends" function (:arguments ("%.cpp")) nil [2380 2438])
+            ("all" function (:arguments ("$(OUT)")) nil [2439 2455])
+            ("test" function nil nil [2456 2473])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [2474 2516])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [2517 2542])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [2543 2608])
+            ("clean" function nil nil [2663 2703]))          
+      :file "Makefile"
+      :pointmax 2703
+      :fsize 2702
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax '((shell-command 2671 . 2702) (bol 2670 . 2670) (semantic-list 2649 . 2655) (punctuation 2648 . 2649) (symbol 2639 . 2647) (bol 2639 . 2639) (shell-command 2248 . 2254) (bol 2247 . 2247) (shell-command 2129 . 2246) (bol 2128 . 2128) (shell-command 2107 . 2127) (bol 2106 . 2106) (ENDIF 1993 . 1998) (bol 1993 . 1993) (shell-command 1927 . 1939) (bol 1926 . 1926) (shell-command 1781 . 1785) (bol 1780 . 1780) (shell-command 1600 . 1619) (bol 1599 . 1599)))
+    (semanticdb-table "simpleColor.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("smartBlocksSimulator.h" include nil nil [21 54])
+            ("smartBlocksBlockCode.h" include nil nil [55 88])
+            ("simpleColorCode.h" include nil nil [89 117])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [119 139])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [140 168])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [179 188])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [189 201]))                  
+                :type "int")
+                nil [170 375]))          
+      :file "simpleColor.cpp"
+      :pointmax 376
+      :fsize 375
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "simpleColorCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simpleColorCode_H_" variable (:constant-flag t) nil [36 54])
+            ("smartBlocksBlockCode.h" include nil nil [55 88])
+            ("BROADCAST_MSG" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "1001"
+                :type "int")
+                nil [90 126])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [128 156])
+            ("SimpleColorCode" type
+               (:superclasses 
+                  ( ("SmartBlocksBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [212 220])
+                    ("distance" variable (:type "int") (reparse-symbol classsubparts) [225 238])
+                    ("public" label nil (reparse-symbol classsubparts) [239 247])
+                    ("SimpleColorCode" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [265 288]))                          
+                        :type ("SimpleColorCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [249 318])
+                    ("SimpleColorCode" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [321 342])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [346 361])
+                    ("myBroadcastFunc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("MessageOf" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [384 409])
+                            ("sender" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [409 437]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [363 438])
+                    ("buildNewBlockCode" function
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("BuildingBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [637 657]))                          
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [601 722]))                  
+                :type "class")
+                nil [158 806])
+            ("_myBroadcastFunc" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [830 842])
+                    ("" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [842 853])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [853 881]))                  
+                :type "void")
+                nil [808 882]))          
+      :file "simpleColorCode.h"
+      :pointmax 915
+      :fsize 914
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax '((punctuation 722 . 723) (punctuation 342 . 343) (punctuation 318 . 319) (punctuation 716 . 717) (punctuation 342 . 343) (punctuation 318 . 319))
+      :lexical-table 
+        '(("simpleColorCode_H_")
+          )
+)
+    (semanticdb-table "simpleColorCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("simpleColorCode.h" include nil nil [1 29])
+            ("myTabColors" variable
+               (:dereference 1
+                :default-value "{RED,ORANGE,YELLOW,GREEN,CYAN,BLUE,MAGENTA,GREY}"
+                :type ("Color" type (:type "class") nil nil))
+                nil [31 101])
+            ("startup" function
+               (:parent "SimpleColorCode"
+                :type "void")
+                nil [103 526])
+            ("myBroadcastFunc" function
+               (:parent "SimpleColorCode"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MessageOf" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [566 591])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [592 619]))                  
+                :type "void")
+                nil [528 1022])
+            ("_myBroadcastFunc" function
+               (:arguments 
+                  ( ("codebloc" variable
+                       (:pointer 1
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1047 1067])
+                    ("msg" variable (:type ("MessagePtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1067 1082])
+                    ("sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1083 1110]))                  
+                :type "void")
+                nil [1025 1257]))          
+      :file "simpleColorCode.cpp"
+      :pointmax 1259
+      :fsize 1258
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!simpleColorSB!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

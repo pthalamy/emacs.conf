@@ -1,0 +1,1094 @@
+;; Object coloration_v2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "coloration_v2/"
+  :tables
+  (list
+    (semanticdb-table "coloration_v2_BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [98 117])
+            ("sstream" include (:system-flag t) nil [118 136])
+            ("cassert" include (:system-flag t) nil [137 155])
+            ("cstdlib" include (:system-flag t) nil [156 174])
+            ("scheduler.h" include nil nil [175 197])
+            ("events.h" include nil nil [198 217])
+            ("coloration_v2_BlockCode.h" include nil nil [218 254])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [277 305])
+            ("neighbor_finding" using (:type ("neighbor_finding" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [306 339])
+            ("coloring" using (:type ("coloring" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [340 365])
+            ("RouteMapElement" type
+               (:typedef ("pair" type
+                     (:template-specifier 
+                        ( ("Coordinates" type nil nil nil)
+                          ("BlockRoutingInfos" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [367 428])
+            ("ColorationV2BlockCode" function
+               (:constructor-flag t
+                :parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [546 569]))                  
+                :type ("ColorationV2BlockCode" type (:type "class") nil nil))
+                nil [501 735])
+            ("ColorationV2BlockCode" function
+               (:destructor-flag t
+                :parent "ColorationV2BlockCode"
+                :type "void")
+                nil [737 847])
+            ("startup" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [849 8358])
+            ("processLocalEvent" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8408 8421]))                  
+                :type "void")
+                nil [8361 12713])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12796 12819]))                  
+                :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                nil [12715 12867])
+            ("TreatRouteSearchMsg" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_msg" variable (:type ("RouteSearchMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13186 13213]))                  
+                :type "void")
+                nil [13137 17025])
+            ("TreatRouteSearchAck" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_ack" variable (:type ("RouteSearchAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17771 17798]))                  
+                :type "void")
+                nil [17722 21501])
+            ("BuildDistancesList" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("searched_blocks" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("Coordinates" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [21633 21667]))                  
+                :type ("list" type
+                     (:template-specifier 
+                        ( ("BlockAckInfos" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [21570 22133])
+            ("StartNextRound" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [22252 23911])
+            ("ContinueWhenNeighborsAreFound" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [23981 24914])
+            ("TreatColoringMsg" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_msg" variable (:type ("ColoringMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24962 24986]))                  
+                :type "void")
+                nil [24916 26297])
+            ("TreatColoringAck" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_ack" variable (:type ("ColoringAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26345 26369]))                  
+                :type "void")
+                nil [26299 27921])
+            ("DrawAndSendColorScores" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [27966 29163])
+            ("ProcessScores" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [29165 31479])
+            ("PrintRoutesMap" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [31481 32023]))          
+      :file "coloration_v2_BlockCode.cpp"
+      :pointmax 32024
+      :fsize 32037
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "coloration_v2_BlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("coloration_v2_BlockCode_H_" variable (:constant-flag t) nil [138 164])
+            ("map" include (:system-flag t) nil [166 180])
+            ("boost/array.hpp" include (:system-flag t) nil [181 207])
+            ("smartBlocksBlockCode.h" include nil nil [209 242])
+            ("smartBlocksSimulator.h" include nil nil [243 276])
+            ("smartBlocksBlock.h" include nil nil [277 306])
+            ("neighbor_finding.h" include nil nil [307 336])
+            ("coloring.h" include nil nil [337 358])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [360 380])
+            ("neighbor_finding" using (:type ("neighbor_finding" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [381 414])
+            ("coloring" using (:type ("coloring" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [415 440])
+            ("ColorationV2BlockCode" type
+               (:superclasses 
+                  ( ("SmartBlocks::SmartBlocksBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TreatRouteSearchMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("RouteSearchMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [568 586]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [542 587])
+                    ("TreatRouteSearchAck" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("RouteSearchAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [616 634]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [590 635])
+                    ("BuildDistancesList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("list" type
+                                 (:template-specifier 
+                                    ( ("Coordinates" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [678 696]))                          
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("BlockAckInfos" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [638 697])
+                    ("StartNextRound" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [700 722])
+                    ("ContinueWhenNeighborsAreFound" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [725 762])
+                    ("routes_map_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("Coordinates" type nil nil nil)
+                              ("BlockRoutingInfos" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [766 819])
+                    ("dead_end_neighbors_" variable
+                       (:dereference 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [904 949])
+                    ("n_round_" variable (:type "unsigned int") (reparse-symbol classsubparts) [952 974])
+                    ("neighbor_finding_done_" variable (:type "bool") (reparse-symbol classsubparts) [977 1005])
+                    ("TreatColoringMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ColoringMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1070]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1032 1071])
+                    ("TreatColoringAck" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ColoringAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1097 1112]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1074 1113])
+                    ("DrawAndSendColorScores" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1140 1170])
+                    ("ProcessScores" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1173 1194])
+                    ("color_neighborhood_" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("Coordinates" type nil nil nil)
+                              ("ColorQuantityArray" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1198 1255])
+                    ("my_scores_" variable (:type ("ColorQuantityArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1258 1288])
+                    ("allowed_colors_" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1291 1317])
+                    ("n_color_msg_received_" variable (:type "unsigned int") (reparse-symbol classsubparts) [1320 1355])
+                    ("my_color_" variable (:type "int") (reparse-symbol classsubparts) [1358 1372])
+                    ("PrintRoutesMap" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1516 1538])
+                    ("public" label nil (reparse-symbol classsubparts) [1539 1546])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1549 1570])
+                    ("smartBlock" variable
+                       (:pointer 1
+                        :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1573 1615])
+                    ("ColorationV2BlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1642 1678]))                          
+                        :type ("ColorationV2BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1619 1679])
+                    ("ColorationV2BlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1682 1707])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1711 1726])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1753 1766]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1729 1767])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1832 1868]))                          
+                        :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1771 1869]))                  
+                :type "class")
+                nil [442 1872]))          
+      :file "coloration_v2_BlockCode.h"
+      :pointmax 1913
+      :fsize 1912
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("coloration_v2_BlockCode_H_")
+          )
+)
+    (semanticdb-table "neighbor_finding.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("NEIGHBOR_FINDING_H_" variable (:constant-flag t) nil [37 56])
+            ("list" include (:system-flag t) nil [58 73])
+            ("memory" include (:system-flag t) nil [74 91])
+            ("network.h" include nil nil [92 112])
+            ("coordinates.h" include nil nil [113 137])
+            ("smartBlocksBlock.h" include nil nil [138 167])
+            ("neighbor_finding" type
+               (:members 
+                  ( ("SmartBlocks" using (:type ("SmartBlocks" type
+                         (:prototype t
+                          :type "namespace")
+                          nil nil)) (reparse-symbol namespacesubparts) [199 227])
+                    ("RouteSearchMsg" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [229 250])
+                    ("RouteSearchAck" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [251 272])
+                    ("RouteSearchMsgPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("RouteSearchMsg" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [274 332])
+                    ("RouteSearchAckPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("RouteSearchAck" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [333 391])
+                    ("cNeighborQuantity" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [393 425])
+                    ("cRouteSearchMsgId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [427 468])
+                    ("cRouteSearchAckId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [469 510])
+                    ("BlockStatus" type
+                       (:members 
+                          ( ("cUnknown" variable
+                               (:constant-flag t
+                                :default-value (544 545)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [533 545])
+                            ("cNotExists" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [549 560])
+                            ("cExists" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [563 571]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [512 574])
+                    ("cMyCoordinates" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [743 783])
+                    ("cCoordinatesOfNeighbor" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :default-value "{
+    //My SmartBlocks::North neighbor
+    Coordinates(  0,  1),
+    //East
+    Coordinates(  1,  0),
+    //South
+    Coordinates(  0, -1),
+    //West
+    Coordinates( -1,  0)}"
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [784 1024])
+                    ("cDiagonalNeighborsCoordinates" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :default-value "{
+    Coordinates( -1, -1),
+    Coordinates( -1,  1),
+    Coordinates(  1, -1),
+    Coordinates(  1,  1)}"
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1025 1201])
+                    ("BlockRoutingInfos" type
+                       (:members 
+                          ( ("status" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1572 1591])
+                            ("route_network_interface" variable
+                               (:pointer 1
+                                :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1651 1696])
+                            ("distance" variable (:type "unsigned int") (reparse-symbol classsubparts) [1699 1721])
+                            ("n_ack_waited" variable (:type "unsigned int") (reparse-symbol classsubparts) [1800 1826])
+                            ("dead_end" variable (:type "bool") (reparse-symbol classsubparts) [1951 1965])
+                            ("BlockRoutingInfos" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1987 1999])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2000 2022])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2023 2036])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2058 2071])
+                                    ("" variable (:type "bool") (reparse-symbol arg-sub-list) [2072 2077]))                                  
+                                :type ("BlockRoutingInfos" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1968 2078]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1543 2081])
+                    ("BlockAckInfos" type
+                       (:members 
+                          ( ("block" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2108 2126])
+                            ("distance" variable (:type "unsigned int") (reparse-symbol classsubparts) [2129 2151])
+                            ("status" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2154 2173])
+                            ("BlockAckInfos" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2192 2204])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2205 2218])
+                                    ("" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2219 2231]))                                  
+                                :type ("BlockAckInfos" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2177 2232]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [2083 2235])
+                    ("RouteSearchMsg" type
+                       (:superclasses 
+                          ( ("Message" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("searched_blocks_" variable (:type ("std::list" type
+                                 (:template-specifier 
+                                    ( ("Coordinates" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2279 2319])
+                            ("origine_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2322 2343])
+                            ("distance_" variable (:type "unsigned int") (reparse-symbol classsubparts) [2346 2369])
+                            ("n_jumps_" variable (:type "unsigned int") (reparse-symbol classsubparts) [2372 2394])
+                            ("origine_id_" variable (:type "int") (reparse-symbol classsubparts) [2410 2426])
+                            ("public" label nil (reparse-symbol classsubparts) [2432 2439])
+                            ("RouteSearchMsg" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::list" type
+                                         (:template-specifier 
+                                            ( ("Coordinates" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [2458 2481])
+                                    ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2500 2512])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2513 2526])
+                                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2527 2540])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2541 2570])
+                                    ("origine_id" variable (:type "int") (reparse-symbol arg-sub-list) [2589 2604]))                                  
+                                :type ("RouteSearchMsg" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2442 2605])
+                            ("RouteSearchMsg" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("RouteSearchMsgPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2624 2648])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2649 2678]))                                  
+                                :type ("RouteSearchMsg" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2608 2679])
+                            ("RouteSearchMsg" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2682 2702])
+                            ("searched_blocks" function (:type ("std::list" type
+                                 (:template-specifier 
+                                    ( ("Coordinates" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2706 2775])
+                            ("origine" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2778 2820])
+                            ("distance" function (:type "unsigned int") (reparse-symbol classsubparts) [2823 2868])
+                            ("n_jumps" function (:type "unsigned int") (reparse-symbol classsubparts) [2871 2914])
+                            ("origine_id" function (:type "int") (reparse-symbol classsubparts) [2930 2970])
+                            ("print" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [2978 2991]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2237 2994])
+                    ("RouteSearchAck" type
+                       (:superclasses 
+                          ( ("Message" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("blocks_infos_" variable (:type ("std::list" type
+                                 (:template-specifier 
+                                    ( ("BlockAckInfos" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3038 3077])
+                            ("origine_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3080 3101])
+                            ("dead_end_" variable (:type "bool") (reparse-symbol classsubparts) [3104 3119])
+                            ("origine_id_" variable (:type "int") (reparse-symbol classsubparts) [3122 3138])
+                            ("public" label nil (reparse-symbol classsubparts) [3139 3146])
+                            ("RouteSearchAck" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("std::list" type
+                                         (:template-specifier 
+                                            ( ("BlockAckInfos" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [3165 3190])
+                                    ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3191 3203])
+                                    ("" variable (:type "bool") (reparse-symbol arg-sub-list) [3204 3209])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3228 3257])
+                                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [3258 3262]))                                  
+                                :type ("RouteSearchAck" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3149 3263])
+                            ("RouteSearchAck" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3266 3286])
+                            ("blocks_infos" function (:type ("std::list" type
+                                 (:template-specifier 
+                                    ( ("BlockAckInfos" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3290 3355])
+                            ("origine" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3358 3400])
+                            ("dead_end" function (:type "bool") (reparse-symbol classsubparts) [3403 3440])
+                            ("origine_id" function (:type "int") (reparse-symbol classsubparts) [3443 3483])
+                            ("print" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [3487 3500]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2996 3503]))                  
+                :type "namespace")
+                nil [169 3505]))          
+      :file "neighbor_finding.h"
+      :pointmax 3535
+      :fsize 3534
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax '((number 780 . 781) (number 777 . 778) (number 507 . 508) (number 465 . 466) (number 422 . 423))
+      :lexical-table 
+        '(("NEIGHBOR_FINDING_H_")
+          )
+)
+    (semanticdb-table "coloring.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("COLORING_H_" variable (:constant-flag t) nil [29 40])
+            ("list" include (:system-flag t) nil [42 57])
+            ("map" include (:system-flag t) nil [58 72])
+            ("memory" include (:system-flag t) nil [73 90])
+            ("network.h" include nil nil [91 111])
+            ("coordinates.h" include nil nil [112 136])
+            ("boost/array.hpp" include (:system-flag t) nil [137 163])
+            ("smartBlocksBlock.h" include nil nil [164 193])
+            ("coloring" type
+               (:members 
+                  ( ("ColoringMsg" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [251 269])
+                    ("ColoringAck" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [270 288])
+                    ("ColoringMsgPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ColoringMsg" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [290 342])
+                    ("ColoringAckPtr" type
+                       (:typedef ("std::shared_ptr" type
+                             (:template-specifier 
+                                ( ("ColoringAck" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [343 395])
+                    ("cNeighborsQuantity" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [397 430])
+                    ("cColorQuantity" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [431 461])
+                    ("ColorQuantityArray" type
+                       (:typedef ("boost::array" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("cColorQuantity" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [463 524])
+                    ("cColoringMsgId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [526 555])
+                    ("cColoringAckId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [556 585])
+                    ("ColoringMsg" type
+                       (:superclasses 
+                          ( ("Message" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("scores_" variable (:type ("ColorQuantityArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [697 724])
+                            ("origine_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [727 748])
+                            ("destination_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [751 776])
+                            ("public" label nil (reparse-symbol classsubparts) [777 784])
+                            ("ColoringMsg" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [800 812])
+                                    ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [813 825])
+                                    ("" variable (:type ("ColorQuantityArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [826 845])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [846 875]))                                  
+                                :type ("ColoringMsg" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [787 876])
+                            ("ColoringMsg" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("ColoringMsgPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [892 913])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [914 943]))                                  
+                                :type ("ColoringMsg" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [879 944])
+                            ("ColoringMsg" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [947 964])
+                            ("scores" function (:type ("ColorQuantityArray" type (:type "class") nil nil)) (reparse-symbol classsubparts) [968 1015])
+                            ("origine" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1019 1061])
+                            ("destination" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1064 1114])
+                            ("print" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1118 1131]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [658 1134])
+                    ("ColoringAck" type
+                       (:superclasses 
+                          ( ("Message" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("origine_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1175 1196])
+                            ("destination_" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1199 1224])
+                            ("color_" variable (:type "int") (reparse-symbol classsubparts) [1227 1238])
+                            ("public" label nil (reparse-symbol classsubparts) [1239 1246])
+                            ("ColoringAck" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1262 1274])
+                                    ("" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1275 1287])
+                                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [1288 1292])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1293 1322]))                                  
+                                :type ("ColoringAck" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1249 1323])
+                            ("ColoringAck" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable
+                                       (:constant-flag t
+                                        :type ("ColoringAckPtr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1339 1360])
+                                    ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1361 1390]))                                  
+                                :type ("ColoringAck" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1326 1391])
+                            ("ColoringAck" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1394 1411])
+                            ("origine" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1415 1457])
+                            ("destination" function (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1461 1511])
+                            ("color" function (:type "int") (reparse-symbol classsubparts) [1514 1544])
+                            ("print" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1548 1561]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1136 1564]))                  
+                :type "namespace")
+                nil [195 1566]))          
+      :file "coloring.h"
+      :pointmax 1589
+      :fsize 1588
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax '((punctuation 1457 . 1458) (punctuation 1015 . 1016) (number 582 . 583) (number 552 . 553) (number 457 . 459) (number 427 . 428))
+      :lexical-table 
+        '(("COLORING_H_")
+          )
+)
+    (semanticdb-table "coordinates.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("COORDINATES_H_" variable (:constant-flag t) nil [32 46])
+            ("smartBlocksBlock.h" include nil nil [48 77])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [79 107])
+            ("Coordinates" type
+               (:members 
+                  ( ("x" variable (:type "int") (reparse-symbol classsubparts) [132 138])
+                    ("y" variable (:type "int") (reparse-symbol classsubparts) [141 147])
+                    ("Coordinates" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [164 168])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [169 173]))                          
+                        :type ("Coordinates" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [151 174])
+                    ("Coordinates" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [190 194])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [195 199])
+                            ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [200 229]))                          
+                        :type ("Coordinates" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [177 230])
+                    ("AdaptToBeSentBy" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [256 285]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [234 286])
+                    ("==" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("Coordinates" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [307 325]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [290 332])
+                    ("!=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("Coordinates" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [352 370]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [335 377])
+                    ("<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:constant-flag t
+                                :type ("Coordinates" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [397 415]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [380 422]))                  
+                :type "struct")
+                nil [109 425]))          
+      :file "coordinates.h"
+      :pointmax 452
+      :fsize 451
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("COORDINATES_H_")
+          )
+)
+    (semanticdb-table "coordinates.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("coordinates.h" include nil nil [1 25])
+            ("Coordinates" function
+               (:constructor-flag t
+                :parent "Coordinates"
+                :arguments 
+                  ( ("arg_x" variable (:type "int") (reparse-symbol arg-sub-list) [53 63])
+                    ("arg_y" variable (:type "int") (reparse-symbol arg-sub-list) [64 74]))                  
+                :type ("Coordinates" type (:type "class") nil nil))
+                nil [27 104])
+            ("Coordinates" function
+               (:constructor-flag t
+                :parent "Coordinates"
+                :arguments 
+                  ( ("arg_x" variable (:type "int") (reparse-symbol arg-sub-list) [132 142])
+                    ("arg_y" variable (:type "int") (reparse-symbol arg-sub-list) [143 153])
+                    ("arg_dir" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [154 191]))                  
+                :type ("Coordinates" type (:type "class") nil nil))
+                nil [106 250])
+            ("AdaptToBeSentBy" function
+               (:parent "Coordinates"
+                :arguments 
+                  ( ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [287 326]))                  
+                :type "void")
+                nil [252 717])
+            ("==" function
+               (:operator-flag t
+                :parent "Coordinates"
+                :arguments 
+                  ( ("other" variable
+                       (:constant-flag t
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [749 773]))                  
+                :type "bool")
+                nil [719 853])
+            ("!=" function
+               (:operator-flag t
+                :parent "Coordinates"
+                :arguments 
+                  ( ("other" variable
+                       (:constant-flag t
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [885 909]))                  
+                :type "bool")
+                nil [855 989])
+            ("<" function
+               (:operator-flag t
+                :parent "Coordinates"
+                :arguments 
+                  ( ("other" variable
+                       (:constant-flag t
+                        :type ("Coordinates" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1020 1044]))                  
+                :type "bool")
+                nil [991 1184]))          
+      :file "coordinates.cpp"
+      :pointmax 1185
+      :fsize 1184
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "neighbor_finding.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("neighbor_finding.h" include nil nil [1 30])
+            ("iostream" include (:system-flag t) nil [31 50])
+            ("cassert" include (:system-flag t) nil [51 69])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [71 91])
+            ("neighbor_finding" using (:type ("neighbor_finding" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [92 125])
+            ("RouteSearchMsg" function
+               (:constructor-flag t
+                :parent "RouteSearchMsg"
+                :arguments 
+                  ( ("searched_blocks_list" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("Coordinates" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [244 283])
+                    ("origine" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [288 308])
+                    ("distance" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [313 335])
+                    ("n_jumps" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [340 361])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [366 405])
+                    ("origine_id" variable (:type "int") (reparse-symbol arg-sub-list) [410 425]))                  
+                :type ("RouteSearchMsg" type (:type "class") nil nil))
+                nil [208 825])
+            ("RouteSearchMsg" function
+               (:constructor-flag t
+                :parent "RouteSearchMsg"
+                :arguments 
+                  ( ("message" variable
+                       (:constant-flag t
+                        :type ("RouteSearchMsgPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [859 891])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [892 931]))                  
+                :type ("RouteSearchMsg" type (:type "class") nil nil))
+                nil [827 1377])
+            ("print" function
+               (:parent "RouteSearchMsg"
+                :type "void")
+                nil [1379 1820])
+            ("RouteSearchAck" function
+               (:constructor-flag t
+                :parent "RouteSearchAck"
+                :arguments 
+                  ( ("blocks_d" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("BlockAckInfos" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1935 1964])
+                    ("origine" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1997 2017])
+                    ("dead_end" variable (:type "bool") (reparse-symbol arg-sub-list) [2018 2032])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2065 2104])
+                    ("origine_id" variable (:type "int") (reparse-symbol arg-sub-list) [2137 2152]))                  
+                :type ("RouteSearchAck" type (:type "class") nil nil))
+                nil [1903 2510])
+            ("print" function
+               (:parent "RouteSearchAck::RouteSearchAck"
+                :type "void")
+                nil [2512 2982])
+            ("BlockRoutingInfos" function
+               (:constructor-flag t
+                :parent "BlockRoutingInfos"
+                :arguments 
+                  ( ("arg_status" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3115 3138])
+                    ("arg_route_interface" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3177 3219])
+                    ("arg_distance" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3258 3284])
+                    ("arg_n_ack_waited" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3323 3353])
+                    ("arg_dead_end" variable (:type "bool") (reparse-symbol arg-sub-list) [3392 3410]))                  
+                :type ("BlockRoutingInfos" type (:type "class") nil nil))
+                nil [3077 3593])
+            ("BlockAckInfos" function
+               (:constructor-flag t
+                :parent "BlockAckInfos"
+                :arguments 
+                  ( ("arg_coordinates" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3706 3734])
+                    ("arg_distance" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3765 3791])
+                    ("arg_status" variable (:type ("BlockStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3792 3815]))                  
+                :type ("BlockAckInfos" type (:type "class") nil nil))
+                nil [3676 3894]))          
+      :file "neighbor_finding.cpp"
+      :pointmax 3895
+      :fsize 3894
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "coloring.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("coloring.h" include nil nil [1 22])
+            ("coloring" using (:type ("coloring" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [24 49])
+            ("ColoringMsg" function
+               (:constructor-flag t
+                :parent "ColoringMsg"
+                :arguments 
+                  ( ("origine" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77 97])
+                    ("destination" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98 122])
+                    ("scores" variable (:type ("ColorQuantityArray" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149 175])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [202 241]))                  
+                :type ("ColoringMsg" type (:type "class") nil nil))
+                nil [51 434])
+            ("ColoringMsg" function
+               (:constructor-flag t
+                :parent "ColoringMsg"
+                :arguments 
+                  ( ("msg" variable
+                       (:constant-flag t
+                        :type ("ColoringMsgPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [462 487])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [488 527]))                  
+                :type ("ColoringMsg" type (:type "class") nil nil))
+                nil [436 738])
+            ("ColoringAck" function
+               (:constructor-flag t
+                :parent "ColoringAck"
+                :arguments 
+                  ( ("origine" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [766 786])
+                    ("destination" variable (:type ("Coordinates" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [787 811])
+                    ("color" variable (:type "int") (reparse-symbol arg-sub-list) [838 848])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [875 914]))                  
+                :type ("ColoringAck" type (:type "class") nil nil))
+                nil [740 1105])
+            ("ColoringAck" function
+               (:constructor-flag t
+                :parent "ColoringAck"
+                :arguments 
+                  ( ("ack" variable
+                       (:constant-flag t
+                        :type ("ColoringAckPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1133 1158])
+                    ("direction" variable (:type ("NeighborDirection::Direction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1159 1198]))                  
+                :type ("ColoringAck" type (:type "class") nil nil))
+                nil [1107 1413])
+            ("print" function
+               (:parent "ColoringMsg"
+                :type "void")
+                nil [1417 1758])
+            ("print" function
+               (:parent "ColoringAck"
+                :type "void")
+                nil [1760 2016]))          
+      :file "coloring.cpp"
+      :pointmax 2017
+      :fsize 2016
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("coloration_v2_main.cpp" "coloration_v2_BlockCode.cpp" "neighbor_finding.cpp" "coloring.cpp" "coordinates.cpp")) nil [1 109])
+            ("OUT" variable (:default-value ("$(APPDIR)/coloration_v2")) nil [110 140])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [141 164])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [164 193])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [194 254])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [641 689])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimSmartBlocks.a")) nil [690 749])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [750 778])
+            ("CC" variable (:default-value ("g++")) nil [778 787])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [788 811])
+            (".cpp.o" function nil nil [812 862])
+            ("%.depends" function (:arguments ("%.cpp")) nil [863 921])
+            ("all" function (:arguments ("$(OUT)")) nil [922 938])
+            ("test" function nil nil [939 1010])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [1011 1053])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [1054 1079])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1204 1269])
+            ("clean" function nil nil [1325 1365]))          
+      :file "Makefile"
+      :pointmax 1365
+      :fsize 1364
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1333 . 1364) (bol 1332 . 1332) (semantic-list 1311 . 1317) (punctuation 1310 . 1311) (symbol 1301 . 1309) (bol 1301 . 1301)))
+    (semanticdb-table "coloration_v2_main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [91 110])
+            ("cstdlib" include (:system-flag t) nil [111 129])
+            ("time.h" include (:system-flag t) nil [130 147])
+            ("smartBlocksSimulator.h" include nil nil [148 181])
+            ("smartBlocksBlockCode.h" include nil nil [182 215])
+            ("coloration_v2_BlockCode.h" include nil nil [216 252])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [254 274])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [275 303])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [314 323])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [324 336]))                  
+                :type "int")
+                nil [305 827]))          
+      :file "coloration_v2_main.cpp"
+      :pointmax 828
+      :fsize 827
+      :lastmodtime '(22452 1305 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!coloration_v2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

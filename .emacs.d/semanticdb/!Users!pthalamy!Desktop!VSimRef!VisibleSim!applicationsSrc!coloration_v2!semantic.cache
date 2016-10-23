@@ -1,0 +1,145 @@
+;; Object coloration_v2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "coloration_v2/"
+  :tables
+  (list
+    (semanticdb-table "coloration_v2_BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [98 117])
+            ("sstream" include (:system-flag t) nil [118 136])
+            ("cassert" include (:system-flag t) nil [137 155])
+            ("cstdlib" include (:system-flag t) nil [156 174])
+            ("scheduler.h" include nil nil [175 197])
+            ("events.h" include nil nil [198 217])
+            ("coloration_v2_BlockCode.h" include nil nil [218 254])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [277 305])
+            ("neighbor_finding" using (:type ("neighbor_finding" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [306 339])
+            ("coloring" using (:type ("coloring" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [340 365])
+            ("RouteMapElement" type
+               (:typedef ("pair" type
+                     (:template-specifier 
+                        ( ("Coordinates" type nil nil nil)
+                          ("BlockRoutingInfos" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [367 428])
+            ("ColorationV2BlockCode" function
+               (:constructor-flag t
+                :parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [546 569]))                  
+                :type ("ColorationV2BlockCode" type (:type "class") nil nil))
+                nil [501 748])
+            ("ColorationV2BlockCode" function
+               (:destructor-flag t
+                :parent "ColorationV2BlockCode"
+                :type "void")
+                nil [750 860])
+            ("startup" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [862 7806])
+            ("processLocalEvent" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7856 7869]))                  
+                :type "void")
+                nil [7809 12223])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12306 12329]))                  
+                :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                nil [12225 12377])
+            ("TreatRouteSearchMsg" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_msg" variable (:type ("RouteSearchMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12696 12723]))                  
+                :type "void")
+                nil [12647 16469])
+            ("TreatRouteSearchAck" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_ack" variable (:type ("RouteSearchAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17215 17242]))                  
+                :type "void")
+                nil [17166 20949])
+            ("BuildDistancesList" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("searched_blocks" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("Coordinates" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [21081 21115]))                  
+                :type ("list" type
+                     (:template-specifier 
+                        ( ("BlockAckInfos" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [21018 21581])
+            ("StartNextRound" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [21700 23256])
+            ("ContinueWhenNeighborsAreFound" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [23326 24259])
+            ("TreatColoringMsg" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_msg" variable (:type ("ColoringMsgPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24307 24331]))                  
+                :type "void")
+                nil [24261 25646])
+            ("TreatColoringAck" function
+               (:parent "ColorationV2BlockCode"
+                :arguments 
+                  ( ("recv_ack" variable (:type ("ColoringAckPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25694 25718]))                  
+                :type "void")
+                nil [25648 27274])
+            ("DrawAndSendColorScores" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [27319 28509])
+            ("ProcessScores" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [28511 30818])
+            ("PrintRoutesMap" function
+               (:parent "ColorationV2BlockCode"
+                :type "void")
+                nil [30820 31362]))          
+      :file "coloration_v2_BlockCode.cpp"
+      :pointmax 31363
+      :fsize 31376
+      :lastmodtime '(22337 19607 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "coloration_v2_BlockCode.h"
+      :file "coloration_v2_BlockCode.h"
+      :fsize 1969
+      :lastmodtime '(22337 19607 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSim!applicationsSrc!coloration_v2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

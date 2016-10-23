@@ -1,0 +1,132 @@
+;; Object blinky01/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "blinky01/"
+  :tables
+  (list
+    (semanticdb-table "blinky01BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [86 105])
+            ("sstream" include (:system-flag t) nil [106 124])
+            ("boost/asio.hpp" include (:system-flag t) nil [125 150])
+            ("scheduler.h" include nil nil [152 174])
+            ("network.h" include nil nil [175 195])
+            ("blinky01BlockCode.h" include nil nil [197 227])
+            ("blinkyBlocksBlock.h" include nil nil [228 258])
+            ("meldProcessEvents.h" include nil nil [260 290])
+            ("meldProcessDebugger.h" include nil nil [291 323])
+            ("trace.h" include nil nil [325 343])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [345 365])
+            ("MeldProcess" using (:type ("MeldProcess" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [366 394])
+            ("BlinkyBlocks" using (:type ("BlinkyBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [395 424])
+            ("boost::asio::ip::tcp" using (:type ("boost::asio::ip::tcp" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [425 452])
+            ("Blinky01BlockCode" function
+               (:constructor-flag t
+                :parent "Blinky01BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BlinkyBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [491 515]))                  
+                :type ("Blinky01BlockCode" type (:type "class") nil nil))
+                nil [454 631])
+            ("Blinky01BlockCode" function
+               (:destructor-flag t
+                :parent "Blinky01BlockCode"
+                :type "void")
+                nil [633 738])
+            ("init" function
+               (:parent "Blinky01BlockCode"
+                :type "void")
+                nil [740 1678])
+            ("startup" function
+               (:parent "Blinky01BlockCode"
+                :type "void")
+                nil [1680 1951])
+            ("processLocalEvent" function
+               (:parent "Blinky01BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1995 2008]))                  
+                :type "void")
+                nil [1953 5913])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "Blinky01BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BlinkyBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5989 6013]))                  
+                :type ("BlinkyBlocks::BlinkyBlocksBlockCode" type (:type "class") nil nil))
+                nil [5915 6055])
+            ("lockVM" function
+               (:parent "Blinky01BlockCode"
+                :type "void")
+                nil [6058 6159])
+            ("unlockVM" function
+               (:parent "Blinky01BlockCode"
+                :type "void")
+                nil [6161 6266])
+            ("sendCommand" function
+               (:parent "Blinky01BlockCode"
+                :arguments 
+                  ( ("c" variable
+                       (:reference 1
+                        :type ("VMCommand" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6303 6316]))                  
+                :type "int")
+                nil [6268 6518])
+            ("killVM" function
+               (:parent "Blinky01BlockCode"
+                :type "void")
+                nil [6520 6627]))          
+      :file "blinky01BlockCode.cpp"
+      :pointmax 6628
+      :fsize 6627
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "blinky01BlockCode.h"
+      :file "blinky01BlockCode.h"
+      :fsize 1035
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("blinky01.cpp" "blinky01BlockCode.cpp")) nil [1 43])
+            ("OUT" variable (:default-value ("$(APPDIR)/blinky01")) nil [44 69])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [70 93])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [93 122])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [123 184])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [571 619])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimBlinkyBlocks.a")) nil [620 680])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [681 709])
+            ("CC" variable (:default-value ("g++")) nil [709 718])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [719 742])
+            (".cpp.o" function nil nil [743 793])
+            ("%.depends" function (:arguments ("%.cpp")) nil [794 852])
+            ("all" function (:arguments ("$(OUT)")) nil [853 869])
+            ("test" function nil nil [870 927])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [928 969])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [970 995])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [997 1063])
+            ("clean" function nil nil [1118 1158]))          
+      :file "Makefile"
+      :pointmax 1158
+      :fsize 1157
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1126 . 1157) (bol 1125 . 1125) (semantic-list 1104 . 1110) (punctuation 1103 . 1104) (symbol 1094 . 1102) (bol 1094 . 1094))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!blinky01!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

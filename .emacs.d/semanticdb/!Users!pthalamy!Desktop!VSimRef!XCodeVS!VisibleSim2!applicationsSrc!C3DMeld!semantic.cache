@@ -1,0 +1,226 @@
+;; Object C3DMeld/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "C3DMeld/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("C3DMeld.cpp" "C3DMeldBlockCode.cpp")) nil [1 41])
+            ("OUT" variable (:default-value ("$(APPDIR)/C3DMeld")) nil [42 66])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [67 90])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [90 119])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [120 181])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [568 616])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [617 680])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [681 709])
+            ("CC" variable (:default-value ("g++")) nil [709 718])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [719 742])
+            (".cpp.o" function nil nil [743 793])
+            ("%.depends" function (:arguments ("%.cpp")) nil [794 852])
+            ("all" function (:arguments ("$(OUT)")) nil [853 869])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [870 911])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [912 937])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [939 1005])
+            ("clean" function nil nil [1060 1100]))          
+      :file "Makefile"
+      :pointmax 1100
+      :fsize 1099
+      :lastmodtime '(22445 19011 0 0)
+      :unmatched-syntax '((shell-command 1068 . 1099) (bol 1067 . 1067) (semantic-list 1046 . 1052) (punctuation 1045 . 1046) (symbol 1036 . 1044) (bol 1036 . 1036)))
+    (semanticdb-table "C3DMeld.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("trace.h" include (:system-flag t) nil [21 39])
+            ("C3DMeldBlockCode.h" include nil nil [41 70])
+            ("catoms3DSimulator.h" include nil nil [71 101])
+            ("catoms3DBlockCode.h" include nil nil [102 132])
+            ("meldInterpretVM.h" include nil nil [133 161])
+            ("configStat.h" include nil nil [162 185])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [187 207])
+            ("Catoms3D" using (:type ("Catoms3D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [208 233])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [244 253])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [254 266]))                  
+                :type "int")
+                nil [235 852]))          
+      :file "C3DMeld.cpp"
+      :pointmax 853
+      :fsize 852
+      :lastmodtime '(22436 6139 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "C3DMeldBlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("sstream" include (:system-flag t) nil [21 39])
+            ("scheduler.h" include nil nil [43 65])
+            ("network.h" include nil nil [66 86])
+            ("C3DMeldBlockCode.h" include nil nil [88 117])
+            ("meldInterpretEvents.h" include nil nil [118 150])
+            ("meldInterpretMessages.h" include nil nil [151 185])
+            ("meldInterpretVM.h" include nil nil [186 214])
+            ("lattice.h" include nil nil [215 235])
+            ("trace.h" include nil nil [237 255])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [257 277])
+            ("Catoms3D" using (:type ("Catoms3D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [278 303])
+            ("MeldInterpret" using (:type ("MeldInterpret" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [304 334])
+            ("C3DMeldBlockCode" function
+               (:constructor-flag t
+                :parent "C3DMeldBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("Catoms3DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [371 391]))                  
+                :type ("C3DMeldBlockCode" type (:type "class") nil nil))
+                nil [336 665])
+            ("C3DMeldBlockCode" function
+               (:destructor-flag t
+                :parent "C3DMeldBlockCode"
+                :type "void")
+                nil [667 770])
+            ("init" function
+               (:parent "C3DMeldBlockCode"
+                :type "void")
+                nil [772 1572])
+            ("startup" function
+               (:parent "C3DMeldBlockCode"
+                :type "void")
+                nil [1574 1825])
+            ("handleDeterministicMode" function
+               (:parent "C3DMeldBlockCode"
+                :type "void")
+                nil [1827 2204])
+            ("processLocalEvent" function
+               (:parent "C3DMeldBlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2247 2260]))                  
+                :type "void")
+                nil [2206 8180])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "C3DMeldBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BuildingBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8229 8249]))                  
+                :type ("BlockCode" type (:type "class") nil nil))
+                nil [8182 8306]))          
+      :file "C3DMeldBlockCode.cpp"
+      :pointmax 8307
+      :fsize 8306
+      :lastmodtime '(22445 19011 0 0)
+      :unmatched-syntax '((punctuation 40 . 41)))
+    (semanticdb-table "C3DMeldBlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("C3DMELDBLOCKCODE_H_" variable (:constant-flag t) nil [37 56])
+            ("catoms3DBlock.h" include nil nil [60 86])
+            ("meldInterpretVM.h" include nil nil [87 115])
+            ("catoms3DBlockCode.h" include nil nil [116 146])
+            ("catoms3DSimulator.h" include nil nil [147 177])
+            ("C3DMeldBlockCode" type
+               (:superclasses 
+                  ( ("Catoms3D::Catoms3DBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [241 249])
+                    ("hasWork" variable (:type "bool") (reparse-symbol classsubparts) [251 273])
+                    ("polling" variable (:type "bool") (reparse-symbol classsubparts) [251 273])
+                    ("vm" variable
+                       (:pointer 1
+                        :type ("MeldInterpret::MeldInterpretVM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [275 310])
+                    ("bb" variable
+                       (:pointer 1
+                        :type ("Catoms3D::Catoms3DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [312 340])
+                    ("currentLocalDate" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol classsubparts) [342 364])
+                    ("public" label nil (reparse-symbol classsubparts) [382 389])
+                    ("C3DMeldBlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("Catoms3D::Catoms3DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [408 438]))                          
+                        :type ("C3DMeldBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [391 439])
+                    ("C3DMeldBlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [441 461])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [464 479])
+                    ("init" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [481 493])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [518 531]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [495 532])
+                    ("setCurrentLocalDate" function
+                       (:arguments 
+                          ( ("t" variable (:type ("Time" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [559 566]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [534 590])
+                    ("handleDeterministicMode" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [592 658])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("BuildingBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [696 716]))                          
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [660 717]))                  
+                :type "class")
+                nil [179 720]))          
+      :file "C3DMeldBlockCode.h"
+      :pointmax 755
+      :fsize 754
+      :lastmodtime '(22441 40291 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("C3DMELDBLOCKCODE_H_")
+          )
+))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!C3DMeld!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,291 @@
+;; Object sphereCatoms3D/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sphereCatoms3D/"
+  :tables
+  (list
+    (semanticdb-table "sphereCatoms3DBlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [90 109])
+            ("sstream" include (:system-flag t) nil [110 128])
+            ("sphereCatoms3DBlockCode.h" include nil nil [129 165])
+            ("catoms3DBlock.h" include nil nil [166 192])
+            ("scheduler.h" include nil nil [193 215])
+            ("events.h" include nil nil [216 235])
+            ("memory" include (:system-flag t) nil [236 253])
+            ("chrono" include (:system-flag t) nil [254 271])
+            ("fstream" include (:system-flag t) nil [272 290])
+            ("INF" variable (:constant-flag t) nil [318 321])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [334 354])
+            ("Catoms3D" using (:type ("Catoms3D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [355 380])
+            ("SphereCatoms3DBlockCode::radius" variable
+               (:dereference 1
+                :default-value "{0}"
+                :type "int")
+                nil [382 433])
+            ("SphereCatoms3DBlockCode" function
+               (:constructor-flag t
+                :parent "SphereCatoms3DBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("Catoms3DBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [484 504]))                  
+                :type ("SphereCatoms3DBlockCode" type (:type "class") nil nil))
+                nil [435 673])
+            ("SphereCatoms3DBlockCode" function
+               (:destructor-flag t
+                :parent "SphereCatoms3DBlockCode"
+                :type "void")
+                nil [675 785])
+            ("startup" function
+               (:parent "SphereCatoms3DBlockCode"
+                :type "void")
+                nil [787 1065])
+            ("processLocalEvent" function
+               (:parent "SphereCatoms3DBlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1116 1129]))                  
+                :type "void")
+                nil [1068 2498])
+            ("sendDistanceMessage" function
+               (:parent "SphereCatoms3DBlockCode"
+                :type "void")
+                nil [2500 2878])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "SphereCatoms3DBlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("BuildingBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2934 2954]))                  
+                :type ("BlockCode" type (:type "class") nil nil))
+                nil [2880 3018])
+            ("Distance_message" function
+               (:constructor-flag t
+                :parent "Distance_message"
+                :arguments 
+                  ( ("_distance" variable (:type "int") (reparse-symbol arg-sub-list) [3055 3069]))                  
+                :type ("Distance_message" type (:type "class") nil nil))
+                nil [3020 3125]))          
+      :file "sphereCatoms3DBlockCode.cpp"
+      :pointmax 3127
+      :fsize 3126
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INF" . ((number "2000000000" 322 . 332)))
+          )
+)
+    (semanticdb-table "sphereCatoms3DBlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("SPHERECATOMS3DBLOCKCODE_H_" variable (:constant-flag t) nil [131 157])
+            ("SPHERE_MSG_ID" variable (:constant-flag t) nil [167 180])
+            ("DISTANCE_MSG_ID" variable (:constant-flag t) nil [194 209])
+            ("catoms3DBlockCode.h" include nil nil [216 246])
+            ("catoms3DSimulator.h" include nil nil [247 277])
+            ("rotation3DEvents.h" include nil nil [278 307])
+            ("catoms3DBlock.h" include nil nil [308 334])
+            ("scheduler.h" include nil nil [335 357])
+            ("events.h" include nil nil [358 377])
+            ("Distance_message" type
+               (:prototype t
+                :type "class")
+                nil [379 402])
+            ("Distance_message_ptr" type
+               (:typedef ("std::shared_ptr" type
+                     (:template-specifier 
+                        ( ("Distance_message" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [404 467])
+            ("SphereCatoms3DBlockCode" type
+               (:superclasses 
+                  ( ("Catoms3D::Catoms3DBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [538 545])
+                    ("radius" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [550 577])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [579 600])
+                    ("catom" variable
+                       (:pointer 1
+                        :type ("Catoms3D::Catoms3DBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [602 633])
+                    ("distance" variable (:type "int") (reparse-symbol classsubparts) [638 651])
+                    ("SphereCatoms3DBlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("Catoms3D::Catoms3DBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [678 708]))                          
+                        :type ("SphereCatoms3DBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [654 709])
+                    ("SphereCatoms3DBlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [711 738])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [741 756])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [781 794]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [758 795])
+                    ("sendDistanceMessage" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [800 827])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("BuildingBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [866 886]))                          
+                        :type ("BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [830 887]))                  
+                :type "class")
+                nil [469 891])
+            ("Distance_message" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("distance" variable (:type "int") (reparse-symbol classsubparts) [939 952])
+                    ("public" label nil (reparse-symbol classsubparts) [953 961])
+                    ("Distance_message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_dist" variable (:type "int") (reparse-symbol arg-sub-list) [983 993]))                          
+                        :type ("Distance_message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [966 994])
+                    ("getDistance" function (:type "int") (reparse-symbol classsubparts) [996 1034]))                  
+                :type "class")
+                nil [893 1038])
+            ("ACK_message" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("ok" variable (:type "bool") (reparse-symbol classsubparts) [1081 1089])
+                    ("public" label nil (reparse-symbol classsubparts) [1090 1098])
+                    ("ACK_message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("ok" variable (:type "bool") (reparse-symbol arg-sub-list) [1115 1123]))                          
+                        :type ("ACK_message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1103 1124]))                  
+                :type "class")
+                nil [1040 1127]))          
+      :file "sphereCatoms3DBlockCode.h"
+      :pointmax 1169
+      :fsize 1168
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax '((punctuation 1034 . 1035))
+      :lexical-table 
+        '(("SPHERECATOMS3DBLOCKCODE_H_")
+          ("SPHERE_MSG_ID" . ((number "9001" 181 . 185)))
+          ("DISTANCE_MSG_ID" . ((number "9002" 210 . 214)))
+          )
+)
+    (semanticdb-table "sphereCatoms3D.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [81 100])
+            ("catoms3DSimulator.h" include nil nil [101 131])
+            ("catoms3DBlockCode.h" include nil nil [132 162])
+            ("sphereCatoms3DBlockCode.h" include nil nil [163 199])
+            ("ctime" include (:system-flag t) nil [200 216])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [218 238])
+            ("Catoms3D" using (:type ("Catoms3D" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [239 264])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [275 284])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [285 297]))                  
+                :type "int")
+                nil [266 1029]))          
+      :file "sphereCatoms3D.cpp"
+      :pointmax 1030
+      :fsize 1029
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("mkfile_path" variable (:default-value ("$(abspath $(lastword $(MAKEFILE_LIST)))")) nil [32 87])
+            ("current_dir" variable (:default-value ("$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))")) nil [87 151])
+            ("APPDIR" variable (:default-value ("../../applicationsBin/$(current_dir)")) nil [151 197])
+            ("SRCS" variable (:default-value ("sphereCatoms3D.cpp" "sphereCatoms3DBlockCode.cpp")) nil [718 772])
+            ("OUT" variable (:default-value ("$(APPDIR)/sphereCatoms3D")) nil [842 873])
+            ("MODULELIB" variable (:default-value ("-lsimCatoms3D")) nil [950 976])
+            ("TESTS" variable (:default-value ("../../utilities/blockCodeTest.sh" "sphereCatoms3D" "$(OUT)")) nil [1055 1118])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [1241 1264])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [1264 1293])
+            ("OS" variable (:default-value ("$(shell uname -s)")) nil [1294 1317])
+            ("SIMULATORLIB" variable (:default-value ("$(MODULELIB:-l%=../../simulatorCore/lib/lib%.a)")) nil [1317 1380])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "-I/usr/local/include" "-I/opt/local/include" "-I/usr/X11/include")) nil [1409 1511])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [1516 1576])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-lGLEW" "-lglut" "-framework" "GLUT" "-framework" "OpenGL" "-L/usr/X11/lib" "/usr/local/lib/libglut.dylib" "$(MODULELIB)")) nil [1628 1788])
+            ("LIBS" variable (:default-value ("-L./" "-L../../simulatorCore/lib" "-L/usr/local/lib" "-L/opt/local/lib" "-lm" "-L/usr/X11/lib" "-lglut" "-lGL" "-lGLU" "-lGLEW" "-lpthread" "$(MODULELIB)")) nil [1794 1934])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [1953 2001])
+            ("CCFLAGS" variable (:default-value ("-g" "-Wall" "-std=c++11" "-DTINYXML_USE_STL" "-DTIXML_USE_STL")) nil [2050 2114])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [2268 2296])
+            ("CC" variable (:default-value ("g++")) nil [2303 2312])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [2313 2336])
+            (".cpp.o" function nil nil [2337 2387])
+            ("%.depends" function (:arguments ("%.cpp")) nil [2388 2446])
+            ("all" function (:arguments ("$(OUT)")) nil [2447 2463])
+            ("test" function nil nil [2464 2481])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [2482 2524])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [2525 2550])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [2551 2616])
+            ("clean" function nil nil [2671 2711]))          
+      :file "Makefile"
+      :pointmax 2711
+      :fsize 2710
+      :lastmodtime '(22449 35661 0 0)
+      :unmatched-syntax '((shell-command 2679 . 2710) (bol 2678 . 2678) (semantic-list 2657 . 2663) (punctuation 2656 . 2657) (symbol 2647 . 2655) (bol 2647 . 2647) (shell-command 2256 . 2262) (bol 2255 . 2255) (shell-command 2137 . 2254) (bol 2136 . 2136) (shell-command 2115 . 2135) (bol 2114 . 2114) (ENDIF 2001 . 2006) (bol 2001 . 2001) (shell-command 1935 . 1947) (bol 1934 . 1934) (shell-command 1789 . 1793) (bol 1788 . 1788) (shell-command 1608 . 1627) (bol 1607 . 1607))))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!sphereCatoms3D!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

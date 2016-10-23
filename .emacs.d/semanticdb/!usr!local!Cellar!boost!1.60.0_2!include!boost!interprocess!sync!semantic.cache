@@ -1,0 +1,150 @@
+;; Object sync/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sync/"
+  :tables
+  (list
+    (semanticdb-table "interprocess_semaphore.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOOST_INTERPROCESS_SEMAPHORE_HPP" variable (:constant-flag t) nil [478 510])
+            ("boost/config.hpp" include (:system-flag t) nil [587 616])
+            ("boost/interprocess/detail/config_begin.hpp" include (:system-flag t) nil [684 737])
+            ("boost/interprocess/detail/workaround.hpp" include (:system-flag t) nil [738 789])
+            ("boost/interprocess/creation_tags.hpp" include (:system-flag t) nil [791 838])
+            ("boost/interprocess/exceptions.hpp" include (:system-flag t) nil [839 883])
+            ("boost/interprocess/detail/posix_time_types_wrk.hpp" include (:system-flag t) nil [884 945])
+            ("boost/interprocess/sync/spin/semaphore.hpp" include (:system-flag t) nil [1486 1542])
+            ("BOOST_INTERPROCESS_USE_GENERIC_EMULATION" variable (:constant-flag t) nil [1554 1594])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("interprocess_semaphore" type
+                               (:members 
+                                  ( ("interprocess_semaphore" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2051 2082]))                                          
+                                        :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2028 2083])
+                                    ("=" function
+                                       (:prototype-flag t
+                                        :operator-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2121 2152]))                                          
+                                        :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2087 2153])
+                                    ("public" label nil (reparse-symbol classsubparts) [2214 2221])
+                                    ("interprocess_semaphore" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("initialCount" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2370 2396]))                                          
+                                        :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2347 2397])
+                                    ("interprocess_semaphore" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2466 2492])
+                                    ("post" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2784 2796])
+                                    ("wait" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3063 3075])
+                                    ("try_wait" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3334 3350])
+                                    ("timed_wait" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("abs_time" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("boost::posix_time::ptime" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3763 3804]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3747 3805])
+                                    ("private" label nil (reparse-symbol classsubparts) [3937 3945])
+                                    ("m_sem" variable (:type ("ipcdetail::spin_semaphore" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4063 4095])
+                                    ("m_sem" variable (:type ("ipcdetail::posix_semaphore" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4288 4321]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [1924 4449]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1764 4452]))                  
+                :type "namespace")
+                nil [1746 4482])
+            ("boost" type
+               (:members 
+                  ( ("interprocess" type
+                       (:members 
+                          ( ("interprocess_semaphore" function
+                               (:constructor-flag t
+                                :parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("initialCount" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4603 4629]))                                  
+                                :type ("interprocess_semaphore" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [4549 4657])
+                            ("interprocess_semaphore" function
+                               (:destructor-flag t
+                                :parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4659 4717])
+                            ("wait" function
+                               (:parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [4719 5261])
+                            ("try_wait" function
+                               (:parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [5262 5337])
+                            ("timed_wait" function
+                               (:parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :arguments 
+                                  ( ("abs_time" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("boost::posix_time::ptime" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5386 5427]))                                  
+                                :type "bool")
+                                (reparse-symbol namespacesubparts) [5339 5466])
+                            ("post" function
+                               (:parent "interprocess_semaphore"
+                                :typemodifiers ("inline")
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [5468 5528]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [4523 5531]))                  
+                :type "namespace")
+                nil [4505 5561])
+            ("boost/interprocess/detail/config_end.hpp" include (:system-flag t) nil [5584 5635]))          
+      :file "interprocess_semaphore.hpp"
+      :pointmax 5681
+      :fsize 5680
+      :lastmodtime '(22415 5290 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOST_INTERPROCESS_SEMAPHORE_HPP")
+          )
+))
+  :file "!usr!local!Cellar!boost!1.60.0_2!include!boost!interprocess!sync!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

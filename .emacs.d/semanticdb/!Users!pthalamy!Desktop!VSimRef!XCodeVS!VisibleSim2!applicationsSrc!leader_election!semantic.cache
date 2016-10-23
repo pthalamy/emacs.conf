@@ -1,0 +1,214 @@
+;; Object leader_election/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "leader_election/"
+  :tables
+  (list
+    (semanticdb-table "leader_election_BlockCode.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("leader_election_BlockCode_H_" variable (:constant-flag t) nil [139 167])
+            ("smartBlocksBlockCode.h" include nil nil [169 202])
+            ("smartBlocksSimulator.h" include nil nil [203 236])
+            ("smartBlocksBlock.h" include nil nil [237 266])
+            ("Leader_election_BlockCode" type
+               (:superclasses 
+                  ( ("SmartBlocks::SmartBlocksBlockCode" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("i_am_master" variable (:type "bool") (reparse-symbol classsubparts) [347 364])
+                    ("master_found" variable (:type "bool") (reparse-symbol classsubparts) [366 384])
+                    ("min_id" variable (:type "int") (reparse-symbol classsubparts) [387 398])
+                    ("min_id_sender" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [400 436])
+                    ("n_answers_needed" variable (:type "unsigned int") (reparse-symbol classsubparts) [438 468])
+                    ("master_routine" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [471 493])
+                    ("public" label nil (reparse-symbol classsubparts) [495 502])
+                    ("scheduler" variable
+                       (:pointer 1
+                        :type ("Scheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [505 526])
+                    ("smartBlock" variable
+                       (:pointer 1
+                        :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [528 570])
+                    ("Leader_election_BlockCode" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [600 636]))                          
+                        :type ("Leader_election_BlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [573 637])
+                    ("Leader_election_BlockCode" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [639 669])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [672 687])
+                    ("processLocalEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [712 725]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [689 726])
+                    ("buildNewBlockCode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("SmartBlocks::SmartBlocksBlock" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [790 826]))                          
+                        :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [729 827]))                  
+                :type "class")
+                nil [269 830]))          
+      :file "leader_election_BlockCode.h"
+      :pointmax 875
+      :fsize 874
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("leader_election_BlockCode_H_")
+          )
+)
+    (semanticdb-table "leader_election_BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [96 115])
+            ("sstream" include (:system-flag t) nil [116 134])
+            ("cstdlib" include (:system-flag t) nil [135 153])
+            ("scheduler.h" include nil nil [154 176])
+            ("events.h" include nil nil [177 196])
+            ("leader_election_BlockCode.h" include nil nil [197 235])
+            ("leader_election_messages.h" include nil nil [236 273])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [276 296])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [297 325])
+            ("TIMESCALE" variable (:constant-flag t) nil [335 344])
+            ("Leader_election_BlockCode" function
+               (:constructor-flag t
+                :parent "Leader_election_BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [405 428]))                  
+                :type ("Leader_election_BlockCode" type (:type "class") nil nil))
+                nil [352 591])
+            ("Leader_election_BlockCode" function
+               (:destructor-flag t
+                :parent "Leader_election_BlockCode"
+                :type "void")
+                nil [593 711])
+            ("startup" function
+               (:parent "Leader_election_BlockCode"
+                :type "void")
+                nil [713 1611])
+            ("processLocalEvent" function
+               (:parent "Leader_election_BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1664 1677]))                  
+                :type "void")
+                nil [1614 6249])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "Leader_election_BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6331 6354]))                  
+                :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                nil [6251 6404])
+            ("master_routine" function
+               (:parent "Leader_election_BlockCode"
+                :type "void")
+                nil [6406 7082]))          
+      :file "leader_election_BlockCode.cpp"
+      :pointmax 7083
+      :fsize 7071
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "leader_election_messages.h"
+      :file "leader_election_messages.h"
+      :fsize 1465
+      :lastmodtime '(22449 35660 0 0))
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SRCS" variable (:default-value ("leader_election_main.cpp" "leader_election_BlockCode.cpp")) nil [1 63])
+            ("OUT" variable (:default-value ("$(APPDIR)/leader_election")) nil [64 96])
+            ("OBJS" variable (:default-value ("$(SRCS:.cpp=.o)")) nil [97 120])
+            ("DEPS" variable (:default-value ("$(SRCS:.cpp=.depends)")) nil [120 149])
+            ("INCLUDES" variable (:default-value ("-I." "-I../../simulatorCore/src" "$(GLOBAL_INCLUDES)")) nil [150 210])
+            ("LIBS" variable (:default-value ("$(GLOBAL_LIBS)" "-L../../simulatorCore/lib")) nil [597 645])
+            ("SIMULATORLIB" variable (:default-value ("../../simulatorCore/lib/libsimSmartBlocks.a")) nil [646 705])
+            ("CCFLAGS" variable (:default-value ("$(GLOBAL_CCFLAGS)")) nil [706 734])
+            ("CC" variable (:default-value ("g++")) nil [734 743])
+            (".PHONY" function (:arguments ("clean" "all" "test")) nil [744 767])
+            (".cpp.o" function nil nil [768 818])
+            ("%.depends" function (:arguments ("%.cpp")) nil [819 877])
+            ("all" function (:arguments ("$(OUT)")) nil [878 894])
+            ("test" function nil nil [895 968])
+            ("autoinstall" function (:arguments ("$(OUT)")) nil [969 1011])
+            ("$(APPDIR)" function (:arguments ("$(OUT)")) nil [1012 1037])
+            ("$(OUT)" function (:arguments ("$(SIMULATORLIB)" "$(OBJS)")) nil [1162 1227])
+            ("clean" function nil nil [1283 1323]))          
+      :file "Makefile"
+      :pointmax 1323
+      :fsize 1322
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax '((shell-command 1291 . 1322) (bol 1290 . 1290) (semantic-list 1269 . 1275) (punctuation 1268 . 1269) (symbol 1259 . 1267) (bol 1259 . 1259)))
+    (semanticdb-table "leader_election_main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [91 110])
+            ("cstdlib" include (:system-flag t) nil [111 129])
+            ("time.h" include (:system-flag t) nil [130 147])
+            ("smartBlocksSimulator.h" include nil nil [148 181])
+            ("smartBlocksBlockCode.h" include nil nil [182 215])
+            ("leader_election_BlockCode.h" include nil nil [216 254])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [277 305])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [316 325])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [326 338]))                  
+                :type "int")
+                nil [307 701]))          
+      :file "leader_election_main.cpp"
+      :pointmax 702
+      :fsize 701
+      :lastmodtime '(22449 35660 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsSrc!leader_election!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

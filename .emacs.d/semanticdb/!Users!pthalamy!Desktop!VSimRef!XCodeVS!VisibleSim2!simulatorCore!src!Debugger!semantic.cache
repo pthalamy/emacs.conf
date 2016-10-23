@@ -1,0 +1,324 @@
+;; Object Debugger/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Debugger/"
+  :tables
+  (list
+    (semanticdb-table "debug_Simhandler.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [42 61])
+            ("pthread.h" include (:system-flag t) nil [62 82])
+            ("iostream" include (:system-flag t) nil [83 102])
+            ("sstream" include (:system-flag t) nil [103 121])
+            ("string" include (:system-flag t) nil [122 139])
+            ("stdio.h" include (:system-flag t) nil [140 158])
+            ("stdlib.h" include (:system-flag t) nil [159 178])
+            ("unistd.h" include (:system-flag t) nil [179 198])
+            ("list" include (:system-flag t) nil [199 214])
+            ("debug_Simprompt.hpp" include nil nil [216 246])
+            ("debug_Simhandler.hpp" include nil nil [247 278])
+            ("serialization.hpp" include nil nil [279 307])
+            ("types.hpp" include nil nil [308 328])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [400 420])
+            ("debugger" using (:type ("debugger" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [421 446])
+            ("debugger" type
+               (:members 
+                  ( ("SIZE" variable (:constant-flag t) (reparse-symbol namespacesubparts) [479 483])
+                    ("BROADCAST" variable (:constant-flag t) (reparse-symbol namespacesubparts) [515 524])
+                    ("messageQueue" variable
+                       (:pointer 1
+                        :type ("ConcurrentQueue" type
+                             (:template-specifier 
+                                ( ("message_type" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [692 737])
+                    ("okayToBroadcastPause" variable
+                       (:typemodifiers ("static")
+                        :default-value "true"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [953 993])
+                    ("okayToPauseSimulation" variable
+                       (:typemodifiers ("static")
+                        :default-value "false"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [995 1037])
+                    ("printLimitation" variable
+                       (:typemodifiers ("static")
+                        :default-value "true"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1039 1074])
+                    ("okayToPrint" variable
+                       (:typemodifiers ("static")
+                        :default-value "true"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1075 1106])
+                    ("numberExpected" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1161 1184])
+                    ("verboseMode" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1186 1211])
+                    ("serializationMode" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1212 1243])
+                    ("rcvMessageList" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1368 1385])
+                    ("msgListContainer" type
+                       (:members 
+                          ( ("instruction" variable (:type "int") (reparse-symbol classsubparts) [1569 1585])
+                            ("node" variable (:type "int") (reparse-symbol classsubparts) [1590 1599])
+                            ("msglist" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [1634 1644]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1539 1647])
+                    ("msgListElem" type
+                       (:members 
+                          ( ("priority" variable (:type "int") (reparse-symbol classsubparts) [1759 1772])
+                            ("content" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1777 1792]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1735 1795])
+                    ("characterInStringIndex" function
+                       (:arguments 
+                          ( ("str" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2178 2189])
+                            ("character" variable (:type "char") (reparse-symbol arg-sub-list) [2190 2205]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2151 2341])
+                    ("getType" function
+                       (:arguments 
+                          ( ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2531 2552]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2516 2806])
+                    ("getName" function
+                       (:arguments 
+                          ( ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2959 2980]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2944 3376])
+                    ("getNode" function
+                       (:arguments 
+                          ( ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3527 3548]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3512 3800])
+                    ("typeInt2String" function
+                       (:arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3931 3940]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3909 4236])
+                    ("setFlags" function
+                       (:arguments 
+                          ( ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4508 4529]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4494 4791])
+                    ("handlePauseCommand" function
+                       (:arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4938 4943]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4914 5018])
+                    ("debugController" function
+                       (:arguments 
+                          ( ("instruction" variable (:type "int") (reparse-symbol arg-sub-list) [5116 5132])
+                            ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5133 5154]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [5095 7659])
+                    ("debugMasterController" function
+                       (:arguments 
+                          ( ("instruction" variable (:type "int") (reparse-symbol arg-sub-list) [7805 7821])
+                            ("specification" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7822 7843]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7778 9041])
+                    ("messageQueueInsert" function
+                       (:arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9561 9575]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9537 9607])
+                    ("getMaxCharArraySize" function
+                       (:typemodifiers ("inline")
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [9685 9872])
+                    ("packList" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("msgEncode" variable (:type "int") (reparse-symbol arg-sub-list) [10131 10145])
+                            ("content" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10146 10161]))                          
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("message_type" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [10096 11021])
+                    ("pack" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("msgEncode" variable (:type "int") (reparse-symbol arg-sub-list) [11187 11201])
+                            ("content" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11202 11217])
+                            ("priority" variable (:type "int") (reparse-symbol arg-sub-list) [11218 11231]))                          
+                        :type ("message_type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11168 12316])
+                    ("sendMsg" function
+                       (:arguments 
+                          ( ("destination" variable (:type "int") (reparse-symbol arg-sub-list) [12512 12528])
+                            ("msgType" variable (:type "int") (reparse-symbol arg-sub-list) [12529 12541])
+                            ("content" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12554 12569])
+                            ("broadcast" variable (:type "bool") (reparse-symbol arg-sub-list) [12570 12585]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [12500 13547])
+                    ("receiveMsg" function
+                       (:arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13791 13796]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13775 16509])
+                    ("insertMsg" function
+                       (:arguments 
+                          ( ("content" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16874 16889])
+                            ("priority" variable (:type "int") (reparse-symbol arg-sub-list) [16890 16903])
+                            ("instruction" variable (:type "int") (reparse-symbol arg-sub-list) [16904 16920])
+                            ("node" variable (:type "int") (reparse-symbol arg-sub-list) [16921 16930]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [16859 17950])
+                    ("checkAndGet" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18135 18140]))                          
+                        :type ("msgListContainer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [18098 19030])
+                    ("printRcv" function
+                       (:arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19122 19127]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19108 20217])
+                    ("buildString" function
+                       (:arguments 
+                          ( ("container" variable
+                               (:pointer 1
+                                :type ("msgListContainer" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20317 20352]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [20298 20847]))                  
+                :type "namespace")
+                nil [449 20850]))          
+      :file "debug_Simhandler.cpp"
+      :pointmax 20851
+      :fsize 20850
+      :lastmodtime '(22436 6140 0 0)
+      :unmatched-syntax '((punctuation 1633 . 1634) (punctuation 1632 . 1633) (symbol 1621 . 1632) (STRUCT 1614 . 1620) (punctuation 1613 . 1614) (symbol 1609 . 1613) (punctuation 1608 . 1609) (punctuation 1607 . 1608) (symbol 1604 . 1607) (punctuation 1367 . 1368) (punctuation 1366 . 1367) (symbol 1350 . 1366) (STRUCT 1343 . 1349) (punctuation 1342 . 1343) (symbol 1338 . 1342) (punctuation 1337 . 1338) (punctuation 1336 . 1337) (symbol 1333 . 1336))
+      :lexical-table 
+        '(("SIZE" . ((semantic-list "(sizeof(message_type))" 484 . 506)))
+          ("BROADCAST" . ((symbol "true" 525 . 529)))
+          )
+)
+    (semanticdb-table "debug_Simprompt.hpp"
+      :file "debug_Simprompt.hpp"
+      :fsize 825
+      :lastmodtime '(22436 6140 0 0))
+    (semanticdb-table "debug_Simhandler.hpp"
+      :file "debug_Simhandler.hpp"
+      :fsize 1987
+      :lastmodtime '(22436 6140 0 0))
+    (semanticdb-table "serialization.hpp"
+      :file "serialization.hpp"
+      :fsize 646
+      :lastmodtime '(22436 6140 0 0))
+    (semanticdb-table "types.hpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "types.hpp"
+      :pointmax 191
+      :fsize 190
+      :lastmodtime '(22436 6140 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "types.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [2 21])
+            ("types.hpp" include nil nil [23 43])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [45 65])
+            ("utils" type
+               (:members 
+                  ( ("print_byte" function
+                       (:arguments 
+                          ( ("b" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102 109]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [86 217])
+                    ("print_uint64_t" function
+                       (:arguments 
+                          ( ("u" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [239 250]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [219 355]))                  
+                :type "namespace")
+                nil [67 358]))          
+      :file "types.cpp"
+      :pointmax 359
+      :fsize 358
+      :lastmodtime '(22436 6140 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "concurrentQueue.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("queue" include (:system-flag t) nil [59 75])
+            ("mutex" include (:system-flag t) nil [76 92])
+            ("condition_variable" include (:system-flag t) nil [93 122])
+            ("chrono" include (:system-flag t) nil [123 140])
+            ("ConcurrentQueue" type
+               (:template 
+                  ( ("Elem" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [192 200])
+                    ("queue" variable (:type ("std::queue" type
+                         (:template-specifier 
+                            ( ("Elem" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [205 228])
+                    ("m" variable
+                       (:typemodifiers ("mutable")
+                        :type ("std::mutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [233 254])
+                    ("cond" variable (:type ("std::condition_variable" type (:type "class") nil nil)) (reparse-symbol classsubparts) [259 288])
+                    ("public" label nil (reparse-symbol classsubparts) [290 297])
+                    ("push" function
+                       (:arguments 
+                          ( ("e" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Elem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [317 331]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [307 458])
+                    ("empty" function (:type "bool") (reparse-symbol classsubparts) [464 566])
+                    ("timed_wait" function (:type "void") (reparse-symbol classsubparts) [572 871])
+                    ("front" function (:type ("Elem" type (:type "class") nil nil)) (reparse-symbol classsubparts) [881 978])
+                    ("pop" function (:type "void") (reparse-symbol classsubparts) [984 1069]))                  )
+                nil [142 1073]))          
+      :file "concurrentQueue.hpp"
+      :pointmax 1074
+      :fsize 1073
+      :lastmodtime '(22436 6140 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!simulatorCore!src!Debugger!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,121 @@
+;; Object smartBlocks1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "smartBlocks1/"
+  :tables
+  (list
+    (semanticdb-table "smartblock1BlockCode.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [90 109])
+            ("sstream" include (:system-flag t) nil [110 128])
+            ("smartblock1BlockCode.h" include nil nil [129 162])
+            ("scheduler.h" include nil nil [163 185])
+            ("events.h" include nil nil [186 205])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [219 250])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [253 273])
+            ("SmartBlocks" using (:type ("SmartBlocks" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [274 302])
+            ("SmartBlock1BlockCode" function
+               (:constructor-flag t
+                :parent "SmartBlock1BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [347 370]))                  
+                :type ("SmartBlock1BlockCode" type (:type "class") nil nil))
+                nil [304 549])
+            ("SmartBlock1BlockCode" function
+               (:destructor-flag t
+                :parent "SmartBlock1BlockCode"
+                :type "void")
+                nil [551 655])
+            ("startup" function
+               (:parent "SmartBlock1BlockCode"
+                :type "void")
+                nil [657 1594])
+            ("processLocalEvent" function
+               (:parent "SmartBlock1BlockCode"
+                :arguments 
+                  ( ("pev" variable (:type ("EventPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1641 1654]))                  
+                :type "void")
+                nil [1596 6818])
+            ("buildNewBlockCode" function
+               (:pointer 1
+                :parent "SmartBlock1BlockCode"
+                :arguments 
+                  ( ("host" variable
+                       (:pointer 1
+                        :type ("SmartBlocksBlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6895 6918]))                  
+                :type ("SmartBlocks::SmartBlocksBlockCode" type (:type "class") nil nil))
+                nil [6820 6966])
+            ("send_dist" function
+               (:parent "SmartBlock1BlockCode"
+                :arguments 
+                  ( ("distance" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7007 7029])
+                    ("by_interface" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7031 7066])
+                    ("time_offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7067 7088]))                  
+                :type "void")
+                nil [6969 7274])
+            ("send_ack" function
+               (:parent "SmartBlock1BlockCode"
+                :arguments 
+                  ( ("path" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7312 7330])
+                    ("distance" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7331 7353])
+                    ("by_interface" variable
+                       (:pointer 1
+                        :type ("P2PNetworkInterface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7355 7390])
+                    ("time_offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7391 7412]))                  
+                :type "void")
+                nil [7276 7593])
+            ("i_can_ack" function
+               (:parent "SmartBlock1BlockCode"
+                :type "bool")
+                nil [7596 7853])
+            ("Dist_message" function
+               (:constructor-flag t
+                :parent "Dist_message"
+                :arguments 
+                  ( ("d" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7883 7898]))                  
+                :type ("Dist_message" type (:type "class") nil nil))
+                nil [7856 7951])
+            ("Dist_message" function
+               (:destructor-flag t
+                :parent "Dist_message"
+                :type "void")
+                nil [7953 7986])
+            ("Ack_message" function
+               (:constructor-flag t
+                :parent "Ack_message"
+                :arguments 
+                  ( ("p" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8013 8028])
+                    ("d" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8028 8043]))                  
+                :type ("Ack_message" type (:type "class") nil nil))
+                nil [7988 8108])
+            ("Ack_message" function
+               (:destructor-flag t
+                :parent "Ack_message"
+                :type "void")
+                nil [8110 8141]))          
+      :file "smartblock1BlockCode.cpp"
+      :pointmax 8143
+      :fsize 8144
+      :lastmodtime '(22350 36551 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "smartblock1BlockCode.h"
+      :file "smartblock1BlockCode.h"
+      :fsize 1890
+      :lastmodtime '(22349 18399 0 0)))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSim!applicationsSrc!smartBlocks1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

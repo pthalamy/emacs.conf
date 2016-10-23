@@ -1,0 +1,359 @@
+;; Object LMParser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "LMParser/"
+  :tables
+  (list
+    (semanticdb-table "LMParser.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdint.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("string.h" include (:system-flag t) nil [60 79])
+            ("LMParser.h" include nil nil [81 102])
+            ("readType" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [430 442]))                  
+                :type ("byte" type (:type "class") nil nil))
+                nil [415 443])
+            ("readTypeID" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [461 473])
+                    ("typeArray" variable
+                       (:dereference 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [474 491]))                  
+                :type ("byte" type (:type "class") nil nil))
+                nil [444 492])
+            ("skipNodeReferences" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [518 530]))                  
+                :type "void")
+                nil [493 531])
+            ("sizeOfPredicateDescriptors" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("predicates" variable
+                       (:dereference 1
+                        :type ("Predicate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [566 589])
+                    ("numPreds" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [590 604]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [532 605])
+            ("sizeOfRuleDescriptors" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("rules" variable
+                       (:dereference 1
+                        :type ("Rule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [635 648])
+                    ("numRules" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [649 663]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [606 664])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [677 686])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [687 700]))                  
+                :type "int")
+                nil [666 24147])
+            ("readType" function
+               (:arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24268 24280]))                  
+                :type ("byte" type (:type "class") nil nil))
+                nil [24253 25506])
+            ("readTypeID" function
+               (:arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25586 25598])
+                    ("typeArray" variable
+                       (:dereference 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25599 25616]))                  
+                :type ("byte" type (:type "class") nil nil))
+                nil [25569 25686])
+            ("skipNodeReferences" function
+               (:arguments 
+                  ( ("pFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25894 25906]))                  
+                :type "void")
+                nil [25869 26039])
+            ("sizeOfRuleDescriptors" function
+               (:arguments 
+                  ( ("rules" variable
+                       (:dereference 1
+                        :type ("Rule" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26123 26136])
+                    ("numRules" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26137 26151]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [26094 26269])
+            ("sizeOfPredicateDescriptors" function
+               (:arguments 
+                  ( ("predicates" variable
+                       (:dereference 1
+                        :type ("Predicate" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26363 26386])
+                    ("numPreds" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26387 26401]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [26329 26524]))          
+      :file "LMParser.c"
+      :pointmax 26525
+      :fsize 26524
+      :lastmodtime '(22395 22120 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "LMParser.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__PARSER_H__" variable (:constant-flag t) nil [30 42])
+            ("stdint.h" include nil nil [44 63])
+            ("string.h" include nil nil [64 83])
+            ("byte" type
+               (:typedef ("unsigned char")
+                :type "typedef")
+                nil [613 640])
+            ("MAGIC1" variable
+               (:constant-flag t
+                :default-value "0x646c656d"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [747 782])
+            ("MAGIC2" variable
+               (:constant-flag t
+                :default-value "0x6c696620"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [783 818])
+            ("VERSION_AT_LEAST" variable (:constant-flag t) nil [921 937])
+            ("PRED_NAME_SIZE_MAX" variable (:constant-flag t) nil [1081 1099])
+            ("PRED_AGG_INFO_MAX" variable (:constant-flag t) nil [1234 1251])
+            ("RULE_MAX_INCL_PREDS" variable (:constant-flag t) nil [1318 1337])
+            ("PREDICATE_DESCRIPTOR_SIZE" variable (:constant-flag t) nil [1447 1472])
+            ("RULE_DESCRIPTOR_SIZE" variable (:constant-flag t) nil [1547 1567])
+            ("_Predicate" type
+               (:members 
+                  ( ("codeSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1703 1721])
+                    ("argOffset" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1750 1765])
+                    ("pName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1803 1815])
+                    ("pBytecode" variable
+                       (:pointer 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1838 1854])
+                    ("bytecodeOffset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1886 1910])
+                    ("properties" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1949 1965])
+                    ("agg" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2003 2012])
+                    ("level" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2049 2060])
+                    ("nFields" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2092 2105])
+                    ("desc_size" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2137 2152]))                  
+                :type "struct")
+                nil [1673 2201])
+            ("Predicate" type
+               (:typedef ("_Predicate" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1673 2201])
+            ("_Rule" type
+               (:members 
+                  ( ("codeSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2228 2246])
+                    ("pBytecode" variable
+                       (:pointer 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2275 2291])
+                    ("pName" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2321 2333])
+                    ("bytecodeOffset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2357 2381])
+                    ("numInclPreds" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2410 2432])
+                    ("inclPredIDs" variable
+                       (:dereference 1
+                        :type ("byte" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2471 2509])
+                    ("persistence" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2548 2565])
+                    ("desc_size" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2600 2615]))                  
+                :type "struct")
+                nil [2203 2654])
+            ("Rule" type
+               (:typedef ("_Rule" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2203 2654])
+            ("PRED_AGG" variable (:constant-flag t) nil [2699 2707])
+            ("PRED_ROUTE" variable (:constant-flag t) nil [2754 2764])
+            ("PRED_REVERSE_ROUTE" variable (:constant-flag t) nil [2821 2839])
+            ("PRED_LINEAR" variable (:constant-flag t) nil [2896 2907])
+            ("PRED_ACTION" variable (:constant-flag t) nil [2944 2955])
+            ("PRED_REUSED" variable (:constant-flag t) nil [3018 3029])
+            ("PRED_CYCLE" variable (:constant-flag t) nil [3068 3078])
+            ("PRED_AGG_LOCAL" variable (:constant-flag t) nil [3235 3249])
+            ("PRED_AGG_REMOTE" variable (:constant-flag t) nil [3263 3278])
+            ("PRED_AGG_REMOTE_AND_SELF" variable (:constant-flag t) nil [3292 3316])
+            ("PRED_AGG_IMMEDIATE" variable (:constant-flag t) nil [3330 3348])
+            ("PRED_AGG_UNSAFE" variable (:constant-flag t) nil [3362 3377])
+            ("field_type" type
+               (:members 
+                  ( ("FIELD_INT" variable
+                       (:constant-flag t
+                        :default-value (3449 3452)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3437 3452])
+                    ("FIELD_FLOAT" variable
+                       (:constant-flag t
+                        :default-value (3471 3474)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3457 3474])
+                    ("FIELD_NODE" variable
+                       (:constant-flag t
+                        :default-value (3492 3495)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3479 3495])
+                    ("FIELD_LIST" variable
+                       (:constant-flag t
+                        :default-value (3513 3516)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3500 3516])
+                    ("FIELD_STRUCT" variable
+                       (:constant-flag t
+                        :default-value (3536 3539)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3521 3539])
+                    ("FIELD_BOOL" variable
+                       (:constant-flag t
+                        :default-value (3557 3560)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3544 3560])
+                    ("FIELD_ANY" variable
+                       (:constant-flag t
+                        :default-value (3577 3580)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3565 3580])
+                    ("FIELD_STRING" variable
+                       (:constant-flag t
+                        :default-value (3601 3604)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3586 3604])
+                    ("FIELD_INTLIST" variable
+                       (:constant-flag t
+                        :default-value (3625 3628)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3609 3628])
+                    ("FIELD_FLOATLIST" variable
+                       (:constant-flag t
+                        :default-value (3651 3654)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3633 3654])
+                    ("FIELD_NODELIST" variable
+                       (:constant-flag t
+                        :default-value (3676 3679)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3659 3679]))                  
+                :type "enum")
+                nil [3416 3682])
+            ("TYPE_AGG" variable (:constant-flag t) nil [3757 3765])
+            ("TYPE_PERSISTENT" variable (:constant-flag t) nil [3812 3827])
+            ("TYPE_LINEAR" variable (:constant-flag t) nil [3871 3882])
+            ("TYPE_DELETE" variable (:constant-flag t) nil [3922 3933])
+            ("TYPE_SCHEDULE" variable (:constant-flag t) nil [3960 3973])
+            ("TYPE_ROUTING" variable (:constant-flag t) nil [4000 4012])
+            ("AGG_FIRST" variable (:constant-flag t) nil [4099 4108])
+            ("AGG_MAX_INT" variable (:constant-flag t) nil [4142 4153])
+            ("AGG_MIN_INT" variable (:constant-flag t) nil [4183 4194])
+            ("AGG_SUM_INT" variable (:constant-flag t) nil [4224 4235])
+            ("AGG_MAX_FLOAT" variable (:constant-flag t) nil [4270 4283])
+            ("AGG_MIN_FLOAT" variable (:constant-flag t) nil [4311 4324])
+            ("AGG_SUM_FLOAT" variable (:constant-flag t) nil [4352 4365])
+            ("AGG_SUM_LIST_FLOAT" variable (:constant-flag t) nil [4401 4419])
+            ("AGG_SET_UNION_INT" variable (:constant-flag t) nil [4713 4730])
+            ("AGG_SET_UNION_FLOAT" variable (:constant-flag t) nil [4745 4764])
+            ("AGG_SUM_LIST_INT" variable (:constant-flag t) nil [4775 4791])
+            ("TFIELD_INT" variable (:constant-flag t) nil [4835 4845])
+            ("TFIELD_FLOAT" variable (:constant-flag t) nil [4880 4892])
+            ("TFIELD_ADDR" variable (:constant-flag t) nil [4925 4936])
+            ("TFIELD_OTHER" variable (:constant-flag t) nil [4979 4991])
+            ("TFIELD_LIST_INT" variable (:constant-flag t) nil [5012 5027])
+            ("TFIELD_LIST_FLOAT" variable (:constant-flag t) nil [5063 5080])
+            ("TFIELD_LIST_ADDR" variable (:constant-flag t) nil [5115 5131])
+            ("TFIELD_SET_INT" variable (:constant-flag t) nil [5168 5182])
+            ("TFIELD_SET_FLOAT" variable (:constant-flag t) nil [5208 5224])
+            ("TFIELD_TYPE" variable (:constant-flag t) nil [5250 5261])
+            ("TFIELD_STRING" variable (:constant-flag t) nil [5288 5301])
+            ("TFIELD_BOOL" variable (:constant-flag t) nil [5328 5339]))          
+      :file "LMParser.h"
+      :pointmax 5420
+      :fsize 5419
+      :lastmodtime '(22408 31784 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PRED_AGG_INFO_MAX" . ((number "32" 1252 . 1254)))
+          ("PRED_AGG_LOCAL" . ((number "0x01" 3250 . 3254)))
+          ("TFIELD_OTHER" . ((number "0x2" 4992 . 4995)))
+          ("PRED_LINEAR" . ((number "0x08" 2908 . 2912)))
+          ("AGG_MAX_INT" . ((number "2" 4154 . 4155)))
+          ("VERSION_AT_LEAST" (spp-arg-list ("MAJ" "MIN") 937 . 947) . ((semantic-list "(majorVersion > (MAJ) || (majorVersion == (MAJ) && minorVersion >= (MIN)))" 950 . 1024)))
+          ("PRED_AGG_UNSAFE" . ((number "0x00" 3378 . 3382)))
+          ("TYPE_PERSISTENT" . ((number "0x02" 3828 . 3832)))
+          ("TYPE_DELETE" . ((number "0x08" 3934 . 3938)))
+          ("AGG_SET_UNION_FLOAT" . ((number "9" 4765 . 4766)))
+          ("TFIELD_ADDR" . ((number "0x2" 4937 . 4940)))
+          ("__PARSER_H__")
+          ("RULE_DESCRIPTOR_SIZE" . ((number "4" 1568 . 1569)))
+          ("PRED_REVERSE_ROUTE" . ((number "0x04" 2840 . 2844)))
+          ("PRED_ACTION" . ((number "0x10" 2956 . 2960)))
+          ("AGG_SET_UNION_INT" . ((number "8" 4731 . 4732)))
+          ("PRED_AGG_IMMEDIATE" . ((number "0x08" 3349 . 3353)))
+          ("AGG_MIN_INT" . ((number "3" 4195 . 4196)))
+          ("AGG_SUM_LIST_INT" . ((number "10" 4792 . 4794)))
+          ("PRED_AGG" . ((number "0x01" 2708 . 2712)))
+          ("PRED_ROUTE" . ((number "0x02" 2765 . 2769)))
+          ("PRED_REUSED" . ((number "0x20" 3030 . 3034)))
+          ("PRED_CYCLE" . ((number "0x40" 3079 . 3083)))
+          ("TYPE_LINEAR" . ((number "0x03" 3883 . 3887)))
+          ("TFIELD_FLOAT" . ((number "0x1" 4893 . 4896)))
+          ("PRED_AGG_REMOTE" . ((number "0x02" 3279 . 3283)))
+          ("TFIELD_LIST_FLOAT" . ((number "0x4" 5081 . 5084)))
+          ("TFIELD_LIST_INT" . ((number "0x3" 5028 . 5031)))
+          ("RULE_MAX_INCL_PREDS" . ((number "32" 1338 . 1340)))
+          ("PREDICATE_DESCRIPTOR_SIZE" . ((number "6" 1473 . 1474)))
+          ("PRED_AGG_REMOTE_AND_SELF" . ((number "0x04" 3317 . 3321)))
+          ("TYPE_SCHEDULE" . ((number "0x10" 3974 . 3978)))
+          ("TYPE_ROUTING" . ((number "0x20" 4013 . 4017)))
+          ("PRED_NAME_SIZE_MAX" . ((number "32" 1100 . 1102)))
+          ("TYPE_AGG" . ((number "0x01" 3766 . 3770)))
+          ("TFIELD_INT" . ((number "0x0" 4846 . 4849)))
+          ("TFIELD_SET_FLOAT" . ((number "0x7" 5225 . 5228)))
+          ("AGG_FIRST" . ((number "1" 4109 . 4110)))
+          ("AGG_SUM_FLOAT" . ((number "7" 4366 . 4367)))
+          ("AGG_SUM_INT" . ((number "4" 4236 . 4237)))
+          ("AGG_MAX_FLOAT" . ((number "5" 4284 . 4285)))
+          ("TFIELD_STRING" . ((number "0x9" 5302 . 5305)))
+          ("AGG_MIN_FLOAT" . ((number "6" 4325 . 4326)))
+          ("AGG_SUM_LIST_FLOAT" . ((number "11" 4420 . 4422)))
+          ("TFIELD_LIST_ADDR" . ((number "0x5" 5132 . 5135)))
+          ("TFIELD_SET_INT" . ((number "0x6" 5183 . 5186)))
+          ("TFIELD_TYPE" . ((number "0x8" 5262 . 5265)))
+          ("TFIELD_BOOL" . ((number "0xa" 5340 . 5343)))
+          )
+))
+  :file "!Users!pthalamy!Desktop!VSimRef!XCodeVS!VisibleSim2!applicationsBin!blinkyMeld!meld!LMParser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

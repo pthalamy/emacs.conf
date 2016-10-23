@@ -1,0 +1,16 @@
+;; Object pthalamy/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pthalamy/"
+  :tables
+  (list
+    (semanticdb-table ".emacs.el"
+      :major-mode 'c++-mode
+      :tags nil
+      :file ".emacs.el"
+      :pointmax 13129
+      :fsize 13153
+      :lastmodtime '(22349 11561 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

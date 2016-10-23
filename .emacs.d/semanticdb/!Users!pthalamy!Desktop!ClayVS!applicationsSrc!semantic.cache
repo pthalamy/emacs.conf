@@ -1,0 +1,25 @@
+;; Object applicationsSrc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "applicationsSrc/"
+  :tables
+  (list
+    (semanticdb-table "Makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags 
+        '( ("SUBDIRS" variable (:default-value ("simpleColorC2D" "simpleColorRB" "simpleColorSB" "distanceRB" "simpleCatoms3D" "simpleColorBB")) nil [23 116])
+            ("SUBDIRS" variable (:default-value ("meld" "MRMeld")) nil [135 158])
+            ("SUBDIRS" variable (:default-value ("noneCatoms2D" "robot01" "sphereCatoms3D" "sbReconf" "smartBlocks1" "bbCycle" "csgCatoms3D")) nil [186 276])
+            (".PHONY" function (:arguments ("subdirs" "$(SUBDIRS)" "test")) nil [277 309])
+            ("subdirs" function (:arguments ("$(SUBDIRS)")) nil [310 330])
+            ("$(SUBDIRS)" function nil nil [364 590])
+            ("test" function nil nil [748 858])
+            ("clean" function nil nil [859 978])
+            ("realclean" function nil nil [979 1079]))          
+      :file "Makefile"
+      :pointmax 1079
+      :fsize 1078
+      :lastmodtime '(22468 33162 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!pthalamy!Desktop!ClayVS!applicationsSrc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

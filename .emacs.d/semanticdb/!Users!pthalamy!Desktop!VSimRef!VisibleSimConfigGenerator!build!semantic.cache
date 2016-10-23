@@ -1,0 +1,1030 @@
+;; Object build/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "build/"
+  :tables
+  (list
+    (semanticdb-table "lattice.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LATTICE_H_" variable (:constant-flag t) nil [28 38])
+            ("string" include (:system-flag t) nil [40 57])
+            ("vector" include (:system-flag t) nil [58 75])
+            ("node.hpp" include nil nil [76 95])
+            ("vector3D.hpp" include nil nil [96 119])
+            ("Dimension_t" type
+               (:members 
+                  ( ("ONE_D_DIMENSION" variable
+                       (:constant-flag t
+                        :default-value (168 169)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [150 169])
+                    ("TWO_D_DIMENSION" variable
+                       (:constant-flag t
+                        :default-value (191 192)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [173 192])
+                    ("THREE_D_DIMENSION" variable
+                       (:constant-flag t
+                        :default-value (216 217)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [196 217])
+                    ("NUM_D_DIMENSIONS" variable
+                       (:constant-flag t
+                        :default-value (240 241)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [221 241]))                  
+                :type "enum")
+                nil [121 254])
+            ("Dimension" type
+               (:typedef ("Dimension_t" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [121 254])
+            ("LatticeType_t" type
+               (:members 
+                  ( ("UNKNOWN_LATTICE" variable
+                       (:constant-flag t
+                        :default-value (305 307)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [287 307])
+                    ("SQUARE_LATTICE" variable
+                       (:constant-flag t
+                        :default-value (328 329)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [311 329])
+                    ("HEXAGONAL_LATTICE" variable
+                       (:constant-flag t
+                        :default-value (353 354)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [333 354])
+                    ("SIMPLE_CUBIC_LATTICE" variable
+                       (:constant-flag t
+                        :default-value (381 382)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [358 382])
+                    ("FACE_CENTERED_CUBIC_LATTICE" variable
+                       (:constant-flag t
+                        :default-value (416 417)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [386 417])
+                    ("NUM_LATTICE_TYPES" variable
+                       (:constant-flag t
+                        :default-value (441 442)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [421 442]))                  
+                :type "enum")
+                nil [256 457])
+            ("LatticeType" type
+               (:typedef ("LatticeType_t" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [256 457])
+            ("Lattice" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [476 483])
+                    ("type" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [486 503])
+                    ("size" variable (:type ("Vector3D" type (:type "class") nil nil)) (reparse-symbol classsubparts) [506 520])
+                    ("grid" variable
+                       (:pointer 2
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [541 554])
+                    ("Lattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Lattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [561 571])
+                    ("Lattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [582 594])
+                            ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [595 609]))                          
+                        :type ("Lattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [574 610])
+                    ("Lattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Lattice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [621 638]))                          
+                        :type ("Lattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [613 639])
+                    ("Lattice" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [642 661])
+                    ("typeShortName" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [665 700])
+                    ("typeFullName" variable
+                       (:dereference 1
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [703 737])
+                    ("getType" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("t" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [767 781]))                          
+                        :type ("LatticeType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [740 782])
+                    ("getDimension" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("Dimension" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [786 823])
+                    ("isIn" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [839 851]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [829 852])
+                    ("getIndex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [869 881]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [856 882])
+                    ("insert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("n" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [897 905])
+                            ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [905 917]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [885 918])
+                    ("getNode" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [935 947]))                          
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [921 948])
+                    ("isFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [966 978]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [954 979])
+                    ("getMiddle" function
+                       (:prototype-flag t
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [982 1003])
+                    ("getNeighborCells" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("n" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1046 1054]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1007 1055])
+                    ("getString" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1091 1103]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1061 1108])
+                    ("getRelativeConnectivity" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1165 1177]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1111 1182]))                  
+                :type "class")
+                nil [459 1185])
+            ("Lattice2D" type
+               (:superclasses 
+                  ( ("Lattice" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1237 1244])
+                    ("Lattice2D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Lattice2D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1247 1259])
+                    ("Lattice2D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1272 1284])
+                            ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1285 1299]))                          
+                        :type ("Lattice2D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1262 1300])
+                    ("Lattice2D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Lattice2D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1313 1332]))                          
+                        :type ("Lattice2D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1303 1333])
+                    ("Lattice2D" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1336 1357])
+                    ("getDimension" function
+                       (:prototype-flag t
+                        :type ("Dimension" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1361 1386])
+                    ("getString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1411 1423]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1389 1424])
+                    ("getRelativeConnectivity" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1484 1496]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1430 1501]))                  
+                :type "class")
+                nil [1201 1504])
+            ("Lattice3D" type
+               (:superclasses 
+                  ( ("Lattice" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1556 1563])
+                    ("Lattice3D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Lattice3D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1566 1578])
+                    ("Lattice3D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1591 1603])
+                            ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1604 1618]))                          
+                        :type ("Lattice3D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1581 1619])
+                    ("Lattice3D" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Lattice2D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1632 1651]))                          
+                        :type ("Lattice3D" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1622 1652])
+                    ("Lattice3D" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1655 1676])
+                    ("getDimension" function
+                       (:prototype-flag t
+                        :type ("Dimension" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1680 1705])
+                    ("getString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1730 1742]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1708 1743])
+                    ("getRelativeConnectivity" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1803 1815]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1749 1820]))                  
+                :type "class")
+                nil [1520 1823])
+            ("SLattice" type
+               (:superclasses 
+                  ( ("Lattice2D" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("nCells" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Vector3D" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1885 1914])
+                    ("public" label nil (reparse-symbol classsubparts) [1915 1922])
+                    ("SLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1925 1936])
+                    ("SLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1948 1960]))                          
+                        :type ("SLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1939 1961])
+                    ("SLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SLattice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1973 1991]))                          
+                        :type ("SLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1964 1992])
+                    ("SLattice" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1995 2007])
+                    ("getRelativeConnectivity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2057 2069]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2011 2070]))                  
+                :type "class")
+                nil [1847 2073])
+            ("HLattice" type
+               (:superclasses 
+                  ( ("Lattice2D" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2137 2144])
+                    ("HLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("HLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2147 2158])
+                    ("HLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2170 2182]))                          
+                        :type ("HLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2161 2183])
+                    ("HLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HLattice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2195 2213]))                          
+                        :type ("HLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2186 2214])
+                    ("HLattice" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2217 2229])
+                    ("getRelativeConnectivity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2279 2291]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2233 2292]))                  
+                :type "class")
+                nil [2100 2295])
+            ("SCLattice" type
+               (:superclasses 
+                  ( ("Lattice3D" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2402 2409])
+                    ("nCells" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Vector3D" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2412 2441])
+                    ("SCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("SCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2447 2459])
+                    ("SCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2472 2484]))                          
+                        :type ("SCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2462 2485])
+                    ("SCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SCLattice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2498 2517]))                          
+                        :type ("SCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2488 2518])
+                    ("SCLattice" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2521 2534])
+                    ("getRelativeConnectivity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2586 2598]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2540 2599]))                  
+                :type "class")
+                nil [2364 2602])
+            ("FCCLattice" type
+               (:superclasses 
+                  ( ("Lattice3D" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2680 2687])
+                    ("FCCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("FCCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2693 2706])
+                    ("FCCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2720 2732]))                          
+                        :type ("FCCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2709 2733])
+                    ("FCCLattice" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("l" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FCCLattice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2747 2767]))                          
+                        :type ("FCCLattice" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2736 2768])
+                    ("FCCLattice" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2771 2785])
+                    ("getRelativeConnectivity" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("p" variable
+                               (:reference 1
+                                :type ("Vector3D" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2837 2849]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Vector3D" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2791 2850]))                  
+                :type "class")
+                nil [2641 2853]))          
+      :file "lattice.hpp"
+      :pointmax 2863
+      :fsize 2862
+      :lastmodtime '(22351 60390 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LATTICE_H_")
+          )
+)
+    (semanticdb-table "node.hpp"
+      :file "node.hpp"
+      :fsize 236
+      :lastmodtime '(22348 64849 0 0))
+    (semanticdb-table "vector3D.hpp"
+      :file "vector3D.hpp"
+      :fsize 674
+      :lastmodtime '(22348 64849 0 0))
+    (semanticdb-table "lattice.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("cstdlib" include (:system-flag t) nil [21 39])
+            ("lattice.hpp" include nil nil [40 62])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [64 84])
+            ("EVEN" variable (:constant-flag t) nil [94 98])
+            ("ODD" variable (:constant-flag t) nil [121 124])
+            ("Lattice::typeShortName" variable
+               (:dereference 1
+                :default-value "{\"s\",\"h\",\"sc\",\"fcc\"}"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [171 231])
+            ("Lattice::typeFullName" variable
+               (:dereference 1
+                :default-value "{\"Square\",\"Hexagonal\",\"Simple-Cubic\",\"Face-Centered Cubic\"}"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [232 330])
+            ("Lattice" function
+               (:constructor-flag t
+                :parent "Lattice"
+                :type ("Lattice" type (:type "class") nil nil))
+                nil [332 369])
+            ("Lattice" function
+               (:constructor-flag t
+                :parent "Lattice"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [388 400])
+                    ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [401 415]))                  
+                :type ("Lattice" type (:type "class") nil nil))
+                nil [371 652])
+            ("Lattice" function
+               (:constructor-flag t
+                :parent "Lattice"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Lattice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [671 688]))                  
+                :type ("Lattice" type (:type "class") nil nil))
+                nil [654 741])
+            ("Lattice" function
+               (:destructor-flag t
+                :parent "Lattice"
+                :type "void")
+                nil [743 784])
+            ("getType" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("t" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [815 829]))                  
+                :type ("LatticeType" type (:type "class") nil nil))
+                nil [786 1001])
+            ("getIndex" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1025 1037]))                  
+                :type "int")
+                nil [1003 1191])
+            ("insert" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("n" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1214 1222])
+                    ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1222 1234]))                  
+                :type "void")
+                nil [1193 1263])
+            ("getNode" function
+               (:pointer 1
+                :parent "Lattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1288 1300]))                  
+                :type ("Node" type (:type "class") nil nil))
+                nil [1265 1332])
+            ("getMiddle" function
+               (:parent "Lattice"
+                :type ("Vector3D" type (:type "class") nil nil))
+                nil [1334 1384])
+            ("isFree" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1407 1419]))                  
+                :type "bool")
+                nil [1386 1454])
+            ("isIn" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1475 1487]))                  
+                :type "bool")
+                nil [1456 1590])
+            ("getNeighborCells" function
+               (:parent "Lattice"
+                :arguments 
+                  ( ("n" variable
+                       (:pointer 1
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1636 1644]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("Vector3D" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1593 1951])
+            ("Lattice2D" function
+               (:constructor-flag t
+                :parent "Lattice2D"
+                :type ("Lattice2D" type (:type "class") nil nil))
+                nil [1987 2024])
+            ("Lattice2D" function
+               (:constructor-flag t
+                :parent "Lattice2D"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2046 2058])
+                    ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2059 2073]))                  
+                :type ("Lattice2D" type (:type "class") nil nil))
+                nil [2025 2091])
+            ("Lattice2D" function
+               (:constructor-flag t
+                :parent "Lattice2D"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Lattice2D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2113 2132]))                  
+                :type ("Lattice2D" type (:type "class") nil nil))
+                nil [2092 2148])
+            ("Lattice2D" function
+               (:destructor-flag t
+                :parent "Lattice2D"
+                :type "void")
+                nil [2149 2175])
+            ("getDimension" function
+               (:parent "Lattice2D"
+                :type ("Dimension" type (:type "class") nil nil))
+                nil [2177 2242])
+            ("getString" function
+               (:parent "Lattice2D"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2272 2284]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2244 2314])
+            ("Lattice3D" function
+               (:constructor-flag t
+                :parent "Lattice3D"
+                :type ("Lattice3D" type (:type "class") nil nil))
+                nil [2350 2387])
+            ("Lattice3D" function
+               (:constructor-flag t
+                :parent "Lattice3D"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2409 2421])
+                    ("t" variable (:type ("LatticeType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2422 2436]))                  
+                :type ("Lattice3D" type (:type "class") nil nil))
+                nil [2388 2454])
+            ("Lattice3D" function
+               (:constructor-flag t
+                :parent "Lattice3D"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Lattice2D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2476 2495]))                  
+                :type ("Lattice3D" type (:type "class") nil nil))
+                nil [2455 2511])
+            ("Lattice3D" function
+               (:destructor-flag t
+                :parent "Lattice3D"
+                :type "void")
+                nil [2512 2538])
+            ("getDimension" function
+               (:parent "Lattice3D"
+                :type ("Dimension" type (:type "class") nil nil))
+                nil [2540 2607])
+            ("getString" function
+               (:parent "Lattice3D"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2637 2649]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2609 2679])
+            ("SLattice" function
+               (:constructor-flag t
+                :parent "SLattice"
+                :type ("SLattice" type (:type "class") nil nil))
+                nil [2719 2756])
+            ("SLattice" function
+               (:constructor-flag t
+                :parent "SLattice"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2777 2789]))                  
+                :type ("SLattice" type (:type "class") nil nil))
+                nil [2758 2974])
+            ("SLattice" function
+               (:constructor-flag t
+                :parent "SLattice"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SLattice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2995 3013]))                  
+                :type ("SLattice" type (:type "class") nil nil))
+                nil [2976 3053])
+            ("SLattice" function
+               (:destructor-flag t
+                :parent "SLattice"
+                :type "void")
+                nil [3055 3079])
+            ("getRelativeConnectivity" function
+               (:parent "SLattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3132 3144]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("Vector3D" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3081 3165])
+            ("HLattice" function
+               (:constructor-flag t
+                :parent "HLattice"
+                :type ("HLattice" type (:type "class") nil nil))
+                nil [3207 3244])
+            ("HLattice" function
+               (:constructor-flag t
+                :parent "HLattice"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3265 3277]))                  
+                :type ("HLattice" type (:type "class") nil nil))
+                nil [3246 3314])
+            ("HLattice" function
+               (:constructor-flag t
+                :parent "HLattice"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("HLattice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3335 3353]))                  
+                :type ("HLattice" type (:type "class") nil nil))
+                nil [3316 3371])
+            ("HLattice" function
+               (:destructor-flag t
+                :parent "HLattice"
+                :type "void")
+                nil [3373 3397])
+            ("getRelativeConnectivity" function
+               (:parent "HLattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3450 3462]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("Vector3D" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3399 3860])
+            ("SCLattice" function
+               (:constructor-flag t
+                :parent "SCLattice"
+                :type ("SCLattice" type (:type "class") nil nil))
+                nil [3906 3945])
+            ("SCLattice" function
+               (:constructor-flag t
+                :parent "SCLattice"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3968 3980]))                  
+                :type ("SCLattice" type (:type "class") nil nil))
+                nil [3947 4246])
+            ("SCLattice" function
+               (:constructor-flag t
+                :parent "SCLattice"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SCLattice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4269 4288]))                  
+                :type ("SCLattice" type (:type "class") nil nil))
+                nil [4248 4328])
+            ("SCLattice" function
+               (:destructor-flag t
+                :parent "SCLattice"
+                :type "void")
+                nil [4330 4356])
+            ("getRelativeConnectivity" function
+               (:parent "SCLattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4410 4422]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("Vector3D" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4358 4443])
+            ("FCCLattice" function
+               (:constructor-flag t
+                :parent "FCCLattice"
+                :type ("FCCLattice" type (:type "class") nil nil))
+                nil [4496 4537])
+            ("FCCLattice" function
+               (:constructor-flag t
+                :parent "FCCLattice"
+                :arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4562 4574]))                  
+                :type ("FCCLattice" type (:type "class") nil nil))
+                nil [4539 4614])
+            ("FCCLattice" function
+               (:constructor-flag t
+                :parent "FCCLattice"
+                :arguments 
+                  ( ("l" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("FCCLattice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4639 4659]))                  
+                :type ("FCCLattice" type (:type "class") nil nil))
+                nil [4616 4677])
+            ("FCCLattice" function
+               (:destructor-flag t
+                :parent "FCCLattice"
+                :type "void")
+                nil [4679 4707])
+            ("getRelativeConnectivity" function
+               (:parent "FCCLattice"
+                :arguments 
+                  ( ("p" variable
+                       (:reference 1
+                        :type ("Vector3D" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4762 4774]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("Vector3D" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4709 5884]))          
+      :file "lattice.cpp"
+      :pointmax 5885
+      :fsize 5884
+      :lastmodtime '(22351 60390 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ODD" (spp-arg-list ("x") 124 . 127) . ((semantic-list "(x%2 == 0)" 128 . 138)))
+          ("EVEN" (spp-arg-list ("x") 98 . 101) . ((semantic-list "(x%2 == 1)" 102 . 112)))
+          )
+))
+  :file "!Users!pthalamy!Desktop!VSimRef!VisibleSimConfigGenerator!build!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

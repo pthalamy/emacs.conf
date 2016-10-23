@@ -1,23 +1,71 @@
-;; -*- emacs-lisp -*- <14/11/23 14:58:55 /Users/pthalamy/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <16/04/06 01:21:20 /Users/pthalamy/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["ssh"
-   #("thalamyp" 0 8
-     (fontified t))
-   #("pcserveur.ensimag.fr" 0 20
-     (fontified t))
-   nil nil]
-  ("uname" "Linux 2.6.32-431.29.2.el6.x86_64")
+((["ssh" "thalamyp" "pcserveur.ensimag.fr" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 2.6.32-573.7.1.el6.x86_64")
   ("test" "test")
   ("remote-path"
    ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("busybox" nil)
+  ("~" "/user/9/thalamyp")
+  ("file-exists" "test -e")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 10502)
+  ("gid-string" "etudiants")
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
-  (#("~" 0 1
-     (fontified t))
-   "/user/9/thalamyp")
-  ("file-exists" "test -e")))
+  ("readlink" "\\readlink")
+  ("git" nil)
+  ("uid-integer" 160727)
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("gvfs-monitor-dir" "/usr/bin/gvfs-monitor-dir"))
+ (["ssh" "gomesf" "pcserveur.ensimag.fr" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 2.6.32-573.22.1.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/user/1/gomesf")
+  ("file-exists" "test -e")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 10502)
+  ("gid-string" "etudiants")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("readlink" "\\readlink")
+  ("gvfs-monitor-dir" nil)
+  ("inotifywait" "/usr/bin/gvfs-monitor-dir")
+  ("uid-integer" 126270)
+  ("git" nil))
+ (["ssh" "bagouc" "pcserveur.ensimag.fr" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 2.6.32-573.22.1.el6.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/user/6/bagouc")
+  ("file-exists" "test -e")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 10502)
+  ("gid-string" "etudiants")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("readlink" "\\readlink")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("gvfs-monitor-dir" "/usr/bin/gvfs-monitor-dir")
+  ("uid-integer" 126499)
+  ("git" nil)))
