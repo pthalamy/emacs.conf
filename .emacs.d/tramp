@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <16/04/06 01:21:20 /Users/pthalamy/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <16/12/15 14:27:59 /Users/pthalamy/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -68,4 +68,25 @@
   ("ls-dired" t)
   ("gvfs-monitor-dir" "/usr/bin/gvfs-monitor-dir")
   ("uid-integer" 126499)
-  ("git" nil)))
+  ("git" nil))
+ (["sudo" "root" "Pierres-MacBook-Pro.local" nil nil]
+  ("uname" "Darwin 16.1.0")
+  ("locale" "LC_ALL=en_US.UTF-8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~root" "/var/root")
+  ("file-exists" "test -e")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 0)
+  ("gid-string" "wheel")
+  ("readlink" nil)
+  ("uid-integer" 0)
+  ("git" "\\git"))
+ (["ssh" nil "localhost" nil nil]
+  nil))

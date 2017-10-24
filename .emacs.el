@@ -42,7 +42,7 @@
 ;; Se limiter à des lignes de 80 caractères dans les modes textes (y
 ;; compris le mode LaTeX) :
 ;; cf. http://www-verimag.imag.fr/~moy/emacs/#autofill
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; Changer le comportement de la selection de fichiers (C-x C-f)
 ;; (ido-mode 1)
@@ -91,12 +91,12 @@ M-x compile.
 (global-set-key (kbd "<f1>") 'replace-string)
 
 ;; yasnippet
-(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20151011.1823")
+;; (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20151011.1823")
 (require 'yasnippet)
 (setq yas/trigger-key (kbd "C-c <kp-multiply>"))
 ;; This is where your snippets will lie.
-(setq yas/root-directory '("~/.emacs.d/elpa/yasnippet-20151011.1823/snippets"))
-(mapc 'yas/load-directory yas/root-directory)
+;; (setq yas/root-directory '("~/.emacs.d/elpa/yasnippet-20151011.1823/snippets"))
+;; (mapc 'yas/load-directory yas/root-directory)
 (yas-global-mode 1)
 
 ;; auto-complete
@@ -165,12 +165,38 @@ M-x compile.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#000000" "#d01A4E" "#7E7D7E" "#b58900" "#268bd2" "#d33682" "#2aa198" "#DCDCCC"])
+ '(ansi-color-names-vector
+   ["#000000" "#d01A4E" "#7E7D7E" "#b58900" "#268bd2" "#d33682" "#2aa198" "#DCDCCC"])
  '(custom-enabled-themes (quote (spolsky)))
- '(custom-safe-themes (quote ("96998f6f11ef9f551b427b8853d947a7857ea5a578c75aa9c4e7c73fe04d10b4" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" "46fd293ff6e2f6b74a5edf1063c32f2a758ec24a5f63d13b07a20255c074d399" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "18a33cdb764e4baf99b23dcd5abdbf1249670d412c6d3a8092ae1a7b211613d5" "1c50040ec3b3480b1fec3a0e912cac1eb011c27dd16d087d61e72054685de345" default)))
+ '(custom-safe-themes
+   (quote
+    ("96998f6f11ef9f551b427b8853d947a7857ea5a578c75aa9c4e7c73fe04d10b4" "987b709680284a5858d5fe7e4e428463a20dfabe0a6f2a6146b3b8c7c529f08b" "46fd293ff6e2f6b74a5edf1063c32f2a758ec24a5f63d13b07a20255c074d399" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" "58c6711a3b568437bab07a30385d34aacf64156cc5137ea20e799984f4227265" "3d5ef3d7ed58c9ad321f05360ad8a6b24585b9c49abcee67bdcbb0fe583a6950" "b3775ba758e7d31f3bb849e7c9e48ff60929a792961a2d536edec8f68c671ca5" "7bde52fdac7ac54d00f3d4c559f2f7aa899311655e7eb20ec5491f3b5c533fe8" "0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" "18a33cdb764e4baf99b23dcd5abdbf1249670d412c6d3a8092ae1a7b211613d5" "1c50040ec3b3480b1fec3a0e912cac1eb011c27dd16d087d61e72054685de345" default)))
  '(fci-rule-color "#383838")
+ '(helm-mode t)
+ '(package-selected-packages
+   (quote
+    (boogie-friends helm-spotify ac-emoji pdf-tools emojify json-mode json-reformat tabbar sublime-themes ssh smart-tab osx-trash origami markdown-mode+ magit-popup java-snippets hipster-theme helm-w3m helm-projectile github-browse-file git-rebase-mode git-commit-mode git-commit git-blame git function-args firecode-theme epc dummy-h-mode auto-yasnippet anything ac-helm 2048-game)))
  '(vc-annotate-background "#2B2B2B")
- '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#d01A4E") (60 . "#cb4b16") (80 . "#b58900") (100 . "#b58900") (120 . "#b58900") (140 . "#7E7D7E") (160 . "#7E7D7E") (180 . "#9FAA9B") (200 . "#9FC59F") (220 . "#859900") (240 . "#31be67") (260 . "#2aa198") (280 . "#268bd2") (300 . "#268bd2") (320 . "#268bd2") (340 . "#00a74e") (360 . "#d33682"))))
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#d01A4E")
+     (60 . "#cb4b16")
+     (80 . "#b58900")
+     (100 . "#b58900")
+     (120 . "#b58900")
+     (140 . "#7E7D7E")
+     (160 . "#7E7D7E")
+     (180 . "#9FAA9B")
+     (200 . "#9FC59F")
+     (220 . "#859900")
+     (240 . "#31be67")
+     (260 . "#2aa198")
+     (280 . "#268bd2")
+     (300 . "#268bd2")
+     (320 . "#268bd2")
+     (340 . "#00a74e")
+     (360 . "#d33682"))))
  '(vc-annotate-very-old-color "#d33682"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -254,6 +280,9 @@ M-x compile.
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
 
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
@@ -318,8 +347,8 @@ prompt to 'name>'."
         (shell (current-buffer))
         (sleep-for 0 200)
         (delete-region (point-min) (point-max))
-        (comint-simple-send (get-buffer-process (current-buffer))
-                            (concat "export PS1=\"" name ">\""))
+        (comint-simple-send (get-buffer-process (current-buffer)))
+;;                            (concat "export PS1=\"" name ">\""))
         ))
 (global-set-key (kbd "C-c s") 'new-shell)
 
